@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Аутофагия, или самопоедание | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Аутофагия, или самопоедание | Адам Леос" />
+{% endblock %}
+{% block title %} Аутофагия, или самопоедание | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/fasting.html"><span>Голодание</span></a>
+            <a href="/topics/fasting.html"><span>Голодание</span></a>
             <div class="post__delimiter"></div>
           </span>
           Аутофагия, или самопоедание
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/autophagy-or-selfeating.jpg"
-              alt="autophagy-or-selfeating"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/autophagy-or-selfeating.jpg') }}" alt="autophagy-or-selfeating">
           </div>
           <p class="post__text">
             В этом посте мы познакомимся с одним крайне важным процессом нашего
@@ -92,18 +31,12 @@
             Изучение механизмов этого процесса принесло Нобелевскую премию
             японскому исследователю в 2016 году [<a href="#sources-list">2</a>].
             Если перевести дословно, то “фагия” - значит есть, а “ауто” -
-            обозначает себя. То есть, буквально процесс “самопоедания” [<a
-              href="#sources-list"
-              >3</a
-            >]. Но не спешите пугаться, так как это “самопоедание” очень и очень
+            обозначает себя. То есть, буквально процесс “самопоедания” [<a href="#sources-list">3</a>]. Но не спешите пугаться, так как это “самопоедание” очень и очень
             хорошо для нас.
           </p>
           <p class="post__text">
             Процесс аутофагии включает в себя целенаправленное разрушение и
-            перерабатывание компонентов клетки, включая органеллы [<a
-              href="#sources-list"
-              >4</a
-            >]. Цель достаточно проста - переработать ненужное или поломанное, и
+            перерабатывание компонентов клетки, включая органеллы [<a href="#sources-list">4</a>]. Цель достаточно проста - переработать ненужное или поломанное, и
             переиспользовать полученные ресурсы более эффективно. Например, в
             процессе аутофагии клетка может разрушить “потрепанные” и
             “подуставшие” органеллы (типа митохондрий) для получения
@@ -120,20 +53,11 @@
           </p>
           <p class="post__text">
             Но последние исследования указывают, что аутофагия является
-            неотъемлемой частью здорового организма в целом [<a
-              href="#sources-list"
-              >7</a
-            >]. Даже находясь в условиях достатка ресурсов, клетки постоянно
+            неотъемлемой частью здорового организма в целом [<a href="#sources-list">7</a>]. Даже находясь в условиях достатка ресурсов, клетки постоянно
             развиваются, меняются, да и попросту накапливают ошибки и отходы, от
             которых хорошо бы избавляться [<a href="#sources-list">8</a>]. У нас
             есть многообещающие данные о необходимости аутофагии для борьбы с
-            множеством расстройств, в том числе сопротивления раку [<a
-              href="#sources-list"
-              >9</a
-            >] и даже таким болезням, как Паркинсон и Альцгеймер [<a
-              href="#sources-list"
-              >10</a
-            >].
+            множеством расстройств, в том числе сопротивления раку [<a href="#sources-list">9</a>] и даже таким болезням, как Паркинсон и Альцгеймер [<a href="#sources-list">10</a>].
           </p>
           <p class="post__text">
             Стоит ли говорить, что одна из основных целей, которую преследуют
@@ -156,7 +80,7 @@
           </p>
 
           <div class="post__continue continue">
-            <a href="./not-a-medicine-fasting.html" class="continue__button">
+            <a href="/posts/not-a-medicine-fasting.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Голодание</span>
@@ -164,7 +88,7 @@
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a href="./mimicking-fasting.html" class="continue__button">
+            <a href="/posts/mimicking-fasting.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
                 <span class="continue__heading"> Имитируем голодание </span>
@@ -178,173 +102,97 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894687/"
-                  target="_blank"
-                  >Parzych, Katherine R, and Daniel J Klionsky. “An overview of
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894687/" target="_blank">Parzych, Katherine R, and Daniel J Klionsky. “An overview of
                   autophagy: morphology, mechanism, and regulation.”
                   <i>Antioxidants & redox signaling</i> vol. 20,3 (2014):
-                  460-73.</a
-                >
+                  460-73.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.nobelprize.org/prizes/medicine/2016/press-release/"
-                  target="_blank"
-                  >Press release. NobelPrize.org. Nobel Prize Outreach AB 2021.
+                <a class="sources__link" href="https://www.nobelprize.org/prizes/medicine/2016/press-release/" target="_blank">Press release. NobelPrize.org. Nobel Prize Outreach AB 2021.
                   Sun. 31 Oct 2021.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cell.com/developmental-cell/fulltext/S1534-5807(04)00099-1"
-                  target="_blank"
-                  >Levine B, Klionsky DJ. Development by self-digestion:
+                <a class="sources__link" href="https://www.cell.com/developmental-cell/fulltext/S1534-5807(04)00099-1" target="_blank">Levine B, Klionsky DJ. Development by self-digestion:
                   molecular mechanisms and biological functions of autophagy.
-                  Dev Cell. 2004 Apr;6(4):463-77.</a
-                >
+                  Dev Cell. 2004 Apr;6(4):463-77.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2732363/"
-                  target="_blank"
-                  >Klionsky, D J, and S D Emr. “Autophagy as a regulated pathway
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2732363/" target="_blank">Klionsky, D J, and S D Emr. “Autophagy as a regulated pathway
                   of cellular degradation.” <i>Science (New York, N.Y.)</i> vol.
-                  290,5497 (2000): 1717-21.</a
-                >
+                  290,5497 (2000): 1717-21.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2990190/"
-                  target="_blank"
-                  >Glick, Danielle et al. “Autophagy: cellular and molecular
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2990190/" target="_blank">Glick, Danielle et al. “Autophagy: cellular and molecular
                   mechanisms.” <i>The Journal of pathology</i> vol. 221,1
-                  (2010): 3-12.</a
-                >
+                  (2010): 3-12.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1828868/"
-                  target="_blank"
-                  >Yorimitsu, T, and D J Klionsky. “Autophagy: molecular
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1828868/" target="_blank">Yorimitsu, T, and D J Klionsky. “Autophagy: molecular
                   machinery for self-eating.”
                   <i>Cell death and differentiation</i> vol. 12 Suppl 2,Suppl 2
-                  (2005): 1542-52.</a
-                >
+                  (2005): 1542-52.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC118053/"
-                  target="_blank"
-                  >Reggiori, Fulvio, and Daniel J Klionsky. “Autophagy in the
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC118053/" target="_blank">Reggiori, Fulvio, and Daniel J Klionsky. “Autophagy in the
                   eukaryotic cell.” <i>Eukaryotic cell</i> vol. 1,1 (2002):
-                  11-21.</a
-                >
+                  11-21.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894687/"
-                  target="_blank"
-                  >Parzych, Katherine R, and Daniel J Klionsky. “An overview of
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894687/" target="_blank">Parzych, Katherine R, and Daniel J Klionsky. “An overview of
                   autophagy: morphology, mechanism, and regulation.”
                   <i>Antioxidants & redox signaling</i> vol. 20,3 (2014):
-                  460-73.</a
-                >
+                  460-73.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6108917/"
-                  target="_blank"
-                  >Onorati, Angelique V et al. “Targeting autophagy in cancer.”
-                  <i>Cancer</i> vol. 124,16 (2018): 3307-3318.</a
-                >
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6108917/" target="_blank">Onorati, Angelique V et al. “Targeting autophagy in cancer.”
+                  <i>Cancer</i> vol. 124,16 (2018): 3307-3318.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5039008/"
-                  target="_blank"
-                  >Zare-Shahabadi, Ameneh et al. “Autophagy in Alzheimer's
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5039008/" target="_blank">Zare-Shahabadi, Ameneh et al. “Autophagy in Alzheimer's
                   disease.” <i>Reviews in the neurosciences</i> vol. 26,4
-                  (2015): 385-95.</a
-                >
+                  (2015): 385-95.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.annualreviews.org/doi/10.1146/annurev-nutr-071816-064634"
-                  target="_blank"
-                  >Patterson RE, Sears DD. Metabolic Effects of Intermittent
-                  Fasting. Annu Rev Nutr. 2017 Aug 21;37:371-393.</a
-                >
+                <a class="sources__link" href="https://www.annualreviews.org/doi/10.1146/annurev-nutr-071816-064634" target="_blank">Patterson RE, Sears DD. Metabolic Effects of Intermittent
+                  Fasting. Annu Rev Nutr. 2017 Aug 21;37:371-393.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/"
-                  target="_blank"
-                  >Longo, Valter D, and Mark P Mattson. “Fasting: molecular
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/" target="_blank">Longo, Valter D, and Mark P Mattson. “Fasting: molecular
                   mechanisms and clinical applications.”
-                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a
-                >
+                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884674/"
-                  target="_blank"
-                  >Wong, Shi Q et al. “Autophagy in aging and longevity.”
-                  <i>Human genetics</i> vol. 139,3 (2020): 277-290.</a
-                >
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884674/" target="_blank">Wong, Shi Q et al. “Autophagy in aging and longevity.”
+                  <i>Human genetics</i> vol. 139,3 (2020): 277-290.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5792715/"
-                  target="_blank"
-                  >Nakamura, Shuhei, and Tamotsu Yoshimori. “Autophagy and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5792715/" target="_blank">Nakamura, Shuhei, and Tamotsu Yoshimori. “Autophagy and
                   Longevity.” <i>Molecules and cells</i> vol. 41,1 (2018):
-                  65-72.</a
-                >
+                  65-72.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382265/"
-                  target="_blank"
-                  >Kim, Young Chul, and Kun-Liang Guan. “mTOR: a pharmacologic
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382265/" target="_blank">Kim, Young Chul, and Kun-Liang Guan. “mTOR: a pharmacologic
                   target for autophagy regulation.”
                   <i>The Journal of clinical investigation</i> vol. 125,1
-                  (2015): 25-32.</a
-                >
+                  (2015): 25-32.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

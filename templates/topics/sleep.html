@@ -1,0 +1,626 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Сон. Как не проспать проблемы со сном | Адам Леос" />
+{% endblock %}
+{% block title %} Сон. Как не проспать проблемы со сном | Адам Леос {% endblock %}
+{% block content %}
+      <section class="main__section articles">
+        <h2 class="main__heading">Сон</h2>
+
+        <input type="checkbox" id="gradient" class="articles__gradient-checkbox">
+        <ul class="articles__list">
+          <label for="gradient" class="articles__navigation">
+            <span class="articles__navigation-arrow"></span>
+            <span class="
+                articles__navigation-arrow articles__navigation-arrow--right
+              "></span>
+          </label>
+          <li class="articles__item">
+            <a href="/posts/everyone-sleeps.html" class="articles__link">1. Спят все</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/sleep-phazes-and-brain-waves.html" class="articles__link">2. Фазы сна (и немного мозговые волны)</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/circadiam-rhytms-and-scn.html" class="articles__link">3. Циркадные ритмы и Супрахиазматическое ядро</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/melatonin-aka-sleep-hormone.html" class="articles__link">
+              4. Мелатонин aka Гормон Сна</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/adenosine-and-how-it-bullied-by-caffeine.html" class="articles__link">
+              5. Аденозин (и как его притесняет кофеин)</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/cortisol-stress-hormone.html" class="articles__link">6. Кортизол, он же “гормон стресса”</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/sleepy-immune-system.html" class="articles__link">7. Сонная иммунная система</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/metabolism-and-sleep.html" class="articles__link">8. Метаболизм и сон</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/cleaning-byproducts-during-sleep.html" class="articles__link">9. Избавляемся от отходов производства во время сна</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/smart-sleep.html" class="articles__link">10. Умный сон</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/light-brightness-discussion.html" class="articles__link">11. Яркость освещения: обсуждение</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/light-brightness-recommendations.html" class="articles__link">12. Яркость освещения: рекомендации</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/visible-light-spectrum-natural.html" class="articles__link">13. Спектр видимого света: естественное освещение</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/visible-light-spectrum-artificial.html" class="articles__link">14. Спектр видимого света: искусственное освещение</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/cool-sleep.html" class="articles__link">15. Прохладный сон</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/night-life-problems.html" class="articles__link">16. Ночная жизнь: проблемы</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/night-life-recommendations.html" class="articles__link">17. Ночная жизнь: рекомендации</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/sleep-under-alcohol.html" class="articles__link">18. Сон под градусом</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/caffeine-sleep.html" class="articles__link">19. Кофеиновый сон</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/growing-in-sleep.html" class="articles__link">20. Растем во сне</a>
+          </li>
+        </ul>
+
+        <span class="articles__delimiter articles__delimiter--single"></span>
+
+        <div class="articles__grid">
+          <div class="articles__topic">
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/everyone-sleeps.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/everyone-sleeps.jpg') }}" alt="everyone-sleeps">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/everyone-sleeps.html">
+                  <h3 class="article__heading">Спят все</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/everyone-sleeps.html">
+                <p class="article__description">
+                  Начать серию постов о сне я бы хотел с ввода в уникальность и
+                  важность этого процесса. Прежде всего, спит не только человек,
+                  но практически все животные в том или ином виде. Включая рыб,
+                  птиц, и даже насекомых. Некоторые животные могут спать каждым
+                  полушарием головного мозга отдельно, по-очереди, как дельфины
+                  или тюлени.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/sleep-phazes-and-brain-waves.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/sleep-phazes-and-brain-waves.jpg') }}" alt="sleep-phazes-and-brain-waves">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/sleep-phazes-and-brain-waves.html">
+                  <h3 class="article__heading">
+                    Фазы сна (и немного мозговые волны)
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/sleep-phazes-and-brain-waves.html">
+                <p class="article__description">
+                  Прежде чем оптимизировать какой-либо процесс, необходимо
+                  понять как он работает. Особенно такой интересный, как сон.
+                  Так что давайте посмотрим, что он из себя представляет.
+                  Материала на несколько постов, поэтому в этом мы ознакомимся с
+                  фазами сна, о которых вы наверняка так много слышали. Так что,
+                  начнем с мозговых волн!
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/circadiam-rhytms-and-scn.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/circadiam-rhytms-and-scn.jpg') }}" alt="circadiam-rhytms-and-scn">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/circadiam-rhytms-and-scn.html">
+                  <h3 class="article__heading">
+                    Циркадные ритмы и Супрахиазматическое ядро
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/circadiam-rhytms-and-scn.html">
+                <p class="article__description">
+                  Сегодня мы поговорим о Циркадных ритмах. Вообще, это большая,
+                  интересная и важная тема, заслуживающая отдельного видео. Но
+                  так как Циркадные ритмы - критическая составляющая сна, мы
+                  обсудим ключевые моменты. Все живое на Земле эволюционировало
+                  в условиях цикличного присутствия и отсутствия Солнца, а для
+                  многих оно было основным источником энергии, освещения и
+                  условий для выживания.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/melatonin-aka-sleep-hormone.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/melatonin-aka-sleep-hormone.jpg') }}" alt="melatonin-aka-sleep-hormone">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/melatonin-aka-sleep-hormone.html">
+                  <h3 class="article__heading">Мелатонин aka Гормон Сна</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/melatonin-aka-sleep-hormone.html">
+                <p class="article__description">
+                  Мелатонин. Также известный многим как “гормон сна”. Что,
+                  отчасти, правда - он помогает с регуляцией циркадных циклов,
+                  которые, как мы уже знаем, важная составляющая сна. Именно от
+                  работы мелатонина зависят изменения на протяжении суток в
+                  функционировании многих процессов, среди которых кровяное
+                  давление и иммунная система
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/adenosine-and-how-it-bullied-by-caffeine.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/adenosine-and-how-it-bullied-by-caffeine.jpg') }}" alt="adenosine-and-how-it-bullied-by-caffeine">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/adenosine-and-how-it-bullied-by-caffeine.html">
+                  <h3 class="article__heading">
+                    Аденозин (и как его притесняет кофеин)
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/adenosine-and-how-it-bullied-by-caffeine.html">
+                <p class="article__description">
+                  Этот занимательный гормон уже не связан с циркадными ритмами,
+                  но так же важен для сна, как и мелатонин. Аденозин отвечает за
+                  наше чувство “сонливости” и накапливается в организме в
+                  течении дня, что к вечеру заставляет нас хотеть поспать. А за
+                  время сна его количество в организме падает и с утра мы
+                  просыпаемся бодрыми и полными сил. К слову, одно из возможных
+                  причин чувства излишней сонливости по утрам и в течении дня
+                  является аденозин, которого в организме осталось слишком много
+                  после сна.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/cortisol-stress-hormone.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/cortisol-stress-hormone.png') }}" alt="cortisol-stress-hormone">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/cortisol-stress-hormone.html">
+                  <h3 class="article__heading">
+                    Кортизол, он же “гормон стресса”
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/cortisol-stress-hormone.html">
+                <p class="article__description">
+                  Последний гормон, который мы обсудим в разрезе темы сна -
+                  Кортизол. Скорее всего он вам известен под названием “гормон
+                  стресса”, что, отчасти, является правдой. Он действительно
+                  выделяется в больших количествах из надпочечников во время
+                  стресса. И в совокупности с такими гормонами, как адреналин и
+                  норадреналин, это активирует основной механизм выживания
+                  организма - состояние “бей или беги”.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/sleepy-immune-system.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/sleepy-immune-system.jpg') }}" alt="sleepy-immune-system">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/sleepy-immune-system.html">
+                  <h3 class="article__heading">Сонная иммунная система</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/sleepy-immune-system.html">
+                <p class="article__description">
+                  Сегодня мы наконец приступим к разбору влияния сна на системы
+                  организма, которые теснее всего с ним связаны. Начнем с очень
+                  важной иммунной системы. Как вы наверняка знаете, наш
+                  иммунитет умеет бороться с инфекциями и болезнями, даже с
+                  которыми мы сталкиваемся впервые. Это называется “адаптивный”
+                  или “приобретённый” иммунитет. Но что самое важное -
+                  научившись справляться с новыми врагами, иммунитет запоминает
+                  их.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/metabolism-and-sleep.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/metabolism-and-sleep.jpg') }}" alt="metabolism-and-sleep">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/metabolism-and-sleep.html">
+                  <h3 class="article__heading">Метаболизм и сон</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/metabolism-and-sleep.html">
+                <p class="article__description">
+                  Сегодня посмотрим как сон влияет на метаболизм. Начнем с
+                  плохого. Даже одна ночь недосыпания (~4 часа) может снизить
+                  инсулиновую чувствительность на 25%. Значит это, что клетки
+                  будут хуже реагировать на инсулин и соотвественно недополучать
+                  глюкозу из крови. Обычно за этим следует увеличение
+                  производства инсулина и если это происходит продолжительное
+                  время, то приводит к диабету 2-го типа.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/cleaning-byproducts-during-sleep.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/cleaning-byproducts-during-sleep.jpg') }}" alt="cleaning-byproducts-during-sleep">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/cleaning-byproducts-during-sleep.html">
+                  <h3 class="article__heading">
+                    Избавляемся от отходов производства во время сна
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/cleaning-byproducts-during-sleep.html">
+                <p class="article__description">
+                  Прежде чем обсудить эффективность мозга, нам нужен небольшой
+                  пост-подводка. Вот этот. Здесь мы разберем очистку организма
+                  от всякого мусора, типа токсинов, отходов производства,
+                  раковых или мертвых клеток, и прочего. Есть у нас в организме
+                  занимательная система органов - Лимфатическая. Она включает в
+                  себя селезенку, тимус, множество лимфатических узлов и целую
+                  сеть лимфатических сосудов.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/smart-sleep.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/smart-sleep.jpg') }}" alt="smart-sleep">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/smart-sleep.html">
+                  <h3 class="article__heading">Умный сон</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/smart-sleep.html">
+                <p class="article__description">
+                  Подобрались мы к эффективности мозга в разрезе темы сна.
+                  Секретом ни для кого не будет, что без хорошего сна мозг
+                  работать качественно не сможет. Многие наверняка испытывали на
+                  себе ощущение “повышенной тупости”, после депривации сна. Но
+                  что конкретно происходит?
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/light-brightness-discussion.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/light-brightness-discussion.jpg') }}" alt="light-brightness-discussion">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/light-brightness-discussion.html">
+                  <h3 class="article__heading">
+                    Яркость освещения: обсуждение
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/light-brightness-discussion.html">
+                <p class="article__description">
+                  О том, как работает сон и на что он влияет, мы поговорили.
+                  Пора обсудить что же влияет на сам сон. Мы поверхностно многие
+                  аспекты уже задевали, но давайте теперь пройдемся по всему
+                  более подробно. Первым мы обсудим освещение, о котором очень
+                  много информации. И чтобы не перегружать вас, освещение мы
+                  разобьем на несколько постов. Сегодня поговорим об уровне
+                  освещения.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/light-brightness-recommendations.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/light-brightness-discussion.jpg') }}" alt="light-brightness-discussion">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/light-brightness-recommendations.html">
+                  <h3 class="article__heading">
+                    Яркость освещения: рекомендации
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/light-brightness-recommendations.html">
+                <p class="article__description">
+                  Как вы поняли, нам необходимо максимизировать правильные
+                  сигналы организму в течении дня (и минимизировать
+                  неправильные). Прежде всего, постарайтесь избавиться от
+                  искусственного освещения по вечерам. Подготавливайтесь ко сну
+                  заранее. Как показывают данные, два часа перед сном без
+                  искусственного освещения значительно улучшат сон.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/visible-light-spectrum-natural.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/visible-light-spectrum-natural.jpg') }}" alt="visible-light-spectrum-natural">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/visible-light-spectrum-natural.html">
+                  <h3 class="article__heading">
+                    Спектр видимого света: естественное освещение
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/visible-light-spectrum-natural.html">
+                <p class="article__description">
+                  В последнем посте мы остановились на мысли, что промышленный
+                  прожектор в комнате возможно и решит проблему яркости
+                  освещения, но не покроет другой крайне важный момент:
+                  правильное распределение интенсивности спектра. Не пугайтесь,
+                  все гораздо проще, чем звучит. Совсем немного вспомним физику.
+                  Обещаю, что будет несложно и интересно, а самое главное -
+                  крайне полезно! То, что мы называем “видимым светом”, на самом
+                  деле является электромагнитным излучением
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/visible-light-spectrum-artificial.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/visible-light-spectrum-natural.jpg') }}" alt="visible-light-spectrum-natural">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/visible-light-spectrum-artificial.html">
+                  <h3 class="article__heading">
+                    Спектр видимого света: искусственное освещение
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/visible-light-spectrum-artificial.html">
+                <p class="article__description">
+                  А вот в искусственном освещении уже происходит “дикий запад”.
+                  Дело в том, что белый свет можно создать большим количеством
+                  комбинаций волн, и у разных лампочек можно увидеть разные
+                  резкие скачки интенсивности определенных длин волн (и очень
+                  низкий уровень других). На глаз вы это не отличите никак, все
+                  будет довольно белым для вас.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/cool-sleep.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/cool-sleep.jpg') }}" alt="cool-sleep">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/cool-sleep.html">
+                  <h3 class="article__heading">Прохладный сон</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/cool-sleep.html">
+                <p class="article__description">
+                  Как и обещал, вернёмся к солнцу. С ним связан ещё один важный
+                  аспект, сильно влияющий на сон. Как вы уже поняли из названия,
+                  речь пойдет о температуре. Как температура окружения растет с
+                  восходом солнца и падает после заката, так и наше тело ведёт
+                  себя аналогичным образом. Мы изменяем температуру тела в
+                  зависимости от времени суток, следуя за окружением.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/night-life-problems.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/night-life-problems.jpg') }}" alt="night-life-problems">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/night-life-problems.html">
+                  <h3 class="article__heading">Ночная жизнь: проблемы</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/night-life-problems.html">
+                <p class="article__description">
+                  Мы уже много говорили о важности сна и проблемах при его
+                  отсутствии. Да и видео уже выпустили. Но насколько сильно
+                  страдают ночные работники, ведь днем они все же спят? Как вы
+                  уже догадались - довольно сильно.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/night-life-recommendations.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/night-life-problems.jpg') }}" alt="night-life-problems">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/night-life-recommendations.html">
+                  <h3 class="article__heading">Ночная жизнь: рекомендации</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/night-life-recommendations.html">
+                <p class="article__description">
+                  В предыдущем посте мы быстро обсудили, что ночные работы
+                  приводят к проблемам и желательно как-то их решить. Конечно
+                  же, в идеальном мире - перестать работать по ночам. Но мы не
+                  живем в таком мире (по крайней мере пока) и я понимаю о
+                  существовании различных ситуаций и условий. Я в том числе
+                  когда-то работал ночные смены и как никто понимаю, как это
+                  сложно.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/sleep-under-alcohol.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/sleep-under-alcohol.png') }}" alt="sleep-under-alcohol">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/sleep-under-alcohol.html">
+                  <h3 class="article__heading">Сон под градусом</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/sleep-under-alcohol.html">
+                <p class="article__description">
+                  Сегодня мы обсудим алкоголь в разрезе сна. Кроме сомнительного
+                  развлечения, люди часто обращаются к выпивке из-за разных
+                  проблем, будь-то психологических или физиологических.
+                  Полностью влияние алкоголя на организм мы в будущем обсудим
+                  отдельно. Также как и почему “алкоголизм - это болезнь”. Но
+                  сегодня нас интересует ответ на вопрос, “стоит ли обращаться к
+                  алкоголю, имея проблемы со сном” и какие у этого последствия.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/caffeine-sleep.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/caffeine-sleep.jpg') }}" alt="caffeine-sleep">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/sleep.html">
+                  <span class="article__tag">Сон</span>
+                </a>
+                <a class="article__link" href="/posts/caffeine-sleep.html">
+                  <h3 class="article__heading">Кофеиновый сон</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/caffeine-sleep.html">
+                <p class="article__description">
+                  Пора серьезно поговорить о кофеине, самом популярном
+                  психоактивном веществе. Кофеин оказывает сильный эффект на
+                  центральную нервную систему и довольно близок по эффектам к
+                  таким веществам как героин, кокаин и амфетамин. И хотя эффекты
+                  не такие значительные, как от последних веществ, я все же
+                  настоятельно попрошу вас отнестись серьезно к моим словам (и
+                  данным), так как ситуация серьезнее, чем мы ее воспринимаем.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/growing-in-sleep.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/growing-in-sleep.jpg') }}" alt="growing-in-sleep">
+                  </div>
+                </a>
+                <a href="/topics/sleep.html"><span class="article__tag">Сон</span></a>
+                <a class="article__link" href="/posts/growing-in-sleep.html">
+                  <h3 class="article__heading">Растем во сне</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/growing-in-sleep.html">
+                <p class="article__description">
+                  Быстрая вводная - гормон роста это именно то, что вы подумали.
+                  Этот протеин стимулирует рост, регенерацию и деление клеток.
+                  Гормон роста является критической составляющей для
+                  полноценного роста и развития тела, особенно в период
+                  взросления. Дополнительно, он стимулирует выработку еще одного
+                  важного для роста гормона - ИФР-1 (инсулиноподобный фактор
+                  роста 1).
+                </p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    {% endblock %}

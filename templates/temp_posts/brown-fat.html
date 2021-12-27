@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+{% endblock %}
+{% block title %} Коричневый жир (ну или бурый) | Адам Леос {% endblock %}
+{% block content %}
+<section class="main__section">
+        <h2 class="main__heading main__heading--post"> <span class="main__subheading"> <a
+                                href="/topics/temperature-stress-cold.html"><span>Температурный Стресс:
+                                        Холод</span></a>
+                        <div class="post__delimiter"></div>
+                </span> Коричневый жир (ну или бурый)
+        </h2>
+        <article class="post">
+                <div class="post__imagewrapper"> <img class="post__image"
+                                src="{ url_for('static', filename='img/posts/brown-fat.png') }" alt="brown-fat"> </div>
+
+                <p class="post__text">В последнем посте мы обозначили существование трех цветов жира - белого,
+                        бежевого, и коричневого. В текущей теме температурного стресса холодом нас особенно
+                        интересует последний. Пора разобраться, почему же он такой интересный.</p>
+                <p class="post__text">Раньше считали, что коричневый жир есть у нас только в детстве и с
+                        возрастом пропадает. Как обычно, сегодня мы уже знаем что это не так. Просто с возрастом
+                        этого жира становится меньше, но мы можем и увеличить его количество при необходимости
+                        [<a href="#sources-list">1</a>].</p>
+                <p class="post__text">Что за необходимость? Ну вы уже и сами прекрасно знаете - согревание при
+                        низких температурах. Это и есть причиной его большого количества у новорожденных детей,
+                        ведь они еще толком не могут защититься от холода иным образом. Даже дрожать эффективно
+                        не выходит - мышцы еще недостаточно развиты [<a href="#sources-list">2</a>].</p>
+                <p class="post__text">И хотя, в определенной степени, все клетки организма способны генерировать
+                        тепло, наиболее эффективно данной задачей занимается именно коричневый жир [<a
+                                href="#sources-list">3</a>]. Дело в
+                        том, что несократительная генерация тепла (т.е. не дрожанием) происходит в тех самых
+                        митохондрия, что производят для нас энергию (АТФ). Но они также могут тратить эту
+                        энергию на производство тепла [<a href="#sources-list">4</a>].</p>
+                <p class="post__text">А вот коричневый жир как раз и содержит намного больше митохондрий, чем
+                        обычно, именно для производства тепла. Да и сами митохондрии у него покрупнее.
+                        Собственного, от того он и коричневый (или бурый) - намного плотнее нашпигован
+                        органеллами (ну и сосудами). Технически, коричневый жир вообще ближе к мышечным клеткам,
+                        чем жировым [<a href="#sources-list">5</a>]. Да не суть.</p>
+                <p class="post__text">Как вы скорее всего предположили, такая мощность требует много энергии
+                        [<a href="#sources-list">6</a>]. Особенно это заметно на животных, которые также часто имеют
+                        этот жир в тех же
+                        целях. И особенно заметно на небольших животных: например, у мышей, в периоды холода, на
+                        генерацию тепла коричневым жиром уходит половина всех поглощаемых калорий. Плюс,
+                        половина кислорода идет туда же, т.к. он необходим для теплогенерации [<a
+                                href="#sources-list">7</a>].</p>
+                <p class="post__text">Человек, конечно же, тратит не так много энергии на те же процессы, но все
+                        еще довольно значительно. Например, люди с коричневым жиром сжигают в 3-4 раз больше
+                        калорий при согревании на холоде, чем люди без него. И это при всего-навсего +19°C,
+                        толком и не холод [<a href="#sources-list">8</a>]. </p>
+                <p class="post__text">Вы, наверное, теперь думаете - насколько вообще это эффективно, что
+                        происходит при более низких температурах, можно ли таким образом похудеть, и как вообще
+                        мы закаляемся? Отличные вопросы! На которые мы ответим в следующем посте…</p>
+
+                <div class="post__continue continue"> <a href="./three-colors-of-fat.html" class="continue__button">
+                                <div class="continue__arrow">&#10229;</div>
+                                <div class="continue__content"> <span class="continue__tag">Температурный
+                                                Стресс: Холод</span> <span class="continue__heading">Три цвета
+                                                жира
+                                        </span> </div>
+                        </a>
+                        <div class="continue__delimiter"></div>
+                        <!-- <a href="./how-cold-makes-you-stronger.html"
+                                        class="continue__button">
+                                        <div class="continue__content continue__content--right"> <span
+                                                        class="continue__tag">Температурный
+                                                        Стресс: Холод</span>
+                                                <span class="continue__heading">Как холод закаляет?
+                                                </span>
+                                        </div>
+                                        <div class="continue__arrow">&#10230;</div>
+                                </a> -->
+                </div>
+                <div class="post__sources sources" id="sources-list">
+                        <h5 class="sources__toggler">Источники</h5>
+                        <ul class="sources__list">
+
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">1</a>]</span> <a class="sources__link"
+                                                href="https://www.nejm.org/doi/full/10.1056/NEJMoa0808718"
+                                                target="_blank">van Marken Lichtenbelt, Wouter D et al.
+                                                “Cold-activated brown adipose tissue in healthy men.” The New
+                                                England journal of medicine vol. 360,15 (2009): 1500-8. </a>
+                                </li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">2</a>]</span> <a class="sources__link"
+                                                href="https://sci-hub.st/10.1159/000321319" target="_blank">Saely,
+                                                Christoph H et al. "Brown
+                                                versus white adipose tissue: a mini-review". <i>Gerontology</i>
+                                                vol. 58, 1. 2012.</a></li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">3</a>]</span> <a class="sources__link"
+                                                href="https://journals.physiology.org/doi/full/10.1152/physrev.00015.2003"
+                                                target="_blank">Cannon, Barbara, and Jan Nedergaard. “Brown
+                                                adipose tissue: function and physiological significance.”
+                                                Physiological reviews vol. 84,1 (2004): 277-359. </a></li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">4</a>]</span> <a class="sources__link"
+                                                href="https://twin.sci-hub.st/6441/b8ff038fa9b63896be44ebc1ed065edc/nedergaard1982.pdf"
+                                                target="_blank">Nedergaard, J, and O Lindberg. “The brown fat
+                                                cell.” International review of cytology vol. 74 (1982): 187-286.
+                                        </a>
+                                </li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">5</a>]</span> <a class="sources__link"
+                                                href="https://sci-hub.st/10.1002/cphy.c170001" target="_blank">Rui,
+                                                Liangyou et al. "Brown
+                                                and Beige Adipose Tissues in Health and Disease".
+                                                <i>Comprehensive Physiology</i> vol. 7, 4.
+                                                09/12/2017.</a></li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">6</a>]</span> <a class="sources__link"
+                                                href="https://www.cell.com/trends/endocrinology-metabolism/fulltext/S1043-2760(13)00209-9"
+                                                target="_blank">Townsend, Kristy L, and Yu-Hua Tseng. “Brown fat
+                                                fuel utilization and thermogenesis.” Trends in endocrinology and
+                                                metabolism: TEM vol. 25,4 (2014): 168-77. </a></li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">7</a>]</span> <a class="sources__link"
+                                                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8134067/"
+                                                target="_blank">Yau, Winifred W
+                                                et al. “Chronic cold exposure induces autophagy to promote fatty
+                                                acid oxidation,
+                                                mitochondrial turnover, and thermogenesis in brown adipose
+                                                tissue.” <i>iScience</i> vol.
+                                                24,5 102434. 15 Apr. 2021.</a></li>
+                                <li class="sources__item"><span class="sources__number">[<a
+                                                        href="#sources-list">8</a>]</span> <a class="sources__link"
+                                                href="https://www.jci.org/articles/view/67803"
+                                                target="_blank">Yoneshiro, Takeshi et al. “Recruited brown
+                                                adipose tissue as an antiobesity agent in humans.” The Journal
+                                                of clinical investigation vol. 123,8 (2013): 3404-8. </a></li>
+
+
+                        </ul>
+                </div>
+        </article>
+</section>
+{% endblock %}

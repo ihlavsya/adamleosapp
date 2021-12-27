@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Метаболическая гибкость | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Метаболическая гибкость | Адам Леос" />
+{% endblock %}
+{% block title %} Метаболическая гибкость | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/fasting.html"><span>Голодание</span></a>
+            <a href="/topics/fasting.html"><span>Голодание</span></a>
             <div class="post__delimiter"></div>
           </span>
           Метаболическая гибкость
@@ -74,18 +17,12 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/metabolic-flexibility.png"
-              alt="metabolic-flexibility"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/metabolic-flexibility.png') }}" alt="metabolic-flexibility">
           </div>
           <p class="post__text">
             Продолжим изучать процессы, связанные с голоданием и приносящие нам
             полезные эффекты. Наконец-то мы добрались до метаболической гибкости
-            - ключевому механизму метаболизма энергии [<a href="#sources-list"
-              >1</a
-            >]. Если кратко, то эта гибкость обозначает способность организма
+            - ключевому механизму метаболизма энергии [<a href="#sources-list">1</a>]. Если кратко, то эта гибкость обозначает способность организма
             периодически переключаться на альтернативные источники энергии (по
             необходимости) [<a href="#sources-list">2</a>].
           </p>
@@ -93,49 +30,29 @@
             Механизм этот очень распространенный и очень базовый. В том или ином
             виде, аналогичные подходы можно обнаружить даже у простейших
             организмов, существующих миллиарды лет. Это позволяло им
-            адаптироваться в различных условиях и успешно выживать [<a
-              href="#sources-list"
-              >3</a
-            >].
+            адаптироваться в различных условиях и успешно выживать [<a href="#sources-list">3</a>].
           </p>
           <p class="post__text">
             У человека же основой данной гибкости является возможность организма
-            переключаться с глюкозы на жиры (и обратно) [<a href="#sources-list"
-              >4</a
-            >]. И как вы помните из поста о жире, в нем мы храним довольно много
-            энергии, которую организм может эффективно использовать [<a
-              href="#sources-list"
-              >5</a
-            >].
+            переключаться с глюкозы на жиры (и обратно) [<a href="#sources-list">4</a>]. И как вы помните из поста о жире, в нем мы храним довольно много
+            энергии, которую организм может эффективно использовать [<a href="#sources-list">5</a>].
           </p>
           <p class="post__text">
             Но в сегодняшнем посте, я хотел бы выделить один очень важный
             момент: метаболическая гибкость - это не просто процесс “на всякий
-            пожарный”, но обязательная составляющая здоровой жизни [<a
-              href="#sources-list"
-              >6</a
-            >]. Мы хотим периодически переключаться на альтернативный источник
-            энергии и тренировать метаболическую гибкость [<a
-              href="#sources-list"
-              >7</a
-            >].
+            пожарный”, но обязательная составляющая здоровой жизни [<a href="#sources-list">6</a>]. Мы хотим периодически переключаться на альтернативный источник
+            энергии и тренировать метаболическую гибкость [<a href="#sources-list">7</a>].
           </p>
           <p class="post__text">
             Отчасти, эта идея уже упоминалась в предыдущем посте о перегрузке
             митохондрий. Ведь смена основного источника энергии положительно
-            сказывается на эффективности и здоровьи органелл [<a
-              href="#sources-list"
-              >8</a
-            >]. А вот отсутствие напротив, приводит к негативным последствиям
+            сказывается на эффективности и здоровьи органелл [<a href="#sources-list">8</a>]. А вот отсутствие напротив, приводит к негативным последствиям
             [<a href="#sources-list">9</a>]. Но на митохондриях, конечно же,
             эффекты не ограничивается.
           </p>
           <p class="post__text">
             Например, если переключение на жиры будет отсутствовать, это
-            приведет к нарушениям по типу инсулиновой резистентности [<a
-              href="#sources-list"
-              >10</a
-            >] или воспалению организма [<a href="#sources-list">11</a>].
+            приведет к нарушениям по типу инсулиновой резистентности [<a href="#sources-list">10</a>] или воспалению организма [<a href="#sources-list">11</a>].
             Вообще, даже существует заметная ассоциация с повышенной смертностью
             от всех причин [<a href="#sources-list">12, 13</a>].
           </p>
@@ -156,7 +73,7 @@
           </p>
 
           <div class="post__continue continue">
-            <a href="./mitochondria-overload.html" class="continue__button">
+            <a href="/posts/mitochondria-overload.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Голодание</span>
@@ -164,10 +81,7 @@
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./mtor-to-grow-or-to-survive.html"
-              class="continue__button"
-            >
+            <a href="/posts/mtor-to-grow-or-to-survive.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
                 <span class="continue__heading">мТОР: расти или выживать</span>
@@ -181,191 +95,112 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6093334"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6093334" target="_blank">
                   Smith, Reuben L et al. “Metabolic Flexibility as an Adaptation
                   to Energy Resources and Requirements in Health and Disease.”
                   Endocrine reviews vol. 39,4 (2018): 489-517.
-                  doi:10.1210/er.2017-00211</a
-                >
+                  doi:10.1210/er.2017-00211</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(17)30220-6"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(17)30220-6" target="_blank">
                   Goodpaster, Bret H, and Lauren M Sparks. “Metabolic
                   Flexibility in Health and Disease.” Cell metabolism vol. 25,5
-                  (2017): 1027-1036.</a
-                >
+                  (2017): 1027-1036.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cell.com/cell/fulltext/S0092-8674(16)30981-3"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.cell.com/cell/fulltext/S0092-8674(16)30981-3" target="_blank">
                   López-Otín, Carlos et al. “Metabolic Control of Longevity.”
-                  Cell vol. 166,4 (2016): 802-821.</a
-                >
+                  Cell vol. 166,4 (2016): 802-821.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/10905472/"
-                  target="_blank"
-                  >Kelley, D E, and L J Mandarino. “Fuel selection in human
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/10905472/" target="_blank">Kelley, D E, and L J Mandarino. “Fuel selection in human
                   skeletal muscle in insulin resistance: a reexamination.”
-                  Diabetes vol. 49,5 (2000): 677-83.</a
-                >
+                  Diabetes vol. 49,5 (2000): 677-83.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/"
-                  target="_blank"
-                  >Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/" target="_blank">Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
                   Cold Spring Harbor perspectives in biology vol. 4,9 a008417. 1
-                  Sep. 2012.</a
-                >
+                  Sep. 2012.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/10095997/"
-                  target="_blank"
-                  >Randle, P J. “Regulatory interactions between lipids and
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/10095997/" target="_blank">Randle, P J. “Regulatory interactions between lipids and
                   carbohydrates: the glucose fatty acid cycle after 35 years.”
                   Diabetes/metabolism reviews vol. 14,4 (1998): 263-83.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6093334/"
-                  target="_blank"
-                  >Smith, Reuben L et al. “Metabolic Flexibility as an
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6093334/" target="_blank">Smith, Reuben L et al. “Metabolic Flexibility as an
                   Adaptation to Energy Resources and Requirements in Health and
-                  Disease.” Endocrine reviews vol. 39,4 (2018): 489-517.</a
-                >
+                  Disease.” Endocrine reviews vol. 39,4 (2018): 489-517.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3348508"
-                  target="_blank"
-                  >Muoio, Deborah M, and P Darrell Neufer. “Lipid-induced
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3348508" target="_blank">Muoio, Deborah M, and P Darrell Neufer. “Lipid-induced
                   mitochondrial stress and insulin action in muscle.” Cell
                   metabolism vol. 15,5 (2012): 595-605.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765362/"
-                  target="_blank"
-                  >Muoio, Deborah M. “Metabolic inflexibility: when
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765362/" target="_blank">Muoio, Deborah M. “Metabolic inflexibility: when
                   mitochondrial indecision leads to metabolic gridlock.” Cell
-                  vol. 159,6 (2014): 1253-62.</a
-                >
+                  vol. 159,6 (2014): 1253-62.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5872768/"
-                  target="_blank"
-                  >Lepretti, Marilena et al. “Omega-3 Fatty Acids and Insulin
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5872768/" target="_blank">Lepretti, Marilena et al. “Omega-3 Fatty Acids and Insulin
                   Resistance: Focus on the Regulation of Mitochondria and
                   Endoplasmic Reticulum Stress.” Nutrients vol. 10,3 350. 14
-                  Mar. 2018.</a
-                >
+                  Mar. 2018.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2814543/"
-                  target="_blank"
-                  >Hotamisligil, Gökhan S, and Ebru Erbay. “Nutrient sensing and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2814543/" target="_blank">Hotamisligil, Gökhan S, and Ebru Erbay. “Nutrient sensing and
                   inflammation in metabolic diseases.” Nature reviews.
-                  Immunology vol. 8,12 (2008): 923-34.</a
-                >
+                  Immunology vol. 8,12 (2008): 923-34.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://moscow.sci-hub.st/5196/e88f8bb86eec55360c328323da0fe4ea/storlien2004.pdf"
-                  target="_blank"
-                  >Storlien, Len et al. “Metabolic flexibility.” The Proceedings
-                  of the Nutrition Society vol. 63,2 (2004): 363-8.</a
-                >
+                <a class="sources__link" href="https://moscow.sci-hub.st/5196/e88f8bb86eec55360c328323da0fe4ea/storlien2004.pdf" target="_blank">Storlien, Len et al. “Metabolic flexibility.” The Proceedings
+                  of the Nutrition Society vol. 63,2 (2004): 363-8.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://pubmed.ncbi.nlm.nih.gov/17563336"
-                  target="_blank"
-                  >Guize, Louis et al. “All-cause mortality associated with
+                <a class="sources__link" href="https://pubmed.ncbi.nlm.nih.gov/17563336" target="_blank">Guize, Louis et al. “All-cause mortality associated with
                   specific combinations of the metabolic syndrome according to
                   recent definitions.” Diabetes care vol. 30,9 (2007):
-                  2381-7.</a
-                >
+                  2381-7.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(17)30220-6"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(17)30220-6" target="_blank">
                   Goodpaster, Bret H, and Lauren M Sparks. “Metabolic
                   Flexibility in Health and Disease.” Cell metabolism vol. 25,5
-                  (2017): 1027-1036.</a
-                >
+                  (2017): 1027-1036.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2584808"
-                  target="_blank"
-                  >Galgani, Jose E et al. “Metabolic flexibility and insulin
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2584808" target="_blank">Galgani, Jose E et al. “Metabolic flexibility and insulin
                   resistance.” American journal of physiology. Endocrinology and
                   metabolism vol. 295,5 (2008): E1009-17.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7538104"
-                  target="_blank"
-                  >Arredondo-Amador, María et al. “Circadian Rhythms in
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7538104" target="_blank">Arredondo-Amador, María et al. “Circadian Rhythms in
                   Hormone-sensitive Lipase in Human Adipose Tissue: Relationship
                   to Meal Timing and Fasting Duration.” The Journal of clinical
                   endocrinology and metabolism vol. 105,12 (2020):
-                  e4407–e4416.</a
-                >
+                  e4407–e4416.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Растем во сне | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Растем во сне | Адам Леос" />
+{% endblock %}
+{% block title %} Растем во сне | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/sleep.html"><span>Сон</span></a>
+            <a href="/topics/sleep.html"><span>Сон</span></a>
             <div class="post__delimiter"></div>
           </span>
           Растем во сне
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/growing-in-sleep.jpg"
-              alt="growing-in-sleep"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/growing-in-sleep.jpg') }}" alt="growing-in-sleep">
           </div>
           <p class="post__text">
             Вот и самый последний пост по теме сна. Закончим мы довольно важной
@@ -87,46 +26,31 @@
           </p>
           <p class="post__text">
             Быстрая вводная - гормон роста это именно то, что вы подумали. Этот
-            протеин стимулирует рост, регенерацию и деление клеток [<a
-              href="#sources-list"
-              >1</a
-            >]. Гормон роста является критической составляющей для полноценного
+            протеин стимулирует рост, регенерацию и деление клеток [<a href="#sources-list">1</a>]. Гормон роста является критической составляющей для полноценного
             роста и развития тела, особенно в период взросления. Дополнительно,
             он стимулирует выработку еще одного важного для роста гормона -
-            ИФР-1 (инсулиноподобный фактор роста 1) [<a href="#sources-list"
-              >2</a
-            >]. Последний - довольно важный для организма человека, поэтому его
+            ИФР-1 (инсулиноподобный фактор роста 1) [<a href="#sources-list">2</a>]. Последний - довольно важный для организма человека, поэтому его
             рекомендуется также знать [<a href="#sources-list">3</a>].
           </p>
           <p class="post__text">
             Само собой, недостаток этих гормонов сказывается на развитии тела и
             опаснее всего является для детей. Проявится это не просто ростом
             “пониже”, но и недоразвитыми костями, мышцами, осложнениями с
-            половым созреванием, да и вообще рядом болезней [<a
-              href="#sources-list"
-              >4, 5</a
-            >]. Важно: проблемы с костями и мышцами из-за дефицита гормона роста
-            может испытывать и взрослый человек [<a href="#sources-list">6, 7</a
-            >].
+            половым созреванием, да и вообще рядом болезней [<a href="#sources-list">4, 5</a>]. Важно: проблемы с костями и мышцами из-за дефицита гормона роста
+            может испытывать и взрослый человек [<a href="#sources-list">6, 7</a>].
           </p>
           <p class="post__text">
             Сразу же обсудим и обратную сторону медали: переизбыток гормона при
             взрослении тоже плохо (как и всегда) и приводит к различным
             расстройствам, типа гигантизма [<a href="#sources-list">8</a>]. А у
-            взрослых же поощряет развитие раковых клеток [<a
-              href="#sources-list"
-              >9</a
-            >] и других болезней [<a href="#sources-list">10</a>], т.к. организм
+            взрослых же поощряет развитие раковых клеток [<a href="#sources-list">9</a>] и других болезней [<a href="#sources-list">10</a>], т.к. организм
             уже толком не растет [<a href="#sources-list">11, 12</a>].
           </p>
           <p class="post__text">
             Это важно проговорить, т.к. некоторые люди, не понимая полной
             картины, пытаются это использовать для “ускорения” роста или набора
             мышечной массы. Что действительно сработает как вы уже поняли из
-            прочитанного. В спорте это может дать большое преимущество [<a
-              href="#sources-list"
-              >13</a
-            >] и, как следствие, с этим борются в профессиональных соревнованиях
+            прочитанного. В спорте это может дать большое преимущество [<a href="#sources-list">13</a>] и, как следствие, с этим борются в профессиональных соревнованиях
             [<a href="#sources-list">14</a>]. Но я бы больше беспокоился за
             здоровье и последствия от подобных “хаков”.
           </p>
@@ -139,10 +63,7 @@
           <p class="post__text">
             А сон очень важен здесь, ведь более 50% гормона роста выделяется
             именно во время сна [<a href="#sources-list">15</a>]. Если быть
-            более точным, то в первой половине ночи, в период глубокого сна [<a
-              href="#sources-list"
-              >16</a
-            >]. Поэтому даже если вы спортсмен, для которого приоритетны не
+            более точным, то в первой половине ночи, в период глубокого сна [<a href="#sources-list">16</a>]. Поэтому даже если вы спортсмен, для которого приоритетны не
             когнитивные способности, а физическая масса, то и здесь без
             качественного сна никуда. Иначе вы не отрегенерируете и не разовьете
             мускулатуру должным образом. К этому мы вернемся очень даже скоро, в
@@ -158,14 +79,8 @@
           </p>
           <p class="post__text">
             Современная медицина же учится применять гормон роста в лечебных
-            практиках по множеству направлений [<a href="#sources-list"
-              >19, 20</a
-            >]. От артрита [<a href="#sources-list">21</a>] и заживления ран [<a
-              href="#sources-list"
-              >22</a
-            >], до когнитивных способностей [<a href="#sources-list">23</a>] и
-            продолжительности жизни (longevity) [<a href="#sources-list">24</a
-            >].
+            практиках по множеству направлений [<a href="#sources-list">19, 20</a>]. От артрита [<a href="#sources-list">21</a>] и заживления ран [<a href="#sources-list">22</a>], до когнитивных способностей [<a href="#sources-list">23</a>] и
+            продолжительности жизни (longevity) [<a href="#sources-list">24</a>].
           </p>
           <p class="post__text">
             Так что на такой хорошей ноте мы закончим пост, а с ним и тему сна.
@@ -173,7 +88,7 @@
           </p>
 
           <div class="post__continue continue">
-            <a href="./caffeine-sleep.html" class="continue__button">
+            <a href="/posts/caffeine-sleep.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Сон</span>
@@ -181,15 +96,10 @@
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./fasting-is-not-what-you-think.html"
-              class="continue__button"
-            >
+            <a href="/posts/fasting-is-not-what-you-think.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
-                <span class="continue__heading"
-                  >Голодание - это не то, что вы подумали</span
-                >
+                <span class="continue__heading">Голодание - это не то, что вы подумали</span>
               </div>
               <div class="continue__arrow">&#10230;</div>
             </a>
@@ -200,288 +110,166 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5816795/"
-                  target="_blank"
-                  >Dehkhoda, Farhad et al. “The Growth Hormone Receptor:
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5816795/" target="_blank">Dehkhoda, Farhad et al. “The Growth Hormone Receptor:
                   Mechanism of Receptor Activation, Cell Signaling, and
                   Physiological Aspects.” <i>Frontiers in endocrinology</i> vol.
-                  9 35. 13 Feb. 2018.</a
-                >
+                  9 35. 13 Feb. 2018.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1038/nrendo.2010.123"
-                  target="_blank"
-                  >Brooks, Andrew J et al. "The growth hormone receptor:
+                <a class="sources__link" href="https://sci-hub.se/10.1038/nrendo.2010.123" target="_blank">Brooks, Andrew J et al. "The growth hormone receptor:
                   mechanism of activation and clinical implications".
-                  <i>Nature reviews. Endocrinology</i> vol. 6, 9. 2010 Sep.</a
-                >
+                  <i>Nature reviews. Endocrinology</i> vol. 6, 9. 2010 Sep.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.1159/000445173"
-                  target="_blank"
-                  >Nicholls, Adam R, and Richard I G Holt. “Growth Hormone and
+                <a class="sources__link" href="http://sci-hub.se/10.1159/000445173" target="_blank">Nicholls, Adam R, and Richard I G Holt. “Growth Hormone and
                   Insulin-Like Growth Factor-1.” Frontiers of hormone research
-                  vol. 47 (2016): 101-14.</a
-                >
+                  vol. 47 (2016): 101-14.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6676577/"
-                  target="_blank"
-                  >Cattoni, A et al. “The use of recombinant human growth
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6676577/" target="_blank">Cattoni, A et al. “The use of recombinant human growth
                   hormone in patients with Mucopolysaccharidoses and growth
                   hormone deficiency: a case series.”
                   <i>Italian journal of pediatrics</i> vol. 45,1 93. 1 Aug.
-                  2019.</a
-                >
+                  2019.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4018305/"
-                  target="_blank"
-                  >Polgreen, Lynda E et al. “Effect of recombinant human growth
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4018305/" target="_blank">Polgreen, Lynda E et al. “Effect of recombinant human growth
                   hormone on changes in height, bone mineral density, and body
                   composition over 1-2 years in children with Hurler or Hunter
                   syndrome.” <i>Molecular genetics and metabolism</i> vol. 111,2
-                  (2014): 101-6.</a
-                >
+                  (2014): 101-6.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5877754/"
-                  target="_blank"
-                  >Díez, Juan J et al. “Treatment with Growth Hormone for Adults
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5877754/" target="_blank">Díez, Juan J et al. “Treatment with Growth Hormone for Adults
                   with Growth Hormone Deficiency Syndrome: Benefits and Risks.”
                   <i>International journal of molecular sciences</i> vol. 19,3
-                  893. 17 Mar. 2018.</a
-                >
+                  893. 17 Mar. 2018.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="sci-hub.se/10.1016/j.beem.2016.11.005"
-                  target="_blank"
-                  >Richmond, Erick, and Alan D Rogol. “Treatment of growth
+                <a class="sources__link" href="sci-hub.se/10.1016/j.beem.2016.11.005" target="_blank">Richmond, Erick, and Alan D Rogol. “Treatment of growth
                   hormone deficiency in children, adolescents and at the
                   transitional age.” Best practice & research. Clinical
-                  endocrinology & metabolism vol. 30,6 (2016): 749-755.</a
-                >
+                  endocrinology & metabolism vol. 30,6 (2016): 749-755.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.1016/S0344-0338(88)80011-6"
-                  target="_blank"
-                  >Kovacs, K et al. "Pathology of growth hormone excess".
+                <a class="sources__link" href="http://sci-hub.se/10.1016/S0344-0338(88)80011-6" target="_blank">Kovacs, K et al. "Pathology of growth hormone excess".
                   <i>Pathology, research and practice</i> vol. 183, 5. 1988
-                  Sep.</a
-                >
+                  Sep.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7708378/"
-                  target="_blank"
-                  >Strous, Ger J et al. “Growth Hormone Receptor Regulation in
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7708378/" target="_blank">Strous, Ger J et al. “Growth Hormone Receptor Regulation in
                   Cancer and Chronic Diseases.”
                   <i>Frontiers in endocrinology</i> vol. 11 597573. 18 Nov.
-                  2020.</a
-                >
+                  2020.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="sci-hub.se/10.1016/j.ghir.2017.12.006"
-                  target="_blank"
-                  >Guevara-Aguirre, Jaime et al. “GH and GHR signaling in human
+                <a class="sources__link" href="sci-hub.se/10.1016/j.ghir.2017.12.006" target="_blank">Guevara-Aguirre, Jaime et al. “GH and GHR signaling in human
                   disease.” Growth hormone & IGF research : official journal of
                   the Growth Hormone Research Society and the International IGF
-                  Research Society vol. 38 (2018): 34-38.</a
-                >
+                  Research Society vol. 38 (2018): 34-38.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="sci-hub.se/10.1159/000053161"
-                  target="_blank"
-                  >Shim, M, and P Cohen. “IGFs and human cancer: implications
+                <a class="sources__link" href="sci-hub.se/10.1159/000053161" target="_blank">Shim, M, and P Cohen. “IGFs and human cancer: implications
                   regarding the risk of growth hormone therapy.” Hormone
                   research vol. 51 Suppl 3 (1999): 42-51.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7025769/"
-                  target="_blank"
-                  >Chesnokova, Vera, and Shlomo Melmed. “Growth hormone in the
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7025769/" target="_blank">Chesnokova, Vera, and Shlomo Melmed. “Growth hormone in the
                   tumor microenvironment.”
                   <i>Archives of endocrinology and metabolism</i> vol. 63,6
-                  (2019): 568-575.</a
-                >
+                  (2019): 568-575.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6116101/"
-                  target="_blank"
-                  >Siebert, David M, and Ashwin L Rao. “The Use and Abuse of
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6116101/" target="_blank">Siebert, David M, and Ashwin L Rao. “The Use and Abuse of
                   Human Growth Hormone in Sports.” <i>Sports health</i> vol.
-                  10,5 (2018): 419-426.</a
-                >
+                  10,5 (2018): 419-426.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2657499/"
-                  target="_blank"
-                  >Saugy, M et al. “Human growth hormone doping in sport.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2657499/" target="_blank">Saugy, M et al. “Human growth hormone doping in sport.”
                   <i>British journal of sports medicine</i> vol. 40 Suppl
-                  1,Suppl 1 (2006): i35-9.</a
-                >
+                  1,Suppl 1 (2006): i35-9.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632578/"
-                  target="_blank"
-                  >Sigalos, John T, and Alexander W Pastuszak. “The Safety and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632578/" target="_blank">Sigalos, John T, and Alexander W Pastuszak. “The Safety and
                   Efficacy of Growth Hormone Secretagogues.”
-                  <i>Sexual medicine reviews</i> vol. 6,1 (2018): 45-53.</a
-                >
+                  <i>Sexual medicine reviews</i> vol. 6,1 (2018): 45-53.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1016/s0022-3476(96)70008-2"
-                  target="_blank"
-                  >Cauter, E Van et al. "Physiology of growth hormone secretion
+                <a class="sources__link" href="https://sci-hub.se/10.1016/s0022-3476(96)70008-2" target="_blank">Cauter, E Van et al. "Physiology of growth hormone secretion
                   during sleep". <i>The Journal of pediatrics</i> vol. 128, 5 Pt
-                  2. 1996 May.</a
-                >
+                  2. 1996 May.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[17]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.jstage.jst.go.jp/article/internalmedicine1992/41/1/41_1_7/_article"
-                  target="_blank"
-                  >Kato, Yuzuru et al. “Regulation of human growth hormone
+                <a class="sources__link" href="https://www.jstage.jst.go.jp/article/internalmedicine1992/41/1/41_1_7/_article" target="_blank">Kato, Yuzuru et al. “Regulation of human growth hormone
                   secretion and its disorders.” Internal medicine (Tokyo, Japan)
                   vol. 41,1 (2002): 7-13.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[18]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1016/j.smrv.2019.101223"
-                  target="_blank"
-                  >Chennaoui, Mounir et al. “Sleep and the GH/IGF-1 axis:
+                <a class="sources__link" href="https://sci-hub.se/10.1016/j.smrv.2019.101223" target="_blank">Chennaoui, Mounir et al. “Sleep and the GH/IGF-1 axis:
                   Consequences and countermeasures of sleep loss/disorders.”
-                  Sleep medicine reviews vol. 49 (2020): 101223.</a
-                >
+                  Sleep medicine reviews vol. 49 (2020): 101223.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[19]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7237337/"
-                  target="_blank"
-                  >Lal, Rayhan A, and Andrew R Hoffman. “Perspectives on
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7237337/" target="_blank">Lal, Rayhan A, and Andrew R Hoffman. “Perspectives on
                   long-acting growth hormone therapy in children and adults.”
                   <i>Archives of endocrinology and metabolism</i> vol. 63,6
-                  (2019): 601-607.</a
-                >
+                  (2019): 601-607.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[20]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6073347/"
-                  target="_blank"
-                  >Harvey, Steve, and Carlos G Martinez-Moreno. “Growth Hormone:
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6073347/" target="_blank">Harvey, Steve, and Carlos G Martinez-Moreno. “Growth Hormone:
                   Therapeutic Possibilities-An Overview.”
                   <i>International journal of molecular sciences</i> vol. 19,7
-                  2015. 11 Jul. 2018.</a
-                >
+                  2015. 11 Jul. 2018.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[21]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.1159/000229766"
-                  target="_blank"
-                  >Bechtold, S et al. "Effects of growth hormone treatment in
+                <a class="sources__link" href="http://sci-hub.se/10.1159/000229766" target="_blank">Bechtold, S et al. "Effects of growth hormone treatment in
                   juvenile idiopathic arthritis: bone and body composition".
-                  <i>Hormone research</i> vol. 72 Suppl 1. 2009 Nov.</a
-                >
+                  <i>Hormone research</i> vol. 72 Suppl 1. 2009 Nov.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[22]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.1159/000452913"
-                  target="_blank"
-                  >Bodart, Gwennaëlle et al. "The Somatotrope Growth
+                <a class="sources__link" href="http://sci-hub.se/10.1159/000452913" target="_blank">Bodart, Gwennaëlle et al. "The Somatotrope Growth
                   Hormone-Releasing Hormone/Growth Hormone/Insulin-Like Growth
                   Factor-1 Axis in Immunoregulation and Immunosenescence".
-                  <i>Frontiers of hormone research</i> vol. 48. 2017.</a
-                >
+                  <i>Frontiers of hormone research</i> vol. 48. 2017.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[23]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1038/nrendo.2013.78"
-                  target="_blank"
-                  >Nyberg, Fred et al. "Growth hormone and cognitive function".
-                  <i>Nature reviews. Endocrinology</i> vol. 9, 6. 2013 Jun.</a
-                >
+                <a class="sources__link" href="https://sci-hub.se/10.1038/nrendo.2013.78" target="_blank">Nyberg, Fred et al. "Growth hormone and cognitive function".
+                  <i>Nature reviews. Endocrinology</i> vol. 9, 6. 2013 Jun.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[24]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424628/"
-                  target="_blank"
-                  >Bartke, Andrzej, and Justin Darcy. “GH and ageing: Pitfalls
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424628/" target="_blank">Bartke, Andrzej, and Justin Darcy. “GH and ageing: Pitfalls
                   and new insights.”
-                  <i
-                    >Best practice & research. Clinical endocrinology &
-                    metabolism</i
-                  >
-                  vol. 31,1 (2017): 113-125.</a
-                >
+                  <i>Best practice & research. Clinical endocrinology &
+                    metabolism</i>
+                  vol. 31,1 (2017): 113-125.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

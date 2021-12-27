@@ -1,0 +1,589 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Голодание. Оздоровляемся путем НЕпоглощения еды | Адам Леос" />
+{% endblock %}
+{% block title %} Голодание. Оздоровляемся путем НЕпоглощения еды | Адам Леос {% endblock %}
+{% block content %}
+      <section class="main__section articles">
+        <h2 class="main__heading">Голодание</h2>
+
+        <input type="checkbox" id="gradient" class="articles__gradient-checkbox">
+        <ul class="articles__list">
+          <label for="gradient" class="articles__navigation">
+            <span class="articles__navigation-arrow"></span>
+            <span class="
+                articles__navigation-arrow articles__navigation-arrow--right
+              "></span>
+          </label>
+          <li class="articles__item">
+            <a href="/posts/fasting-is-not-what-you-think.html" class="articles__link">1. Голодание - это не то, что вы подумали</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/fasting-variations.html" class="articles__link">2. Вариации голодания</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/circadian-components-in-eating.html" class="articles__link">3. Циркадные компоненты в приемах пищи</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/time-restricted-eating-i.html" class="articles__link">
+              4. Ограниченное окно для принятия пищи (Time-restricted eating).
+              Часть I
+            </a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/time-restricted-eating-ii.html" class="articles__link">
+              5. Ограниченное окно для принятия пищи (Time-restricted eating).
+              Часть II
+            </a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/ghrelin-and-hunger.html" class="articles__link">6. Грелин и чувство голода</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/not-a-medicine-fasting.html" class="articles__link">7. НЕмедицинское голодание</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/autophagy-or-selfeating.html" class="articles__link">8. Аутофагия, или самопоедание</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/mimicking-fasting.html" class="articles__link">9. Имитируем голодание</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/fat-is-good.html" class="articles__link">10. Жир - это хорошо</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/mitochondria-overload.html" class="articles__link">11. Перегрузка митохондрий</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/metabolic-flexibility.html" class="articles__link">12. Метаболическая гибкость</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/mtor-to-grow-or-to-survive.html" class="articles__link">13. мТОР: расти или выживать</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/fasting-nuances-i-deficiencies.html" class="articles__link">14. Нюансы голодания. Часть I: Недостаток питательных веществ</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/fasting-nuances-ii-age-muscle-brain.html" class="articles__link">15. Нюансы голодания. Часть II: Возраст, мышцы и мозги</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/fasting-nuances-iii-diseases.html" class="articles__link">16. Нюансы голодания. Часть III: Расстройства и нарушения</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/fasting-nuances-iv-toxins-release.html" class="articles__link">17. Нюансы голодания. Часть IV: Высвобождение токсинов</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/fasting-nuances-v-ending-fast.html" class="articles__link">18. Нюансы голодания. Часть V: Выходим из голодания</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/what-to-eat-on-fmd.html" class="articles__link">19. Что есть на имитирующей голодание диете?</a>
+          </li>
+        </ul>
+
+        <span class="articles__delimiter articles__delimiter--single"></span>
+
+        <div class="articles__grid">
+          <div class="articles__topic">
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-is-not-what-you-think.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-is-not-what-you-think.png') }}" alt="fasting-is-not-what-you-think">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/fasting-is-not-what-you-think.html">
+                  <h3 class="article__heading">
+                    Голодание - это не то, что вы подумали
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-is-not-what-you-think.html">
+                <p class="article__description">
+                  Наконец-то говорим о голодании! В ближайшие несколько недель
+                  мы раскроем тему в подробностях, изучим последствия для
+                  здоровья, окунемся в самые распространенные вариации
+                  голодания, и найдем ответы на вопросы: “стоит ли голодать” и
+                  “как лучше всего это делать”. Для нетерпеливых - однозначно
+                  стоит, но с умом.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-variations.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-variations.jpg') }}" alt="fasting-variations">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/fasting-variations.html">
+                  <h3 class="article__heading">Вариации голодания</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-variations.html">
+                <p class="article__description">
+                  Сегодня мы обсудим вариации голодания, какие подходы на
+                  сегодняшний день самые популярные и, что самое главное,
+                  эффективные. Конечно же, каждый из них заслуживает отдельный,
+                  самостоятельный пост… Что мы, собственно, и сделаем, где-то на
+                  следующей неделе. Так что принимайте этот пост как
+                  верхнеуровневую сводку (но все еще крайне полезную), после
+                  которой мы углубимся в самые важные направления.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/circadian-components-in-eating.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/circadian-components-in-eating.jpg') }}" alt="circadian-components-in-eating">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/circadian-components-in-eating.html">
+                  <h3 class="article__heading">
+                    Циркадные компоненты в приемах пищи
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/circadian-components-in-eating.html">
+                <p class="article__description">
+                  Собирался начать раскрывать упомянутые в предыдущем посте
+                  техники голодания в подробностях, как осознал, что у меня
+                  снова не влазит все в один пост. Подготавливал пост об
+                  ограниченном окне для принятия пищи и обозначение циркадных
+                  компонентов вылилось в… по сути в этот отдельный пост. Поэтому
+                  сегодня обсудим как циркадные ритмы связаны с приемами пищи и
+                  почему это важно. А завтра уже вернемся к ограниченному окну.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/time-restricted-eating-i.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/time-restricted-eating-i.jpg') }}" alt="time-restricted-eating-i">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/time-restricted-eating-i.html">
+                  <h3 class="article__heading">
+                    Ограниченное окно для принятия пищи (Time-restricted
+                    eating). Часть I
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/time-restricted-eating-i.html">
+                <p class="article__description">
+                  Углубление в основные техники голодания мы начнем с
+                  ограниченного окна для принятия пищи (англ. TRE). Да, не
+                  смотря на то, что для некоторых это не является “голоданием”
+                  как таковым, и даже я этот подход называю больше “здоровым
+                  режимом приема пищи”, ограниченное окно способно предложить
+                  очень много.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/time-restricted-eating-ii.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/time-restricted-eating-ii.png') }}" alt="time-restricted-eating-ii">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/time-restricted-eating-ii.html">
+                  <h3 class="article__heading">
+                    Ограниченное окно для принятия пищи (Time-restricted
+                    eating). Часть II
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/time-restricted-eating-ii.html">
+                <p class="article__description">
+                  В предыдущем посте мы обсудили базовую теорию, связанную с
+                  идеей ограничения времени для приема пищи. Базовую - т.к.
+                  тогда мы оперировали примерами с простым, но крайне
+                  эффективным режимом (16\8). Конечно же, окно можно уменьшать
+                  дальше 8 часов.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/ghrelin-and-hunger.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/ghrelin-and-hunger.png') }}" alt="ghrelin-and-hunger">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/ghrelin-and-hunger.html">
+                  <h3 class="article__heading">Грелин и чувство голода</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/ghrelin-and-hunger.html">
+                <p class="article__description">
+                  Базовая информация: грелин - это так называемый “гормон
+                  голода” и он действительно принимает непосредственное участие
+                  в регулировании желания есть. Высокая его концентрация во
+                  многом и порождает чувство голодa
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/not-a-medicine-fasting.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/not-a-medicine-fasting.jpg') }}" alt="not-a-medicine-fasting">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/not-a-medicine-fasting.html">
+                  <h3 class="article__heading">НЕмедицинское голодание</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/not-a-medicine-fasting.html">
+                <p class="article__description">
+                  Занимательно, что голодание - это не просто внезапное
+                  современное модное направление в диетологии. На протяжении
+                  многих лет в человеческой истории существовало большое
+                  количество аналогичных подходов. Самые известные случаи - в
+                  религиях. Люди вполне ожидаемо обратили внимание на
+                  человеческую “зависимость” от еды и связали просветление и
+                  духовность с собственным воздержанием от подобных искушений.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/autophagy-or-selfeating.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/autophagy-or-selfeating.jpg') }}" alt="autophagy-or-selfeating">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/autophagy-or-selfeating.html">
+                  <h3 class="article__heading">Аутофагия, или самопоедание</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/autophagy-or-selfeating.html">
+                <p class="article__description">
+                  В этом посте мы познакомимся с одним крайне важным процессом
+                  нашего организма - аутофагией. Он играет важную роль в теме
+                  голодания, но на самом деле процесс настолько интересный,
+                  комплексный, и критичный, что в будущем я собираюсь посвятить
+                  ему отдельную тему. Сегодня же, как обычно, рассмотрим в
+                  разрезе голодания.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/mimicking-fasting.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/mimicking-fasting.jpg') }}" alt="mimicking-fasting">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/mimicking-fasting.html">
+                  <h3 class="article__heading">Имитируем голодание</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/mimicking-fasting.html">
+                <p class="article__description">
+                  Пора обсудить наконец эту “волшебную голодание имитирующую
+                  диету”, упомянутую мной в посте о вариациях голодания.
+                  “Волшебную”, так как диета утверждает, что вы сможете
+                  достигнуть эффектов голодания, продолжая есть! И хотя я уже
+                  заспойлерил в том посте, что это действительно так, давайте
+                  все же разберем механизмы немного подробнее.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fat-is-good.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fat-is-good.jpg') }}" alt="fat-is-good">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/fat-is-good.html">
+                  <h3 class="article__heading">Жир - это хорошо</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fat-is-good.html">
+                <p class="article__description">
+                  Сегодня делаем важное отступление и обсудим жир, который
+                  наверняка для многих является причиной номер один для
+                  голодания. Это будет отличной подводкой к будущим постам. Дело
+                  в том, что жир — это крайне мощный механизм для выживания, а
+                  не чтобы летом было стыдно в купальнике ходить.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/mitochondria-overload.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/mitochondria-overload.png') }}" alt="mitochondria-overload">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/mitochondria-overload.html">
+                  <h3 class="article__heading">Перегрузка митохондрий</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/mitochondria-overload.html">
+                <p class="article__description">
+                  Планировал сегодня написать о метаболической гибкости, но для
+                  этого необходимо немного обсудить такой феномен как
+                  “перегрузка митохондрий”. Механизмы эти крайне важные и тесно
+                  связанные, так что информация будет полезной и интересной.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/metabolic-flexibility.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/metabolic-flexibility.png') }}" alt="metabolic-flexibility">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/metabolic-flexibility.html">
+                  <h3 class="article__heading">Метаболическая гибкость</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/metabolic-flexibility.html">
+                <p class="article__description">
+                  Продолжим изучать процессы, связанные с голоданием и
+                  приносящие нам полезные эффекты. Наконец-то мы добрались до
+                  метаболической гибкости - ключевому механизму метаболизма
+                  энергии. Если кратко, то эта гибкость обозначает способность
+                  организма периодически переключаться на альтернативные
+                  источники энергии (по необходимости).
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/mtor-to-grow-or-to-survive.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/mtor-to-grow-or-to-survive.png') }}" alt="mtor-to-grow-or-to-survive">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/mtor-to-grow-or-to-survive.html">
+                  <h3 class="article__heading">мТОР: расти или выживать?</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/mtor-to-grow-or-to-survive.html">
+                <p class="article__description">
+                  Казалось бы, ну что еще может предложить периодическое
+                  голодание? Вечную молодость и бесконечную жизнь! Ну или типа
+                  того. Есть у нас интересная протеинкиназа под названием мТОР.
+                  Наверняка некоторые из вас слышали это модное словечко,
+                  которое постоянно фигурирует в разговорах об удлинении жизни.
+                  На русском вообще-то называется "механистичекая мишень
+                  связывания рапамицина". Но мы будем оперировать английской
+                  аббревиатурой мТОР для простоты.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-nuances-i-deficiencies.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-nuances-i-deficiencies.png') }}" alt="fasting-nuances-i-deficiencies">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/fasting-nuances-i-deficiencies.html">
+                  <h3 class="article__heading">
+                    Нюансы голодания. Часть I: Недостаток питательных веществ
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-nuances-i-deficiencies.html">
+                <p class="article__description">
+                  Начнем с очевидного - недостаток питательных веществ. И хотя
+                  присутствует факт того, что здоровому человеку это не грозит,
+                  не стоит забывать, что не все находятся в идеально здоровом
+                  состоянии.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-nuances-ii-age-muscle-brain.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-nuances-ii-age-muscle-brain.png') }}" alt="fasting-nuances-ii-age-muscle-brain">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/fasting-nuances-ii-age-muscle-brain.html">
+                  <h3 class="article__heading">
+                    Нюансы голодания. Часть II: Возраст, мышцы и мозги
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-nuances-ii-age-muscle-brain.html">
+                <p class="article__description">
+                  Несмотря на то, что периодическое голодание показывало
+                  отличные результаты почти при любом возрасте, следует
+                  учитывать ряд особенностей. Например, у детей действительно
+                  растущий организм и их метаболизм быстрее чем у взрослого.
+                  Поэтому подобные ограничения для здоровых детей нежелательны.
+                  Лучше исправить диету своего чада и смотреть, чтобы он не
+                  переедал.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-nuances-iii-diseases.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-nuances-iii-diseases.jpg') }}" alt="fasting-nuances-iii-diseases">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/fasting-nuances-iii-diseases.html">
+                  <h3 class="article__heading">
+                    Нюансы голодания. Часть III: Расстройства и нарушения
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-nuances-iii-diseases.html">
+                <p class="article__description">
+                  Продолжая изучать нюансы голодания, очень важно обратить
+                  внимание на свое текущее состояние здоровья. Ведь в некоторых
+                  случаях подобные ограничения может быть крайне нежелательно.
+                  Но еще чаще, определенные расстройства могут довольно
+                  незаметно оказывать негативное влияние при голодании.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-nuances-iv-toxins-release.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-nuances-iv-toxins-release.jpg') }}" alt="fasting-nuances-iv-toxins-release">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/fasting-nuances-iv-toxins-release.html">
+                  <h3 class="article__heading">
+                    Нюансы голодания. Часть IV: Высвобождение токсинов
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-nuances-iv-toxins-release.html">
+                <p class="article__description">
+                  Сегодня мы продолжим говорить о потенциальных проблемах,
+                  которые обязательно необходимо учесть, прежде чем начать
+                  голодать. Большой нюанс присутствует в использовании жировых
+                  запасов. Дело в том, что в жировые ткани при их создании могут
+                  попасть разнообразные нежелательные вещества, самые известные
+                  среди которых будут пестициды и тяжелые металлы.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/fasting-nuances-v-ending-fast.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/fasting-nuances-v-ending-fast.jpg') }}" alt="fasting-nuances-v-ending-fast">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/fasting.html">
+                  <span class="article__tag">Голодание</span>
+                </a>
+                <a class="article__link" href="/posts/fasting-nuances-v-ending-fast.html">
+                  <h3 class="article__heading">
+                    Нюансы голодания. Часть V: Выходим из голодания
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/fasting-nuances-v-ending-fast.html">
+                <p class="article__description">
+                  Ладненько, последняя часть нюансов голодания, а заодно и
+                  заключительный пост темы голодания перед выходом видео.
+                  Сегодня хотел бы обратить внимание на один важный нюанс,
+                  который обычно не берется во внимание - как правильно и
+                  безопасно выйти из голодания.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/what-to-eat-on-fmd.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/what-to-eat-on-fmd.jpg') }}" alt="what-to-eat-on-fmd">
+                  </div>
+                </a>
+                <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
+                <a class="article__link" href="/posts/what-to-eat-on-fmd.html">
+                  <h3 class="article__heading">
+                    Что есть на имитирующей голодание диете?
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/what-to-eat-on-fmd.html">
+                <p class="article__description">
+                  Я особо не планировал данный пост, но один из самых частых
+                  вопросов, после публикации видео о голодании , был “Что есть
+                  на имитирующей голодание диете, конкретно”. Поэтому закрывая
+                  тему голодания , закончим этим постом, где я подробнее
+                  поделюсь подходящими вариациями блюд и продуктов.
+                </p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    {% endblock %}

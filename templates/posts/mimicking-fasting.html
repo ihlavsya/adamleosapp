@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Имитируем голодание | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Имитируем голодание | Адам Леос" />
+{% endblock %}
+{% block title %} Имитируем голодание | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/fasting.html"><span>Голодание</span></a>
+            <a href="/topics/fasting.html"><span>Голодание</span></a>
             <div class="post__delimiter"></div>
           </span>
           Имитируем голодание
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/mimicking-fasting.jpg"
-              alt="mimicking-fasting"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/mimicking-fasting.jpg') }}" alt="mimicking-fasting">
           </div>
           <p class="post__text">
             Пора обсудить наконец эту “волшебную голодание имитирующую диету”,
@@ -91,34 +30,23 @@
           <p class="post__text">
             Как мы обсуждали ранее, у нашего организма заложены множество
             процессов, задача которых поддерживать нас в работоспособном
-            состоянии даже во время отсутствия ресурсов [<a href="#sources-list"
-              >1</a
-            >]. Например, аутофагию мы обсудили в предыдущем посте, а в
+            состоянии даже во время отсутствия ресурсов [<a href="#sources-list">1</a>]. Например, аутофагию мы обсудили в предыдущем посте, а в
             последующих я планирую раскрыть шире темы запасов и использования
             жира [<a href="#sources-list">2</a>], а также изнашивания организма
-            (в ключе молодости и старения, связанных с нашей темой) [<a
-              href="#sources-list"
-              >3</a
-            >].
+            (в ключе молодости и старения, связанных с нашей темой) [<a href="#sources-list">3</a>].
           </p>
           <p class="post__text">
             Важно, что эти процессы не “спят”, ожидая прихода голода, а делают
             свои дела постоянно [<a href="#sources-list">4</a>]. И отличается
             лишь “степень активности” в зависимости от условий, в которых мы
             находимся. Занимательной же находкой было то, что активирует эти
-            процессы не только голодание, но и ряд других событий [<a
-              href="#sources-list"
-              >5</a
-            >]. Среди которых нас особо интересуют исследования, построенные
+            процессы не только голодание, но и ряд других событий [<a href="#sources-list">5</a>]. Среди которых нас особо интересуют исследования, построенные
             вокруг ограничения калорий [<a href="#sources-list">6</a>].
           </p>
           <p class="post__text">
             И речь не о банальных диетах с постоянным ограничением калорий. О
             них мы поговорим однажды отдельно (краткий комментарий: негативных
-            эффектов и нюансов сильно больше, чем преимуществ) [<a
-              href="#sources-list"
-              >7</a
-            >]. Сегодня мы обсудим исследования, указывающие, что если следовать
+            эффектов и нюансов сильно больше, чем преимуществ) [<a href="#sources-list">7</a>]. Сегодня мы обсудим исследования, указывающие, что если следовать
             правильной диете в течении нескольких дней, то вы достигнете
             большинства эффектов голодания, при этом не голодая вовсе!
           </p>
@@ -129,13 +57,8 @@
             калорий. Очевидным образом преследовалась максимизация получаемых
             питательных веществ с минимизацией количества калорий. Таким
             образом, рацион состоял преимущественно из ненасыщенные жиров и
-            различных вариаций овощей, с акцентом на зелень [<a
-              href="#sources-list"
-              >8</a
-            >]. Заодно, это позволяло поддерживать микрофлору в хорошем
-            состоянии (а вы же помните, как это важно!) [<a href="#sources-list"
-              >9</a
-            >].
+            различных вариаций овощей, с акцентом на зелень [<a href="#sources-list">8</a>]. Заодно, это позволяло поддерживать микрофлору в хорошем
+            состоянии (а вы же помните, как это важно!) [<a href="#sources-list">9</a>].
           </p>
           <p class="post__text">
             При этом, находиться на диете постоянно вовсе не надо. Вы ей
@@ -144,10 +67,7 @@
             исследования, по прошествию пяти дней вы достигнете большинства
             положительных эффектов голодания [<a href="#sources-list">10</a>].
             Безусловно, можно и дольше, но как и с сильным уменьшением окна,
-            эффект будет увеличиваться уже не так значительно [<a
-              href="#sources-list"
-              >11</a
-            >].
+            эффект будет увеличиваться уже не так значительно [<a href="#sources-list">11</a>].
           </p>
           <p class="post__text">
             Разве что, это единственный важный момент - надо хотя бы пять дней
@@ -169,26 +89,21 @@
             определенные риски, но так как они общие для любого режима
             продолжительного голодания (и занимают много места), мы их обсудим в
             следующем посте [<a href="#sources-list">14</a>]. Но среди всех
-            режимов, данная диета является наиболее безопасной [<a
-              href="#sources-list"
-              >15</a
-            >]. Главное - применяйте плавно и следите за показателями
+            режимов, данная диета является наиболее безопасной [<a href="#sources-list">15</a>]. Главное - применяйте плавно и следите за показателями
             питательных веществ, дабы избежать дефицита (можно принимать
             добавки).
           </p>
 
           <div class="post__continue continue">
-            <a href="./autophagy-or-selfeating.html" class="continue__button">
+            <a href="/posts/autophagy-or-selfeating.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Голодание</span>
-                <span class="continue__heading"
-                  >Аутофагия, или самопоедание</span
-                >
+                <span class="continue__heading">Аутофагия, или самопоедание</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a href="./fat-is-good.html" class="continue__button">
+            <a href="/posts/fat-is-good.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
                 <span class="continue__heading">Жир - это хорошо</span>
@@ -202,102 +117,58 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6314618/"
-                  target="_blank"
-                  >Wilhelmi de Toledo, Françoise et al. “Safety, health
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6314618/" target="_blank">Wilhelmi de Toledo, Françoise et al. “Safety, health
                   improvement and well-being during a 4 to 21-day fasting period
                   in an observational study including 1422 subjects.”
-                  <i>PloS one</i> vol. 14,1 e0209353. 2 Jan. 2019.</a
-                >
+                  <i>PloS one</i> vol. 14,1 e0209353. 2 Jan. 2019.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/"
-                  target="_blank"
-                  >Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/" target="_blank">Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
                   Cold Spring Harbor perspectives in biology vol. 4,9 a008417. 1
-                  Sep. 2012.</a
-                >
+                  Sep. 2012.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/"
-                  target="_blank"
-                  >Longo, Valter D, and Mark P Mattson. “Fasting: molecular
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/" target="_blank">Longo, Valter D, and Mark P Mattson. “Fasting: molecular
                   mechanisms and clinical applications.”
-                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a
-                >
+                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5388543/"
-                  target="_blank"
-                  >Longo, Valter D, and Satchidananda Panda. “Fasting, Circadian
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5388543/" target="_blank">Longo, Valter D, and Satchidananda Panda. “Fasting, Circadian
                   Rhythms, and Time-Restricted Feeding in Healthy Lifespan.”
-                  Cell metabolism vol. 23,6 (2016): 1048-1059.</a
-                >
+                  Cell metabolism vol. 23,6 (2016): 1048-1059.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/20811357/"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/20811357/" target="_blank">
                   Madeo F, Tavernarakis N, Kroemer G. Can autophagy promote
-                  longevity? Nat Cell Biol. 2010 Sep;12(9):842-6.</a
-                >
+                  longevity? Nat Cell Biol. 2010 Sep;12(9):842-6.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4509734/"
-                  target="_blank"
-                  >Brandhorst, Sebastian et al. “A Periodic Diet that Mimics
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4509734/" target="_blank">Brandhorst, Sebastian et al. “A Periodic Diet that Mimics
                   Fasting Promotes Multi-System Regeneration, Enhanced Cognitive
                   Performance, and Healthspan.” Cell metabolism vol. 22,1
-                  (2015): 86-99.</a
-                >
+                  (2015): 86-99.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3673773/"
-                  target="_blank"
-                  >Rosenbaum, M, and R L Leibel. “Adaptive thermogenesis in
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3673773/" target="_blank">Rosenbaum, M, and R L Leibel. “Adaptive thermogenesis in
                   humans.” <i>International journal of obesity (2005)</i> vol.
-                  34 Suppl 1,0 1 (2010): S47-55.</a
-                >
+                  34 Suppl 1,0 1 (2010): S47-55.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816332/bin/NIHMS1054235-supplement-Supplementary_Materials.pdf"
-                  target="_blank"
-                  >Wei, Min et al. “Fasting-mimicking diet and markers/risk
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816332/bin/NIHMS1054235-supplement-Supplementary_Materials.pdf" target="_blank">Wei, Min et al. “Fasting-mimicking diet and markers/risk
                   factors for aging, diabetes, cancer, and cardiovascular
                   disease.” <i>Science translational medicine</i> vol. 9,377
-                  (2017): eaai8700.</a
-                >
+                  (2017): eaai8700.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://academic.oup.com/nutritionreviews/article/70/suppl_1/S38/1921538"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://academic.oup.com/nutritionreviews/article/70/suppl_1/S38/1921538" target="_blank">
                   Ursell, Metcalf et al. “Defining the human microbiome.”
                   Nutrition Reviews, Volume 70, Issue suppl_1, 1 August 2012,
                   Pages S38–S44.
@@ -305,81 +176,49 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4509734/"
-                  target="_blank"
-                  >Brandhorst, Sebastian et al. “A Periodic Diet that Mimics
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4509734/" target="_blank">Brandhorst, Sebastian et al. “A Periodic Diet that Mimics
                   Fasting Promotes Multi-System Regeneration, Enhanced Cognitive
                   Performance, and Healthspan.” Cell metabolism vol. 22,1
-                  (2015): 86-99.</a
-                >
+                  (2015): 86-99.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816332/"
-                  target="_blank"
-                  >Wei, Min et al. “Fasting-mimicking diet and markers/risk
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816332/" target="_blank">Wei, Min et al. “Fasting-mimicking diet and markers/risk
                   factors for aging, diabetes, cancer, and cardiovascular
                   disease.” Science translational medicine vol. 9,377 (2017):
-                  eaai8700.</a
-                >
+                  eaai8700.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816332/"
-                  target="_blank"
-                  >Wei, Min et al. “Fasting-mimicking diet and markers/risk
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816332/" target="_blank">Wei, Min et al. “Fasting-mimicking diet and markers/risk
                   factors for aging, diabetes, cancer, and cardiovascular
                   disease.” Science translational medicine vol. 9,377 (2017):
-                  eaai8700.</a
-                >
+                  eaai8700.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.foundmyfitness.com/episodes/frequency-fasting-mimicking-diet-valter-longo"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.foundmyfitness.com/episodes/frequency-fasting-mimicking-diet-valter-longo" target="_blank">
                   Patrick, Rhonda. “How Frequently Should You Do the Fasting
                   Mimicking Diet? | Valter Longo.” FoundMyFitness, 5 Sept.
-                  2019.</a
-                >
+                  2019.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/32019765/"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/32019765/" target="_blank">
                   Mustieles, Vicente, and Juan P Arrebola. “How polluted is your
                   fat? What the study of adipose tissue can contribute to
                   environmental epidemiology.” Journal of epidemiology and
-                  community health vol. 74,5 (2020): 401-407.</a
-                >
+                  community health vol. 74,5 (2020): 401-407.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6528490/"
-                  target="_blank"
-                  >Rangan, Priya et al. “Fasting-Mimicking Diet Modulates
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6528490/" target="_blank">Rangan, Priya et al. “Fasting-Mimicking Diet Modulates
                   Microbiota and Promotes Intestinal Regeneration to Reduce
                   Inflammatory Bowel Disease Pathology.” Cell reports vol. 26,10
-                  (2019): 2704-2719.e6.</a
-                >
+                  (2019): 2704-2719.e6.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

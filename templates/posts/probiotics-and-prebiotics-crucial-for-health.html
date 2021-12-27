@@ -1,75 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>
-      ПРОбиотики и ПРЕбиотики - инструмент для втюхивания йогуртов или важная
-      составляющая крепкого здоровья? | Адам Леос
-    </title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="" />
+{% endblock %}
+{% block title %}  {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/microbiome.html"><span>Микрофлора</span></a>
+            <a href="/topics/microbiome.html"><span>Микрофлора</span></a>
             <div class="post__delimiter"></div>
           </span>
           ПРОбиотики и ПРЕбиотики - инструмент для втюхивания йогуртов или
@@ -78,11 +18,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/probiotics-and-prebiotics-crucial-for-health.jpg"
-              alt="probiotics-and-prebiotics-crucial-for-health"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/probiotics-and-prebiotics-crucial-for-health.jpg') }}" alt="probiotics-and-prebiotics-crucial-for-health">
           </div>
           <p class="post__text">
             Наверняка каждый из вас слышал слово «пробиотики». Скорее всего в
@@ -106,9 +42,7 @@
             микроорганизмов [<a href="#sources-list">2</a>]. Вы же помните, что
             они питаются клетчаткой? Все виды сложных углеводов, что мы
             обсуждали в предыдущем посте, можно называть пребиотиками. Совет
-            здесь простой - ешьте побольше клетчатки! [<a href="#sources-list"
-              >3</a
-            >]
+            здесь простой - ешьте побольше клетчатки! [<a href="#sources-list">3</a>]
           </p>
           <p class="post__text">
             Но что же с «про»? Пробиотики - это уже сами бактерии, которые по
@@ -150,9 +84,7 @@
             получите. Поэтому важно чтобы пробиотик содержал живые бактерии.
             Также не менее важны условия производства и хранения продукции -
             микроорганизмы очень чувствительны к окружению и могут испустить дух
-            задолго до того, как будут вами съедены [<a href="#sources-list"
-              >8</a
-            >]
+            задолго до того, как будут вами съедены [<a href="#sources-list">8</a>]
           </p>
           <p class="post__text">
             2. Пробиотик, как и любая еда, скорее всего попадет к вам в кишечник
@@ -165,10 +97,7 @@
             В довершении ко всему, должен очень сильно вас попросить выбирать
             всю продукцию без сахара, подсластителей и прочего мусора. Мы об
             этом поговорим отдельно, но даже в разрезе микрофлоры эти вещи
-            оказывают негативный эффект на ваш микробиом [<a
-              href="#sources-list"
-              >10</a
-            >]. Набросайте сами туда ягод или орехов, приправьте корицей или
+            оказывают негативный эффект на ваш микробиом [<a href="#sources-list">10</a>]. Набросайте сами туда ягод или орехов, приправьте корицей или
             мятой и выйдет в сотни раз лучше любого магазинного.
           </p>
           <p class="post__text">
@@ -177,29 +106,20 @@
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./what-to-eat-for-microbiome-to-thrive.html"
-              class="continue__button"
-            >
+            <a href="/posts/what-to-eat-for-microbiome-to-thrive.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Микрофлора</span>
-                <span class="continue__heading"
-                  >Чем питаться, чтобы микрофлора кишечника процветала (а вместе
-                  с ней и вы)</span
-                >
+                <span class="continue__heading">Чем питаться, чтобы микрофлора кишечника процветала (а вместе
+                  с ней и вы)</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./how-our-immune-system-depends-on-microbs.html"
-              class="continue__button"
-            >
+            <a href="/posts/how-our-immune-system-depends-on-microbs.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Микрофлора</span>
                 <span class="continue__heading">
-                  Как наш иммунитет зависит от микробов в кишечнике</span
-                >
+                  Как наш иммунитет зависит от микробов в кишечнике</span>
               </div>
               <div class="continue__arrow">&#10230;</div>
             </a>
@@ -210,117 +130,68 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6463098/"
-                  target="_blank"
-                  >Dorna Davani-Davari, Dorna et al. “Prebiotics: Definition,
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6463098/" target="_blank">Dorna Davani-Davari, Dorna et al. “Prebiotics: Definition,
                   Types, Sources, Mechanisms, and Clinical Applications.” Foods
-                  (Basel, Switzerland) vol. 8,3 92. 9 Mar. 2019.</a
-                >
+                  (Basel, Switzerland) vol. 8,3 92. 9 Mar. 2019.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5390821/"
-                  target="_blank"
-                  >Hannah Holscher, Hannah D. “Dietary fiber and prebiotics and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5390821/" target="_blank">Hannah Holscher, Hannah D. “Dietary fiber and prebiotics and
                   the gastrointestinal microbiota.” Gut microbes vol. 8,2
-                  (2017): 172-184.</a
-                >
+                  (2017): 172-184.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.gastrojournal.org/article/S0016-5085(17)35698-6/fulltext"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.gastrojournal.org/article/S0016-5085(17)35698-6/fulltext" target="_blank">
                   Nicolucci, Alissa C et al. “Prebiotics Reduce Body Fat and
                   Alter Intestinal Microbiota in Children Who Are Overweight or
-                  With Obesity.” Gastroenterology vol. 153,3 (2017): 711-722.</a
-                >
+                  With Obesity.” Gastroenterology vol. 153,3 (2017): 711-722.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4997396/"
-                  target="_blank"
-                  >Huang, Ruixue et al. “Effect of Probiotics on Depression: A
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4997396/" target="_blank">Huang, Ruixue et al. “Effect of Probiotics on Depression: A
                   Systematic Review and Meta-Analysis of Randomized Controlled
-                  Trials.” <i>Nutrients</i> vol. 8,8 483. 6 Aug. 2016.</a
-                >
+                  Trials.” <i>Nutrients</i> vol. 8,8 483. 6 Aug. 2016.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4356930/"
-                  target="_blank"
-                  >Didari, Tina et al. “Effectiveness of probiotics in irritable
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4356930/" target="_blank">Didari, Tina et al. “Effectiveness of probiotics in irritable
                   bowel syndrome: Updated systematic review with meta-analysis.”
                   <i>World journal of gastroenterology</i> vol. 21,10 (2015):
-                  3072-84.</a
-                >
+                  3072-84.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6319478/"
-                  target="_blank"
-                  >Kijmanawat, Athasit et al. “Effects of probiotic supplements
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6319478/" target="_blank">Kijmanawat, Athasit et al. “Effects of probiotic supplements
                   on insulin resistance in gestational diabetes mellitus: A
                   double-blind randomized controlled trial.”
                   <i>Journal of diabetes investigation</i> vol. 10,1 (2019):
-                  163-170.</a
-                >
+                  163-170.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1016/j.copbio.2005.02.008"
-                  target="_blank"
-                  >Stanton, Catherine et al. "Fermented functional foods based
+                <a class="sources__link" href="https://sci-hub.se/10.1016/j.copbio.2005.02.008" target="_blank">Stanton, Catherine et al. "Fermented functional foods based
                   on probiotics and their biogenic metabolites".
                   <i>Current opinion in biotechnology</i> vol. 16, 2. 2005
-                  Apr.</a
-                >
+                  Apr.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://doi.org/10.1080/10408690590900144"
-                  target="_blank"
-                  >Champagne, Claude P et al. "Challenges in the addition of
+                <a class="sources__link" href="https://sci-hub.se/https://doi.org/10.1080/10408690590900144" target="_blank">Champagne, Claude P et al. "Challenges in the addition of
                   probiotic cultures to foods".
                   <i>Critical reviews in food science and nutrition</i> vol. 45,
-                  1. 2005.</a
-                >
+                  1. 2005.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.sciencedirect.com/science/article/pii/S0022030212007138"
-                  target="_blank"
-                  >F, Ortakci, F, and S Sert. “Stability of free and
+                <a class="sources__link" href="https://www.sciencedirect.com/science/article/pii/S0022030212007138" target="_blank">F, Ortakci, F, and S Sert. “Stability of free and
                   encapsulated Lactobacillus acidophilus ATCC 4356 in yogurt and
                   in an artificial human gastric digestion system.” Journal of
-                  dairy science vol. 95,12 (2012): 6918-25.</a
-                >
+                  dairy science vol. 95,12 (2012): 6918-25.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.sciencedirect.com/science/article/abs/pii/S0031938416309489"
-                  target="_blank"
-                  >Sen, Tanusree et al. “Diet-driven microbiota dysbiosis is
+                <a class="sources__link" href="https://www.sciencedirect.com/science/article/abs/pii/S0031938416309489" target="_blank">Sen, Tanusree et al. “Diet-driven microbiota dysbiosis is
                   associated with vagal remodeling and obesity.” Physiology &
                   behavior vol. 173 (2017): 305-317.
                 </a>
@@ -329,6 +200,4 @@
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

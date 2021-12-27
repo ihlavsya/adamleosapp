@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Сон под градусом | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Сон под градусом | Адам Леос" />
+{% endblock %}
+{% block title %} Сон под градусом | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/sleep.html"><span>Сон</span></a>
+            <a href="/topics/sleep.html"><span>Сон</span></a>
             <div class="post__delimiter"></div>
           </span>
           Сон под градусом
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/sleep-under-alcohol.png"
-              alt="sleep-under-alcohol"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/sleep-under-alcohol.png') }}" alt="sleep-under-alcohol">
           </div>
           <p class="post__text">
             Сегодня мы обсудим алкоголь в разрезе сна. Кроме сомнительного
@@ -91,15 +30,11 @@
           </p>
           <p class="post__text">
             Употребление спиртного действительно распространённый случай у
-            людей, испытывающих проблемы со сном [<a href="#sources-list">1</a
-            >]. Основная причина тому - алкоголь имеет свойства
+            людей, испытывающих проблемы со сном [<a href="#sources-list">1</a>]. Основная причина тому - алкоголь имеет свойства
             “успокоительного” для центральной нервной системы и подавляет
             мозговую активность [<a href="#sources-list">2</a>]. Если быть более
             точным, то алкоголь способствует производству “расслабляющего”
-            нейромедиатора NPY, вмешиваясь в экспрессию генов [<a
-              href="#sources-list"
-              >3</a
-            >]. В краткосрочной перспективе это помогает расслабиться и
+            нейромедиатора NPY, вмешиваясь в экспрессию генов [<a href="#sources-list">3</a>]. В краткосрочной перспективе это помогает расслабиться и
             действительно может помочь уснуть быстрее (если вы обычно не пьете)
             [<a href="#sources-list">4, 5</a>]. Но что по поводу качества сна?
           </p>
@@ -109,10 +44,7 @@
             медленного сна увеличивается в первой половине ночи, но не достигает
             привычной “глубины” [<a href="#sources-list">7</a>]. Количество
             быстрого сна же уменьшается [<a href="#sources-list">8</a>]. А во
-            второй половине ночи сон становится менее стабилен [<a
-              href="#sources-list"
-              >9</a
-            >]. Как вы поняли, не смотря на то, что уснуть в первое время можно
+            второй половине ночи сон становится менее стабилен [<a href="#sources-list">9</a>]. Как вы поняли, не смотря на то, что уснуть в первое время можно
             быстрее, качество сна сильно страдает.
           </p>
           <p class="post__text">
@@ -120,43 +52,28 @@
             вы обычно не пьете”. Ведь как и все подобные вещества, оказывающие
             влияние на мозг - как кофеин, как кокаин и прочие - алкоголь
             вызывает привыкание и толерантность, расшатывает нервную систему, и
-            нарушает работу нейромедиаторов и рецепторов [<a
-              href="#sources-list"
-              >10, 11, 12</a
-            >]. В долгосрочной перспективе сон нарушается еще сильнее, а в
-            дополнение, вы не сможете нормально спать без алкоголя вообще [<a
-              href="#sources-list"
-              >13</a
-            >]. Что в определенной степени и проводит к алкоголизму. Механизмы
+            нарушает работу нейромедиаторов и рецепторов [<a href="#sources-list">10, 11, 12</a>]. В долгосрочной перспективе сон нарушается еще сильнее, а в
+            дополнение, вы не сможете нормально спать без алкоголя вообще [<a href="#sources-list">13</a>]. Что в определенной степени и проводит к алкоголизму. Механизмы
             зависимости и толерантности мы разберем в отдельной теме.
           </p>
           <p class="post__text">
             Напоследок я бы упомянул, что как обычно, влияние сильно
             комплекснее. Например, исследования обнаружили связь между
             употреблением алкоголя и различными расстройствами сна, такими как
-            бессонница, нарушением циркадных ритмов [<a href="#sources-list"
-              >14</a
-            >], и проблемами с дыханием во время сна [<a href="#sources-list"
-              >15</a
-            >]. Так что нет - употребление спиртного не помогает со сном и
+            бессонница, нарушением циркадных ритмов [<a href="#sources-list">14</a>], и проблемами с дыханием во время сна [<a href="#sources-list">15</a>]. Так что нет - употребление спиртного не помогает со сном и
             только очень сильно навредит [<a href="#sources-list">16</a>].
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./night-life-recommendations.html"
-              class="continue__button"
-            >
+            <a href="/posts/night-life-recommendations.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Сон</span>
-                <span class="continue__heading"
-                  >Ночная жизнь: рекомендации</span
-                >
+                <span class="continue__heading">Ночная жизнь: рекомендации</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a href="./caffeine-sleep.html" class="continue__button">
+            <a href="/posts/caffeine-sleep.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Сон</span>
                 <span class="continue__heading">Кофеиновый сон</span>
@@ -170,201 +87,113 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.st/10.1016/s0893-133x(98)00068-2"
-                  target="_blank"
-                  >Roehrs, T et al. "Ethanol as a hypnotic in insomniacs: self
+                <a class="sources__link" href="https://sci-hub.st/10.1016/s0893-133x(98)00068-2" target="_blank">Roehrs, T et al. "Ethanol as a hypnotic in insomniacs: self
                   administration and effects on sleep and mood".
-                  <i
-                    >Neuropsychopharmacology : official publication of the
-                    American College of Neuropsychopharmacology</i
-                  >
-                  vol. 20, 3. 1999 Mar.</a
-                >
+                  <i>Neuropsychopharmacology : official publication of the
+                    American College of Neuropsychopharmacology</i>
+                  vol. 20, 3. 1999 Mar.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1590/1806-9282.61.04.381"
-                  target="_blank"
-                  >Costardi, João Victor Vezali et al. "A review on alcohol:
+                <a class="sources__link" href="http://sci-hub.st/10.1590/1806-9282.61.04.381" target="_blank">Costardi, João Victor Vezali et al. "A review on alcohol:
                   from the central action mechanism to chemical dependency".
                   <i>Revista da Associacao Medica Brasileira (1992)</i> vol. 61,
-                  4. 2015 Aug.</a
-                >
+                  4. 2015 Aug.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4398579/"
-                  target="_blank"
-                  >Gilpin, Nicholas W et al. “The central amygdala as an
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4398579/" target="_blank">Gilpin, Nicholas W et al. “The central amygdala as an
                   integrative hub for anxiety and alcohol use disorders.”
-                  <i>Biological psychiatry</i> vol. 77,10 (2015): 859-69.</a
-                >
+                  <i>Biological psychiatry</i> vol. 77,10 (2015): 859-69.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.15288/jsa.1983.44.515"
-                  target="_blank"
-                  >Williams, D L et al. "Dose-response effects of ethanol on the
+                <a class="sources__link" href="http://sci-hub.se/10.15288/jsa.1983.44.515" target="_blank">Williams, D L et al. "Dose-response effects of ethanol on the
                   sleep of young women".
-                  <i>Journal of studies on alcohol</i> vol. 44, 3. 1983 May.</a
-                >
+                  <i>Journal of studies on alcohol</i> vol. 44, 3. 1983 May.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.15288/jsa.1982.43.434"
-                  target="_blank"
-                  >MacLean, A W et al. "Dose-response effects of ethanol on the
+                <a class="sources__link" href="http://sci-hub.se/10.15288/jsa.1982.43.434" target="_blank">MacLean, A W et al. "Dose-response effects of ethanol on the
                   sleep of young men". <i>Journal of studies on alcohol</i> vol.
-                  43, 5. 1982 May.</a
-                >
+                  43, 5. 1982 May.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5821259/"
-                  target="_blank"
-                  >Colrain, Ian M et al. “Alcohol and the sleeping brain.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5821259/" target="_blank">Colrain, Ian M et al. “Alcohol and the sleeping brain.”
                   <i>Handbook of clinical neurology</i> vol. 125 (2014):
-                  415-31.</a
-                >
+                  415-31.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3987855/"
-                  target="_blank"
-                  >Chan, Julia K M et al. “The acute effects of alcohol on sleep
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3987855/" target="_blank">Chan, Julia K M et al. “The acute effects of alcohol on sleep
                   architecture in late adolescence.”
                   <i>Alcoholism, clinical and experimental research</i> vol.
-                  37,10 (2013): 1720-8.</a
-                >
+                  37,10 (2013): 1720-8.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1111/j.1530-0277.2006.00111.x"
-                  target="_blank"
-                  >Reen, Eliza Van et al. "Effects of alcohol on sleep and the
+                <a class="sources__link" href="http://sci-hub.st/10.1111/j.1530-0277.2006.00111.x" target="_blank">Reen, Eliza Van et al. "Effects of alcohol on sleep and the
                   sleep electroencephalogram in healthy young women".
                   <i>Alcoholism, clinical and experimental research</i> vol. 30,
-                  6. 2006 Jun.</a
-                >
+                  6. 2006 Jun.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1007/bf00422697"
-                  target="_blank"
-                  >Rundell, O H et al. "Alcohol and sleep in young adults".
-                  <i>Psychopharmacologia</i> vol. 26, 3. 1972.</a
-                >
+                <a class="sources__link" href="http://sci-hub.st/10.1007/bf00422697" target="_blank">Rundell, O H et al. "Alcohol and sleep in young adults".
+                  <i>Psychopharmacologia</i> vol. 26, 3. 1972.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4532397/"
-                  target="_blank"
-                  >de la Monte, Suzanne M, and Jillian J Kril. “Human
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4532397/" target="_blank">de la Monte, Suzanne M, and Jillian J Kril. “Human
                   alcohol-related neuropathology.”
-                  <i>Acta neuropathologica</i> vol. 127,1 (2014): 71-90.</a
-                >
+                  <i>Acta neuropathologica</i> vol. 127,1 (2014): 71-90.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3860493/"
-                  target="_blank"
-                  >Lovinger, David M. “Communication networks in the brain:
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3860493/" target="_blank">Lovinger, David M. “Communication networks in the brain:
                   neurons, receptors, neurotransmitters, and alcohol.”
-                  <i
-                    >Alcohol research & health : the journal of the National
-                    Institute on Alcohol Abuse and Alcoholism</i
-                  >
-                  vol. 31,3 (2008): 196-214.</a
-                >
+                  <i>Alcohol research & health : the journal of the National
+                    Institute on Alcohol Abuse and Alcoholism</i>
+                  vol. 31,3 (2008): 196-214.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1590/1806-9282.61.04.381"
-                  target="_blank"
-                  >Costardi, João Victor Vezali et al. "A review on alcohol:
+                <a class="sources__link" href="http://sci-hub.st/10.1590/1806-9282.61.04.381" target="_blank">Costardi, João Victor Vezali et al. "A review on alcohol:
                   from the central action mechanism to chemical dependency".
                   <i>Revista da Associacao Medica Brasileira (1992)</i> vol. 61,
-                  4. 2015 Aug.</a
-                >
+                  4. 2015 Aug.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2778757/"
-                  target="_blank"
-                  >Brower, K J. “Alcohol's effects on sleep in alcoholics.”
-                  <i
-                    >Alcohol research & health : the journal of the National
-                    Institute on Alcohol Abuse and Alcoholism</i
-                  >
-                  vol. 25,2 (2001): 110-25.</a
-                >
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2778757/" target="_blank">Brower, K J. “Alcohol's effects on sleep in alcoholics.”
+                  <i>Alcohol research & health : the journal of the National
+                    Institute on Alcohol Abuse and Alcoholism</i>
+                  vol. 25,2 (2001): 110-25.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7486899/"
-                  target="_blank"
-                  >Chakravorty, Subhajit et al. “Alcohol Dependence and Its
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7486899/" target="_blank">Chakravorty, Subhajit et al. “Alcohol Dependence and Its
                   Relationship With Insomnia and Other Sleep Disorders.”
                   <i>Alcoholism, clinical and experimental research</i> vol.
-                  40,11 (2016): 2271-2282.</a
-                >
+                  40,11 (2016): 2271-2282.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1016/j.smrv.2018.05.007"
-                  target="_blank"
-                  >Kolla, Bhanu Prakash et al. "The impact of alcohol on
+                <a class="sources__link" href="http://sci-hub.st/10.1016/j.smrv.2018.05.007" target="_blank">Kolla, Bhanu Prakash et al. "The impact of alcohol on
                   breathing parameters during sleep: A systematic review and
                   meta-analysis". <i>Sleep medicine reviews</i> vol. 42. 2018
-                  Dec.</a
-                >
+                  Dec.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2936493/"
-                  target="_blank"
-                  >Arnedt, J Todd et al. “Treatment options for sleep
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2936493/" target="_blank">Arnedt, J Todd et al. “Treatment options for sleep
                   disturbances during alcohol recovery.”
                   <i>Journal of addictive diseases</i> vol. 26,4 (2007):
-                  41-54.</a
-                >
+                  41-54.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

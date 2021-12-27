@@ -1,75 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>
-      Ограниченное окно для принятия пищи (Time-restricted eating). Часть II |
-      Адам Леос
-    </title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="" />
+{% endblock %}
+{% block title %}  {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/fasting.html"><span>Голодание</span></a>
+            <a href="/topics/fasting.html"><span>Голодание</span></a>
             <div class="post__delimiter"></div>
           </span>
           Ограниченное окно для принятия пищи (Time-restricted eating). Часть II
@@ -77,17 +17,11 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/time-restricted-eating-ii.png"
-              alt="time-restricted-eating-ii"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/time-restricted-eating-ii.png') }}" alt="time-restricted-eating-ii">
           </div>
           <p class="post__text">
             В
-            <a class="post__link" href="./time-restricted-eating-i.html"
-              >предыдущем посте</a
-            >
+            <a class="post__link" href="/posts/time-restricted-eating-i.html">предыдущем посте</a>
             мы обсудили базовую теорию, связанную с идеей ограничения времени
             для приема пищи.Базовую - т.к. мы оперировали примерами с простым,
             но крайне эффективным режимом (16\8). Конечно же, окно можно
@@ -112,10 +46,7 @@
           </p>
           <p class="post__text">
             Дополнительно, большинство положительных эффектов при маленьких
-            окнах связаны с приближенным к голоданию состоянием [<a
-              href="#sources-list"
-              >7</a
-            >]. И эффективнее было бы придерживаться небольшого комфортного
+            окнах связаны с приближенным к голоданию состоянием [<a href="#sources-list">7</a>]. И эффективнее было бы придерживаться небольшого комфортного
             режима ТРЕ, дополняя его периодическим, продолжительным голоданием
             [<a href="#sources-list">8</a>].
           </p>
@@ -131,18 +62,14 @@
           <p class="post__text">
             (Здесь я хотел привести отличный пример об адаптации нашего чувства
             голода, в лице
-            <a class="post__link" href="./ghrelin-and-hunger.html">грелина</a>,
+            <a class="post__link" href="/posts/ghrelin-and-hunger.html">грелина</a>,
             гормона голода. Но вы не поверите, это вылилось в
-            <a class="post__link" href="./ghrelin-and-hunger.html"
-              >отдельный пост</a
-            >. Опубликую сразу за этим)
+            <a class="post__link" href="/posts/ghrelin-and-hunger.html">отдельный пост</a>. Опубликую сразу за этим)
           </p>
           <p class="post__text">
             Если же вас интересует “идеальное” время суток для вашего окна - то
             точного ответа нет. Основная рекомендация - синхронизация с
-            <a class="post__link" href="./circadian-components-in-eating.html"
-              >циркадными ритмами</a
-            >, т.е. днем [<a href="#sources-list">10</a>]. В дополнению к этому,
+            <a class="post__link" href="/posts/circadian-components-in-eating.html">циркадными ритмами</a>, т.е. днем [<a href="#sources-list">10</a>]. В дополнению к этому,
             вам, возможно, стоит учесть пару моментов.
           </p>
           <p class="post__text">
@@ -150,9 +77,7 @@
             многих иметь окно именно по утрам [<a href="#sources-list">11</a>].
             В этом посте мы точно не будем обсуждать инсулиновую
             чувствительность (хотя в будущем - обязательно). Я лишь уточню, что
-            это действительно может помочь метаболизму [<a href="#sources-list"
-              >12</a
-            >]. Но не стоит забывать, что повышенная чувствительность может быть
+            это действительно может помочь метаболизму [<a href="#sources-list">12</a>]. Но не стоит забывать, что повышенная чувствительность может быть
             опасна для некоторых групп людей, например для диабетиков 1го типа
             [<a href="#sources-list">13</a>].
           </p>
@@ -160,14 +85,9 @@
             С другой стороны, в первой половине дня заметно увеличен уровень
             эпинефрина (адреналина) [<a href="#sources-list">14</a>], а также
             кортизола (о котором мы
-            <a class="post__link" href="./cortisol-stress-hormone.html"
-              >уже говорили</a
-            >
+            <a class="post__link" href="/posts/cortisol-stress-hormone.html">уже говорили</a>
             в разрезе темы сна) [<a href="#sources-list">15</a>]. Что
-            эволюционно должно было нам помочь добывать еду по утрам [<a
-              href="#sources-list"
-              >16</a
-            >].
+            эволюционно должно было нам помочь добывать еду по утрам [<a href="#sources-list">16</a>].
           </p>
           <p class="post__text">
             Решение, как всегда, за вами. Отталкивайтесь от собственных
@@ -178,18 +98,16 @@
           </p>
 
           <div class="post__continue continue">
-            <a href="./time-restricted-eating-i.html" class="continue__button">
+            <a href="/posts/time-restricted-eating-i.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Голодание</span>
-                <span class="continue__heading"
-                  >Ограниченное окно для принятия пищи (Time-restricted eating).
-                  Часть I</span
-                >
+                <span class="continue__heading">Ограниченное окно для принятия пищи (Time-restricted eating).
+                  Часть I</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a href="./ghrelin-and-hunger.html" class="continue__button">
+            <a href="/posts/ghrelin-and-hunger.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
                 <span class="continue__heading"> Грелин и чувство голода </span>
@@ -203,37 +121,21 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/"
-                  target="_blank"
-                  >Longo, Valter D, and Mark P Mattson. “Fasting: molecular
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/" target="_blank">Longo, Valter D, and Mark P Mattson. “Fasting: molecular
                   mechanisms and clinical applications.”
-                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a
-                >
+                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4250148/"
-                  target="_blank"
-                  >Mattson, Mark P et al. “Meal frequency and timing in health
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4250148/" target="_blank">Mattson, Mark P et al. “Meal frequency and timing in health
                   and disease.”
-                  <i
-                    >Proceedings of the National Academy of Sciences of the
-                    United States of America</i
-                  >
-                  vol. 111,47 (2014): 16647-53.</a
-                >
+                  <i>Proceedings of the National Academy of Sciences of the
+                    United States of America</i>
+                  vol. 111,47 (2014): 16647-53.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://academic.oup.com/nutritionreviews/article/72/5/308/1933482"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://academic.oup.com/nutritionreviews/article/72/5/308/1933482" target="_blank">
                   Rothschild, Jeff et al. “Time-restricted feeding and risk of
                   metabolic disease: a review of human and animal studies.”
                   Nutrition reviews vol. 72,5 (2014): 308-18.
@@ -241,39 +143,23 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2645638/"
-                  target="_blank"
-                  >Stote, Kim S et al. “A controlled trial of reduced meal
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2645638/" target="_blank">Stote, Kim S et al. “A controlled trial of reduced meal
                   frequency without caloric restriction in healthy,
                   normal-weight, middle-aged adults.”
                   <i>The American journal of clinical nutrition</i> vol. 85,4
-                  (2007): 981-8.</a
-                >
+                  (2007): 981-8.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6709695/"
-                  target="_blank"
-                  >Frank, Guido K W et al. “The Neurobiology of Eating
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6709695/" target="_blank">Frank, Guido K W et al. “The Neurobiology of Eating
                   Disorders.”
-                  <i
-                    >Child and adolescent psychiatric clinics of North
-                    America</i
-                  >
-                  vol. 28,4 (2019): 629-640.</a
-                >
+                  <i>Child and adolescent psychiatric clinics of North
+                    America</i>
+                  vol. 28,4 (2019): 629-640.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1093/ajcn/63.4.491"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://sci-hub.se/10.1093/ajcn/63.4.491" target="_blank">
                   Sawaya, A L et al. “Evaluation of four methods for determining
                   energy intake in young and older women: comparison with doubly
                   labeled water measurements of total energy expenditure.” The
@@ -283,11 +169,7 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(16)30250-9"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(16)30250-9" target="_blank">
                   Longo, Valter D, and Satchidananda Panda. “Fasting, Circadian
                   Rhythms, and Time-Restricted Feeding in Healthy Lifespan.”
                   Cell metabolism vol. 23,6 (2016): 1048-1059.
@@ -295,11 +177,7 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.annualreviews.org/doi/10.1146/annurev-nutr-071816-064634"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.annualreviews.org/doi/10.1146/annurev-nutr-071816-064634" target="_blank">
                   Patterson, Ruth E, and Dorothy D Sears. “Metabolic Effects of
                   Intermittent Fasting.” Annual review of nutrition vol. 37
                   (2017): 371-393.
@@ -307,23 +185,14 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3200169/"
-                  target="_blank"
-                  >Trepanowski, John F et al. “Impact of caloric and dietary
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3200169/" target="_blank">Trepanowski, John F et al. “Impact of caloric and dietary
                   restriction regimens on markers of health and longevity in
                   humans and animals: a summary of available findings.”
-                  <i>Nutrition journal</i> vol. 10 107. 7 Oct. 2011.</a
-                >
+                  <i>Nutrition journal</i> vol. 10 107. 7 Oct. 2011.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="http://www.jpp.krakow.pl/journal/archive/04_11/pdf/139_04_11_article.pdf"
-                  target="_blank"
-                  >Konturek, P C et al. “Gut clock: implication of circadian
+                <a class="sources__link" href="http://www.jpp.krakow.pl/journal/archive/04_11/pdf/139_04_11_article.pdf" target="_blank">Konturek, P C et al. “Gut clock: implication of circadian
                   rhythms in the gastrointestinal tract.” Journal of physiology
                   and pharmacology : an official journal of the Polish
                   Physiological Society vol. 62,2 (2011): 139-50.
@@ -331,23 +200,14 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.1016/j.metabol.2007.07.018"
-                  target="_blank"
-                  >Carlson, Olga et al. “Impact of reduced meal frequency
+                <a class="sources__link" href="http://sci-hub.se/10.1016/j.metabol.2007.07.018" target="_blank">Carlson, Olga et al. “Impact of reduced meal frequency
                   without caloric restriction on glucose regulation in healthy,
                   normal-weight middle-aged men and women.” Metabolism: clinical
-                  and experimental vol. 56,12 (2007): 1729-34.</a
-                >
+                  and experimental vol. 56,12 (2007): 1729-34.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/23107254/"
-                  target="_blank"
-                  >Dulloo, A G, and J-P Montani. “Body composition, inflammation
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/23107254/" target="_blank">Dulloo, A G, and J-P Montani. “Body composition, inflammation
                   and thermogenesis in pathways to obesity and the metabolic
                   syndrome: an overview.” Obesity reviews : an official journal
                   of the International Association for the Study of Obesity vol.
@@ -356,36 +216,22 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5723935/"
-                  target="_blank"
-                  >Ndisang, Joseph Fomusi et al. “Insulin Resistance, Type 1 and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5723935/" target="_blank">Ndisang, Joseph Fomusi et al. “Insulin Resistance, Type 1 and
                   Type 2 Diabetes, and Related Complications 2017.”
                   <i>Journal of diabetes research</i> vol. 2017 (2017):
-                  1478294.</a
-                >
+                  1478294.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5413106/"
-                  target="_blank"
-                  >Vinales, Karyne Lima et al. “The Consistency in Macronutrient
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5413106/" target="_blank">Vinales, Karyne Lima et al. “The Consistency in Macronutrient
                   Oxidation and the Role for Epinephrine in the Response to
                   Fasting and Overfeeding.”
                   <i>The Journal of clinical endocrinology and metabolism</i>
-                  vol. 102,1 (2017): 279-289.</a
-                >
+                  vol. 102,1 (2017): 279-289.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.st/10.1210/jcem-33-1-1"
-                  target="_blank"
-                  >Hwang, P et al. “Biosynthesis of human growth hormone and
+                <a class="sources__link" href="https://sci-hub.st/10.1210/jcem-33-1-1" target="_blank">Hwang, P et al. “Biosynthesis of human growth hormone and
                   prolactin by normal pituitary glands and pituitary adenomas.”
                   The Journal of clinical endocrinology and metabolism vol. 33,1
                   (1971): 1-7.
@@ -393,19 +239,12 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3607354/"
-                  target="_blank"
-                  >Fontana, Luigi et al. “Extending healthy life span--from
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3607354/" target="_blank">Fontana, Luigi et al. “Extending healthy life span--from
                   yeast to humans.” <i>Science (New York, N.Y.)</i> vol.
-                  328,5976 (2010): 321-6.</a
-                >
+                  328,5976 (2010): 321-6.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

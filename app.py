@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from views.old_posts import old_posts
+from views.old_topics import old_topics
 
 app = Flask(__name__)
 
@@ -10,37 +11,24 @@ else:
 
 
 app.register_blueprint(old_posts, url_prefix='/posts')
+app.register_blueprint(old_topics, url_prefix='/topics')
+
 @app.route('/')
+@app.route('/index.html')
 def index():
     return render_template('index.html')
 
 
+@app.route('/media')
+@app.route('/media/index.html')
+def media_index():
+    return render_template('media/index.html')
+
+
+@app.route('/contacts')
+@app.route('/contacts/index.html')
+def contacts_index():
+    return render_template('contacts/index.html')
+
 if __name__ == "__main__":
    app.run()
-
-# import os
-
-# def generate_func_from_filename(filename):
-#     func_name = filename.replace("-", "_").replace(".html", "")
-#     template = f"""
-# @old_posts.route('{filename}')
-# def {func_name}():
-#    return render_template('posts/{filename}')"""
-#     return template
-
-
-# def generate_funcs(output_filename, path):
-#     funcs = []
-#     output_file = open(output_filename, "a")
-#     for root, dirs, files in os.walk(path):
-#         for file in files:
-#             func = generate_func_from_filename(file)
-#             output_file.writelines(func)
-#             output_file.write("\n")
-#     output_file.close()
-#     return funcs
-
-
-# if __name__ == "__main__":
-#     generate_funcs("funcs.txt", "templates/posts")
-

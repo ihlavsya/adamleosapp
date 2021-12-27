@@ -1,0 +1,21 @@
+.sources__toggler {
+  color: #2c2c2c;
+  padding: 5px;
+  letter-spacing: 2px;
+}
+
+.sources__list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: #2c2c2c;
+}
+
+.sources__item {
+  padding: 10px;
+}
+
+a:visited.sources__link,
+.sources__link {
+  color: #426be8;
+}

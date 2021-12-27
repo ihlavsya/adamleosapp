@@ -1,74 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>
-      Нюансы голодания. Часть III: Расстройства и нарушения | Адам Леос
-    </title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="" />
+{% endblock %}
+{% block title %}  {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/fasting.html"><span>Голодание</span></a>
+            <a href="/topics/fasting.html"><span>Голодание</span></a>
             <div class="post__delimiter"></div>
           </span>
           Нюансы голодания. Часть III: Расстройства и нарушения
@@ -76,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/fasting-nuances-iii-diseases.jpg"
-              alt="fasting-nuances-iii-diseases"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/fasting-nuances-iii-diseases.jpg') }}" alt="fasting-nuances-iii-diseases">
           </div>
           <p class="post__text">
             Продолжая изучать нюансы голодания, очень важно обратить внимание на
@@ -92,23 +29,14 @@
           <p class="post__text">
             Начать я бы хотел с весьма недооцененных проблем. Например, имея
             расстройства типа анорексии или переедания (которые по сути являются
-            нервными расстройствами), голодание противопоказано [<a
-              href="#sources-list"
-              >1, 2</a
-            >]. Ведь в результате, это часто приводит к ухудшению состояния [<a
-              href="#sources-list"
-              >3</a
-            >]. А с учетом того, что та же анорексия имеет самый высокий уровень
+            нервными расстройствами), голодание противопоказано [<a href="#sources-list">1, 2</a>]. Ведь в результате, это часто приводит к ухудшению состояния [<a href="#sources-list">3</a>]. А с учетом того, что та же анорексия имеет самый высокий уровень
             смертности среди психиатрических расстройств, лучше заняться
             исправлением ментального здоровья [<a href="#sources-list">4</a>].
           </p>
           <p class="post__text">
             Также сложно, когда присутствуют проблемы по типу камней в желчном
             пузыре [<a href="#sources-list">5</a>]. Например, в этом случае
-            голодание может стремительно привести к осложнениям [<a
-              href="#sources-list"
-              >6</a
-            >]. Преимущественно, это вызвано резкой потерей веса у людей. Но,
+            голодание может стремительно привести к осложнениям [<a href="#sources-list">6</a>]. Преимущественно, это вызвано резкой потерей веса у людей. Но,
             как и всегда, зависимых процессов сильно больше.
           </p>
           <p class="post__text">
@@ -131,10 +59,7 @@
           <p class="post__text">
             Прежде всего, у больных диабетом второго типа, да и у большей части
             людей с ожирением, присутствуют нарушения инсулиновой
-            чувствительности и среднего уровня инсулина в целом [<a
-              href="#sources-list"
-              >9</a
-            >]. Проблема в том, что инсулин блокирует фермент под названием
+            чувствительности и среднего уровня инсулина в целом [<a href="#sources-list">9</a>]. Проблема в том, что инсулин блокирует фермент под названием
             гормон-чувствительная липаза, чья основная функция - это мобилизация
             жира [<a href="#sources-list">10</a>]. Иными словами, высокой
             уровень инсулина не позволяет нам использовать жировые запасы в
@@ -152,9 +77,7 @@
           </p>
           <p class="post__text">
             Ладно, как правильно поступать в такой ситуации? Перестать есть
-            САХАР! [<a href="#sources-list"
-              >15, 16, 17, 18, 19, 20, 21, 22, 23</a
-            >]!
+            САХАР! [<a href="#sources-list">15, 16, 17, 18, 19, 20, 21, 22, 23</a>]!
           </p>
           <p class="post__text">
             Ладно, давайте серьезно. Если в вашем рационе на постоянной основе
@@ -177,28 +100,18 @@
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./fasting-nuances-ii-age-muscle-brain.html"
-              class="continue__button"
-            >
+            <a href="/posts/fasting-nuances-ii-age-muscle-brain.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Голодание</span>
-                <span class="continue__heading"
-                  >Нюансы голодания. Часть II: Возраст, мышцы и мозги</span
-                >
+                <span class="continue__heading">Нюансы голодания. Часть II: Возраст, мышцы и мозги</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./fasting-nuances-iv-toxins-release.html"
-              class="continue__button"
-            >
+            <a href="/posts/fasting-nuances-iv-toxins-release.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
-                <span class="continue__heading"
-                  >Нюансы голодания. Часть IV: Высвобождение токсинов</span
-                >
+                <span class="continue__heading">Нюансы голодания. Часть IV: Высвобождение токсинов</span>
               </div>
               <div class="continue__arrow">&#10230;</div>
             </a>
@@ -209,67 +122,38 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7003934/"
-                  target="_blank"
-                  >Hay, Phillipa. “Current approach to eating disorders: a
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7003934/" target="_blank">Hay, Phillipa. “Current approach to eating disorders: a
                   clinical update.” Internal medicine journal vol. 50,1 (2020):
-                  24-29.</a
-                >
+                  24-29.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252500/"
-                  target="_blank"
-                  >De Young, Kyle P et al. “Bidirectional associations between
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252500/" target="_blank">De Young, Kyle P et al. “Bidirectional associations between
                   binge eating and restriction in anorexia nervosa. An
                   ecological momentary assessment study.” Appetite vol. 83
-                  (2014): 69-74.</a
-                >
+                  (2014): 69-74.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2850570/"
-                  target="_blank"
-                  >Stice, Eric et al. “Fasting increases risk for onset of binge
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2850570/" target="_blank">Stice, Eric et al. “Fasting increases risk for onset of binge
                   eating and bulimic pathology: a 5-year prospective study.”
-                  Journal of abnormal psychology vol. 117,4 (2008): 941-6.</a
-                >
+                  Journal of abnormal psychology vol. 117,4 (2008): 941-6.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/28532965/"
-                  target="_blank"
-                  >Moskowitz, Lindsay, and Eric Weiselberg. “Anorexia
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/28532965/" target="_blank">Moskowitz, Lindsay, and Eric Weiselberg. “Anorexia
                   Nervosa/Atypical Anorexia Nervosa.” Current problems in
                   pediatric and adolescent health care vol. 47,4 (2017):
-                  70-84.</a
-                >
+                  70-84.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/dieting"
-                  target="_blank"
-                  >“Dieting &amp; Gallstones.” NIH: National Institute of
-                  Diabetes and Digestive and Kidney Diseases, Nov. 2017.</a
-                >
+                <a class="sources__link" href="https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/dieting" target="_blank">“Dieting &amp; Gallstones.” NIH: National Institute of
+                  Diabetes and Digestive and Kidney Diseases, Nov. 2017.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://ajph.aphapublications.org/doi/10.2105/AJPH.81.7.880"
-                  target="_blank"
-                  >Sichieri, R et al. “A prospective study of hospitalization
+                <a class="sources__link" href="https://ajph.aphapublications.org/doi/10.2105/AJPH.81.7.880" target="_blank">Sichieri, R et al. “A prospective study of hospitalization
                   with gallstone disease among women: role of dietary factors,
                   fasting period, and dieting.” American journal of public
                   health vol. 81,7 (1991): 880-4.
@@ -277,11 +161,7 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.diabetesresearchclinicalpractice.com/article/S0168-8227(20)30841-X/fulltext"
-                  target="_blank"
-                  >Hassanein, Mohamad M et al. “Changes in fasting patterns
+                <a class="sources__link" href="https://www.diabetesresearchclinicalpractice.com/article/S0168-8227(20)30841-X/fulltext" target="_blank">Hassanein, Mohamad M et al. “Changes in fasting patterns
                   during Ramadan, and associated clinical outcomes in adults
                   with type 2 diabetes: A narrative review of epidemiological
                   studies over the last 20 years.” Diabetes research and
@@ -290,194 +170,112 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/29580576/"
-                  target="_blank"
-                  >Koye, Digsu N et al. “The Global Epidemiology of Diabetes and
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/29580576/" target="_blank">Koye, Digsu N et al. “The Global Epidemiology of Diabetes and
                   Kidney Disease.” Advances in chronic kidney disease vol. 25,2
-                  (2018): 121-132.</a
-                >
+                  (2018): 121-132.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7084909/"
-                  target="_blank"
-                  >Rachdaoui, Nadia. “Insulin: The Friend and the Foe in the
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7084909/" target="_blank">Rachdaoui, Nadia. “Insulin: The Friend and the Foe in the
                   Development of Type 2 Diabetes Mellitus.” International
-                  journal of molecular sciences vol. 21,5 1770. 5 Mar. 2020.</a
-                >
+                  journal of molecular sciences vol. 21,5 1770. 5 Mar. 2020.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7538104"
-                  target="_blank"
-                  >Arredondo-Amador, María et al. “Circadian Rhythms in
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7538104" target="_blank">Arredondo-Amador, María et al. “Circadian Rhythms in
                   Hormone-sensitive Lipase in Human Adipose Tissue: Relationship
                   to Meal Timing and Fasting Duration.” The Journal of clinical
                   endocrinology and metabolism vol. 105,12 (2020):
-                  e4407–e4416.</a
-                >
+                  e4407–e4416.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7441661/"
-                  target="_blank"
-                  >Kolb, Hubert et al. “Insulin: too much of a good thing is
-                  bad.” BMC medicine vol. 18,1 224. 21 Aug. 2020.</a
-                >
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7441661/" target="_blank">Kolb, Hubert et al. “Insulin: too much of a good thing is
+                  bad.” BMC medicine vol. 18,1 224. 21 Aug. 2020.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(17)30220-6"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(17)30220-6" target="_blank">
                   Goodpaster, Bret H, and Lauren M Sparks. “Metabolic
                   Flexibility in Health and Disease.” Cell metabolism vol. 25,5
-                  (2017): 1027-1036.</a
-                >
+                  (2017): 1027-1036.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5800835/"
-                  target="_blank"
-                  >Kim, Joon Young et al. “Impaired Lipolysis, Diminished Fat
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5800835/" target="_blank">Kim, Joon Young et al. “Impaired Lipolysis, Diminished Fat
                   Oxidation, and Metabolic Inflexibility in Obese Girls With
                   Polycystic Ovary Syndrome.” The Journal of clinical
-                  endocrinology and metabolism vol. 103,2 (2018): 546-554.</a
-                >
+                  endocrinology and metabolism vol. 103,2 (2018): 546-554.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.cdc.gov/diabetes/data/statistics-report/index.html"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.cdc.gov/diabetes/data/statistics-report/index.html" target="_blank">
                   Centers for Disease Control and Prevention. National Diabetes
                   Statistics Report, 2020. Atlanta, GA: Centers for Disease
                   Control and Prevention, U.S. Dept of Health and Human
-                  Services; 2020.</a
-                >
+                  Services; 2020.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5421126/"
-                  target="_blank"
-                  >Johnson, Richard J et al. “Perspective: A Historical and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5421126/" target="_blank">Johnson, Richard J et al. “Perspective: A Historical and
                   Scientific Perspective of Sugar and Its Relation with Obesity
                   and Diabetes.” Advances in nutrition (Bethesda, Md.) vol. 8,3
-                  412-422. 15 May. 2017.</a
-                >
+                  412-422. 15 May. 2017.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/28402535/"
-                  target="_blank"
-                  >Ruanpeng, D et al. “Sugar and artificially sweetened
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/28402535/" target="_blank">Ruanpeng, D et al. “Sugar and artificially sweetened
                   beverages linked to obesity: a systematic review and
                   meta-analysis.” QJM : monthly journal of the Association of
-                  Physicians vol. 110,8 (2017): 513-520.</a
-                >
+                  Physicians vol. 110,8 (2017): 513-520.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[17]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5893377/"
-                  target="_blank"
-                  >Jensen, Thomas et al. “Fructose and sugar: A major mediator
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5893377/" target="_blank">Jensen, Thomas et al. “Fructose and sugar: A major mediator
                   of non-alcoholic fatty liver disease.” Journal of hepatology
-                  vol. 68,5 (2018): 1063-1075.</a
-                >
+                  vol. 68,5 (2018): 1063-1075.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[18]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4751088/"
-                  target="_blank"
-                  >Ley, Sylvia H et al. “Prevention and management of type 2
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4751088/" target="_blank">Ley, Sylvia H et al. “Prevention and management of type 2
                   diabetes: dietary components and nutritional strategies.”
-                  Lancet (London, England) vol. 383,9933 (2014): 1999-2007.</a
-                >
+                  Lancet (London, England) vol. 383,9933 (2014): 1999-2007.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[19]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3065753/"
-                  target="_blank"
-                  >Levy, David T et al. “A review of the literature on policies
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3065753/" target="_blank">Levy, David T et al. “A review of the literature on policies
                   directed at the youth consumption of sugar sweetened
                   beverages.” Advances in nutrition (Bethesda, Md.) vol. 2,2
-                  (2011): 182S-200S.</a
-                >
+                  (2011): 182S-200S.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[20]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860745/"
-                  target="_blank"
-                  >Bellou, Vanesa et al. “Risk factors for type 2 diabetes
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860745/" target="_blank">Bellou, Vanesa et al. “Risk factors for type 2 diabetes
                   mellitus: An exposure-wide umbrella review of meta-analyses.”
-                  PloS one vol. 13,3 e0194127. 20 Mar. 2018.</a
-                >
+                  PloS one vol. 13,3 e0194127. 20 Mar. 2018.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[21]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/29443421/"
-                  target="_blank"
-                  >Dyson, P A et al. “Diabetes UK evidence-based nutrition
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/29443421/" target="_blank">Dyson, P A et al. “Diabetes UK evidence-based nutrition
                   guidelines for the prevention and management of diabetes.”
                   Diabetic medicine : a journal of the British Diabetic
-                  Association vol. 35,5 (2018): 541-547.</a
-                >
+                  Association vol. 35,5 (2018): 541-547.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[22]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6607211/"
-                  target="_blank"
-                  >Neuenschwander, Manuela et al. “Role of diet in type 2
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6607211/" target="_blank">Neuenschwander, Manuela et al. “Role of diet in type 2
                   diabetes incidence: umbrella review of meta-analyses of
                   prospective observational studies.” BMJ (Clinical research
-                  ed.) vol. 366 l2368. 3 Jul. 2019.</a
-                >
+                  ed.) vol. 366 l2368. 3 Jul. 2019.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[23]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3210834/"
-                  target="_blank"
-                  >Malik, Vasanti S et al. “Intake of sugar-sweetened beverages
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3210834/" target="_blank">Malik, Vasanti S et al. “Intake of sugar-sweetened beverages
                   and weight gain: a systematic review.” The American journal of
-                  clinical nutrition vol. 84,2 (2006): 274-88.</a
-                >
+                  clinical nutrition vol. 84,2 (2006): 274-88.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

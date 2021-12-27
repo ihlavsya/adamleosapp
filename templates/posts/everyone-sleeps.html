@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Спят все | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Спят все | Адам Леос" />
+{% endblock %}
+{% block title %} Спят все | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/sleep.html"><span>Сон</span></a>
+            <a href="/topics/sleep.html"><span>Сон</span></a>
             <div class="post__delimiter"></div>
           </span>
           Спят все
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/everyone-sleeps.jpg"
-              alt="everyone-sleeps"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/everyone-sleeps.jpg') }}" alt="everyone-sleeps">
           </div>
           <p class="post__text">
             Начать серию постов о сне я бы хотел с ввода в уникальность и
@@ -106,31 +45,20 @@
             на важность этого процесса.
           </p>
           <p class="post__text">
-            А современные исследования это подчеркивают [<a href="#sources-list"
-              >6</a
-            >]. В особенности критичен сон для:
+            А современные исследования это подчеркивают [<a href="#sources-list">6</a>]. В особенности критичен сон для:
           </p>
           <p class="post__text">
             - иммунной системы [<a href="#sources-list">7</a>] (функционирование
             в целом [<a href="#sources-list">8</a>], популяция имунных клеток
-            [<a href="#sources-list">9</a>], выработка антител [<a
-              href="#sources-list"
-              >10</a
-            >])
+            [<a href="#sources-list">9</a>], выработка антител [<a href="#sources-list">10</a>])
           </p>
           <p class="post__text">
             - метаболизма [<a href="#sources-list">11</a>] (инсулиновая
             чувствительность [<a href="#sources-list">12</a>], использование
-            глюкозы [<a href="#sources-list">13</a>] , контроль аппетита [<a
-              href="#sources-list"
-              >14</a
-            >])
+            глюкозы [<a href="#sources-list">13</a>] , контроль аппетита [<a href="#sources-list">14</a>])
           </p>
           <p class="post__text">
-            - и, конечно же, мозга [<a href="#sources-list">15</a>] (память [<a
-              href="#sources-list"
-              >16</a
-            >], когнитивные способности [<a href="#sources-list">17</a>] ,
+            - и, конечно же, мозга [<a href="#sources-list">15</a>] (память [<a href="#sources-list">16</a>], когнитивные способности [<a href="#sources-list">17</a>] ,
             обучаемость [<a href="#sources-list">18</a>]).
           </p>
           <p class="post__text">
@@ -146,23 +74,15 @@
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./what-destroying-microbiome-ii.html"
-              class="continue__button"
-            >
+            <a href="/posts/what-destroying-microbiome-ii.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Микрофлора</span>
-                <span class="continue__heading"
-                  >Какие повседневные вещи уничтожают микрофлору. Часть II</span
-                >
+                <span class="continue__heading">Какие повседневные вещи уничтожают микрофлору. Часть II</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./sleep-phazes-and-brain-waves.html"
-              class="continue__button"
-            >
+            <a href="/posts/sleep-phazes-and-brain-waves.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Сон</span>
                 <span class="continue__heading">
@@ -178,159 +98,91 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://doi.org/10.1002/ajpa.23373"
-                  target="_blank"
-                  >Fruth, Barbara et al. "Sleep and nesting behavior in
+                <a class="sources__link" href="https://sci-hub.se/https://doi.org/10.1002/ajpa.23373" target="_blank">Fruth, Barbara et al. "Sleep and nesting behavior in
                   primates: A review".
                   <i>American journal of physical anthropology</i> vol. 166, 3.
-                  2018 Jul.</a
-                >
+                  2018 Jul.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/10.1016/0149-7634(84)90054-X"
-                  target="_blank"
-                  >Campbell, S S et al. "Animal sleep: a review of sleep
+                <a class="sources__link" href="https://sci-hub.se/10.1016/0149-7634(84)90054-X" target="_blank">Campbell, S S et al. "Animal sleep: a review of sleep
                   duration across phylogeny".
                   <i>Neuroscience and biobehavioral reviews</i> vol. 8, 3. Fall
-                  1984.</a
-                >
+                  1984.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4948738/"
-                  target="_blank"
-                  >Mascetti, Gastone. “Unihemispheric sleep and asymmetrical
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4948738/" target="_blank">Mascetti, Gastone. “Unihemispheric sleep and asymmetrical
                   sleep: behavioral, neurophysiological, and functional
                   perspectives.” Nature and science of sleep vol. 8 221-38. 12
-                  Jul. 2016.</a
-                >
+                  Jul. 2016.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4976198/"
-                  target="_blank"
-                  >Rattenborg, C et al. “Evidence that birds sleep in
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4976198/" target="_blank">Rattenborg, C et al. “Evidence that birds sleep in
                   mid-flight.” Nature communications vol. 7 12468. 3 Aug.
-                  2016.</a
-                >
+                  2016.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2525690/"
-                  target="_blank"
-                  >Cirelli, and Giulio Tononi. “Is sleep essential?.” PLoS
-                  biology vol. 6,8 (2008): e216.</a
-                >
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2525690/" target="_blank">Cirelli, and Giulio Tononi. “Is sleep essential?.” PLoS
+                  biology vol. 6,8 (2008): e216.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2869.2008.00732.x"
-                  target="_blank"
-                  >Gallicchio, Lisa, and Bindu Kalesan. “Sleep duration and
+                <a class="sources__link" href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2869.2008.00732.x" target="_blank">Gallicchio, Lisa, and Bindu Kalesan. “Sleep duration and
                   mortality: a systematic review and meta-analysis.” Journal of
                   sleep research vol. 18,2 (2009): 148-58.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.jimmunol.org/content/187/1/283.long"
-                  target="_blank"
-                  >Lange, et al. “Sleep after vaccination boosts immunological
+                <a class="sources__link" href="https://www.jimmunol.org/content/187/1/283.long" target="_blank">Lange, et al. “Sleep after vaccination boosts immunological
                   memory.” Journal of immunology (Baltimore, Md. : 1950) vol.
-                  187,1 (2011): 283-90.</a
-                >
+                  187,1 (2011): 283-90.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1038/nri1369"
-                  target="_blank"
-                  >Bryant, Penelope A et al. "Sick and tired: Does sleep have a
+                <a class="sources__link" href="http://sci-hub.st/10.1038/nri1369" target="_blank">Bryant, Penelope A et al. "Sick and tired: Does sleep have a
                   vital role in the immune system?".
-                  <i>Nature reviews. Immunology</i> vol. 4, 6. 2004 Jun.</a
-                >
+                  <i>Nature reviews. Immunology</i> vol. 4, 6. 2004 Jun.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC294300/"
-                  target="_blank"
-                  >Dinges, F et al. “Leukocytosis and natural killer cell
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC294300/" target="_blank">Dinges, F et al. “Leukocytosis and natural killer cell
                   function parallel neurobehavioral fatigue induced by 64 hours
                   of sleep deprivation.” The Journal of clinical investigation
-                  vol. 93,5 (1994): 1930-9.</a
-                >
+                  vol. 93,5 (1994): 1930-9.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1097/01.psy.0000091382.61178.f1"
-                  target="_blank"
-                  >Lange, Tanja et al. "Sleep enhances the human antibody
+                <a class="sources__link" href="http://sci-hub.st/10.1097/01.psy.0000091382.61178.f1" target="_blank">Lange, Tanja et al. "Sleep enhances the human antibody
                   response to hepatitis A vaccination".
-                  <i>Psychosomatic medicine</i> vol. 65, 5. Sep-Oct 2003.</a
-                >
+                  <i>Psychosomatic medicine</i> vol. 65, 5. Sep-Oct 2003.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3763921/"
-                  target="_blank"
-                  >Greer, M et al. “The impact of sleep deprivation on food
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3763921/" target="_blank">Greer, M et al. “The impact of sleep deprivation on food
                   desire in the human brain.” Nature communications vol. 4
-                  (2013): 2259.</a
-                >
+                  (2013): 2259.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1210/jc.2009-2430"
-                  target="_blank"
-                  >Donga, Esther et al. "A single night of partial sleep
+                <a class="sources__link" href="http://sci-hub.st/10.1210/jc.2009-2430" target="_blank">Donga, Esther et al. "A single night of partial sleep
                   deprivation induces insulin resistance in multiple metabolic
                   pathways in healthy subjects".
                   <i>The Journal of clinical endocrinology and metabolism</i>
-                  vol. 95, 6. 2010 Jun.</a
-                >
+                  vol. 95, 6. 2010 Jun.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1016/S0140-6736(99)01376-8"
-                  target="_blank"
-                  >Spiegel, K et al. "Impact of sleep debt on metabolic and
+                <a class="sources__link" href="http://sci-hub.st/10.1016/S0140-6736(99)01376-8" target="_blank">Spiegel, K et al. "Impact of sleep debt on metabolic and
                   endocrine function". <i>Lancet (London, England)</i> vol. 354,
-                  9188. 10/23/1999.</a
-                >
+                  9188. 10/23/1999.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://academic.oup.com/jcem/article/89/11/5762/2844744"
-                  target="_blank"
-                  >Spiegel, Karine et al. “Leptin levels are dependent on sleep
+                <a class="sources__link" href="https://academic.oup.com/jcem/article/89/11/5762/2844744" target="_blank">Spiegel, Karine et al. “Leptin levels are dependent on sleep
                   duration: relationships with sympathovagal balance,
                   carbohydrate regulation, cortisol, and thyrotropin.” The
                   Journal of clinical endocrinology and metabolism vol. 89,11
@@ -339,55 +191,31 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802247/"
-                  target="_blank"
-                  >Tucker, M et al. “Effects of sleep deprivation on dissociated
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802247/" target="_blank">Tucker, M et al. “Effects of sleep deprivation on dissociated
                   components of executive functioning.” Sleep vol. 33,1 (2010):
-                  47-57.</a
-                >
+                  47-57.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.st/10.1177/1073858406292647"
-                  target="_blank"
-                  >Born, Jan et al. "Sleep to remember".
-                  <i
-                    >The Neuroscientist : a review journal bringing
-                    neurobiology, neurology and psychiatry</i
-                  >
-                  vol. 12, 5. 2006 Oct.</a
-                >
+                <a class="sources__link" href="https://sci-hub.st/10.1177/1073858406292647" target="_blank">Born, Jan et al. "Sleep to remember".
+                  <i>The Neuroscientist : a review journal bringing
+                    neurobiology, neurology and psychiatry</i>
+                  vol. 12, 5. 2006 Oct.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[17]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243827/"
-                  target="_blank"
-                  >Van Hans P A et al. “A local, bottom-up perspective on sleep
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243827/" target="_blank">Van Hans P A et al. “A local, bottom-up perspective on sleep
                   deprivation and neurobehavioral performance.” Current topics
-                  in medicinal chemistry vol. 11,19 (2011): 2414-22.</a
-                >
+                  in medicinal chemistry vol. 11,19 (2011): 2414-22.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[18]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3093247/"
-                  target="_blank"
-                  >Mander, A et al. “Wake deterioration and sleep restoration of
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3093247/" target="_blank">Mander, A et al. “Wake deterioration and sleep restoration of
                   human learning.” Current biology : CB vol. 21,5 (2011):
-                  R183-4.</a
-                >
+                  R183-4.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

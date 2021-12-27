@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html" %}
+{% endblock %}
+{% block title %} Аденозин (и как его притесняет кофеин) | Адам Леос{% endblock %}
+
+{% block content %}
+<section class="main__section">
+  <h2 class="main__heading main__heading--post">
+    <span class="main__subheading">
+      <a href="/topics/sleep.html"><span>Сон</span></a>
+      <div class="post__delimiter"></div>
+    </span>
+    Аденозин (и как его притесняет кофеин)
+  </h2>
+
+  <article class="post">
+    <div class="post__imagewrapper">
+      <img class="post__image"
+        src="{{ url_for('static', filename='img/posts/adenosine-and-how-it-bullied-by-caffeine.jpg') }}"
+        alt="adenosine-and-how-it-bullied-by-caffeine" />
+    </div>
+    <p class="post__text">
+      Этот занимательный гормон уже не связан с циркадными ритмами, но так
+      же важен для сна, как и мелатонин. Аденозин отвечает за наше чувство
+      “сонливости” и накапливается в организме в течении дня, что к вечеру
+      заставляет нас хотеть поспать. А за время сна его количество в
+      организме падает и с утра мы просыпаемся бодрыми и полными сил [<a href="#sources-list">1</a>]. К слову, одно из
+      возможных причин чувства излишней сонливости по
+      утрам и в течении дня является аденозин, которого в организме
+      осталось слишком много после сна. Причин может быть много, среди
+      которых как прямые проблемы со здоровьем, так и плохая гигиена сна,
+      о которой мы еще поговорим.
+    </p>
+    <p class="post__text">
+      Отдельно разве что я бы упомянул кофе, который так всех бодрит.
+      Наверняка вы в курсе, что это из-за кофеина. Но теперь больше -
+      кофеин блокирует рецепторы аденозина, не позволяя гормону делать нас
+      сонными [<a href="#sources-list">2</a>]. На самом деле - это
+      проблема [<a href="#sources-list">3</a>]. Ведь пока рецепторы
+      заблокированы кофеином, организм продолжает производить аденозин,
+      который попросту скапливается в организме. Это приводит к появлению
+      большего количества рецепторов. А значит, в будущем понадобится
+      больше аденозина для их активации (что приведет к нарушения сна,
+      т.к. организм не привык столько производить), и еще больше кофеина
+      для их блокировки (по сути классический пример толерантности) [<a href="#sources-list">4</a>]. Вообще, о влиянии
+      кофе на сон я напишу отдельный пост (очень
+      скоро), где мы это все разберем подробнее. Пока же, пожалуйста, не
+      наседайте на кофеин и постарайтесь пить только в первой половине
+      дня. А еще лучше - соскакивайте.
+    </p>
+    <p class="post__text">
+      Напоследок, хотел бы поделится частью “цикла жизни” аденозина,
+      потому что это “занимательная эволюция во всей своей красе”. Вы
+      наверняка знаете о гликогене, сложном углеводе, который является
+      одним из основных источников энергии для организма. По сути это
+      глюкоза, запакованная для использования “попозже” (правда не так
+      надолго, как жир). Хранится преимущественно в печени, но также
+      находится и в мышцах, где гликоген затем может быть использован по
+      необходимости. И после цепочки химических реакций для конвертации
+      гликогена в энергию, отходом производства и становится аденозин (для
+      желающих разобраться еще лучше, вспомните наш универсальный источник
+      энергии - АТФ или на английском ATP, который расшифровывается как
+      Аденозинтрифосфат). Таким образом, мы имеем энергию, которую на
+      протяжении дня организм активно использует, а на выходе получаем
+      гормон, отправляющий нас спать и эту энергию восстанавливать [<a href="#sources-list">5</a>].
+    </p>
+
+    <div class="post__continue continue">
+      <a href="/posts/melatonin-aka-sleep-hormone.html" class="continue__button">
+        <div class="continue__arrow">&#10229;</div>
+        <div class="continue__content">
+          <span class="continue__tag">Сон</span>
+          <span class="continue__heading">Мелатонин aka Гормон Сна</span>
+        </div>
+      </a>
+      <div class="continue__delimiter"></div>
+      <a href="/posts/cortisol-stress-hormone.html" class="continue__button">
+        <div class="continue__content continue__content--right">
+          <span class="continue__tag">Сон</span>
+          <span class="continue__heading">Кортизол, он же “гормон стресса”</span>
+        </div>
+        <div class="continue__arrow">&#10230;</div>
+      </a>
+    </div>
+
+    <div class="post__sources sources" id="sources-list">
+      <h5 class="sources__toggler">Источники</h5>
+      <ul class="sources__list">
+        <li class="sources__item">
+          <span class="sources__number">[1]</span>
+          <a class="sources__link" href="https://sci-hub.se/10.1016/S0306-4522(00)00220-7"
+            target="_blank">Porkka-Heiskanen, T et al. "Brain site-specificity of
+            extracellular adenosine concentration changes during sleep
+            deprivation and spontaneous sleep: an in vivo microdialysis
+            study". <i>Neuroscience</i> vol. 99, 3. 2000.</a>
+        </li>
+        <li class="sources__item">
+          <span class="sources__number">[2]</span>
+          <a class="sources__link" href="https://sci-hub.st/10.1007/s00213-004-2000-x" target="_blank">Juliano, Laura M
+            et al. "A critical review of caffeine
+            withdrawal: empirical validation of symptoms and signs,
+            incidence, severity, and associated features".
+            <i>Psychopharmacology</i> vol. 176, 1. 2004 Oct.</a>
+        </li>
+        <li class="sources__item">
+          <span class="sources__number">[3]</span>
+          <a class="sources__link" href="http://sci-hub.st/10.1002/cpt1976206682" target="_blank">Karacan, I et al.
+            "Dose-related sleep disturbances induced by
+            coffee and caffeine".
+            <i>Clinical pharmacology and therapeutics</i> vol. 20, 6. 1976
+            Dec.</a>
+        </li>
+        <li class="sources__item">
+          <span class="sources__number">[4]</span>
+          <a class="sources__link" href="http://sci-hub.se/10.1016/0024-3205(83)90119-4" target="_blank">Boulenger, J P
+            et al. "Chronic caffeine consumption increases
+            the number of brain adenosine receptors".
+            <i>Life sciences</i> vol. 32, 10. 03/07/1983.</a>
+        </li>
+        <li class="sources__item">
+          <span class="sources__number">[5]</span>
+          <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2701283/"
+            target="_blank">Schwartz, Jonathan R L, and Thomas Roth. “Neurophysiology of
+            sleep and wakefulness: basic science and clinical
+            implications.” <i>Current neuropharmacology</i> vol. 6,4
+            (2008): 367-78.</a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>
+{% endblock %}

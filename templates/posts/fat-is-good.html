@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Жир - это хорошо | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Жир - это хорошо | Адам Леос" />
+{% endblock %}
+{% block title %} Жир - это хорошо | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/fasting.html"><span>Голодание</span></a>
+            <a href="/topics/fasting.html"><span>Голодание</span></a>
             <div class="post__delimiter"></div>
           </span>
           Жир - это хорошо
@@ -74,18 +17,11 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/fat-is-good.jpg"
-              alt="fat-is-good"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/fat-is-good.jpg') }}" alt="fat-is-good">
           </div>
           <p class="post__text">
             Сегодня делаем важное отступление и обсудим жир, который наверняка
-            для многих является причиной номер один для голодания [<a
-              href="#sources-list"
-              >1</a
-            >]. Это будет отличной подводкой к будущим постам. Дело в том, что
+            для многих является причиной номер один для голодания [<a href="#sources-list">1</a>]. Это будет отличной подводкой к будущим постам. Дело в том, что
             жир — это крайне мощный механизм для выживания, а не чтобы летом
             было стыдно в купальнике ходить [<a href="#sources-list">2</a>].
           </p>
@@ -93,13 +29,7 @@
             В частности, таким образом организм сохраняет излишки энергии на
             черный день [<a href="#sources-list">3</a>]. Поэтому все, что мы не
             использовали сегодня, мы сохраняем на потом. В первую очередь в
-            краткосрочное хранилище - в виде гликогена в мышцах и печени [<a
-              href="#sources-list"
-              >4</a
-            >]. Затем уже в долгосрочное хранилище - в виде жира [<a
-              href="#sources-list"
-              >5</a
-            >].
+            краткосрочное хранилище - в виде гликогена в мышцах и печени [<a href="#sources-list">4</a>]. Затем уже в долгосрочное хранилище - в виде жира [<a href="#sources-list">5</a>].
           </p>
           <p class="post__text">
             И когда черный день наступает, и мы использовали всю энергию, а
@@ -122,10 +52,7 @@
           <p class="post__text">
             И определенное количество жира не просто нормально, но и необходимо
             для здорового организма [<a href="#sources-list">12</a>]. Правда не
-            только на боках, но и вдругих местах, в том числе вокруг органов [<a
-              href="#sources-list"
-              >13</a
-            >]. Собственно, именно поэтому мы начинаем развитие жировых тканей
+            только на боках, но и вдругих местах, в том числе вокруг органов [<a href="#sources-list">13</a>]. Собственно, именно поэтому мы начинаем развитие жировых тканей
             еще до рождения [<a href="#sources-list">14</a>]. Вообще, орган
             настолько интересный и комплексный, а также окруженный тонной мифов,
             что мы в будущем посвятим ему отдельное видео.
@@ -145,20 +72,14 @@
             использованы напрямую митохондриями, через процесс под названием
             Бета-окисление [<a href="#sources-list">18</a>]. А другая часть
             жирных кислот уйдет в печень, где будет трансформированы в кетоновые
-            тела (да, те самые, что в кето диете, но сегодня о ней не будем) [<a
-              href="#sources-list"
-              >19</a
-            >]. Они затем уже отправятся в органы и мышечные ткани, где будут
+            тела (да, те самые, что в кето диете, но сегодня о ней не будем) [<a href="#sources-list">19</a>]. Они затем уже отправятся в органы и мышечные ткани, где будут
             использованы в виде энергии [<a href="#sources-list">20</a>].
           </p>
           <p class="post__text">
             Дополняя это тем, что запасы энергии в жире очень высокие, то
             человек с легкостью может поддерживать полноценное функционирование
             организма в этом состоянии на протяжении нескольких дней, а то и
-            недель, в зависимости от размера жировых запасов [<a
-              href="#sources-list"
-              >21</a
-            >]. Да, утверждения по типу, что для функционирования центральной
+            недель, в зависимости от размера жировых запасов [<a href="#sources-list">21</a>]. Да, утверждения по типу, что для функционирования центральной
             нервной системы обязательно необходимо поглощать 100 грамм глюкозы в
             день - не правдивы, так как кетоны предоставляют не меньшее
             количество энергии [<a href="#sources-list">22</a>].
@@ -167,15 +88,12 @@
             Но, конечно же, необходимо учесть пару нюансов, особенно которые
             могут сильно нарушить данные процессы. Например, высокий инсулин или
             нарушения метаболической гибкости, что приводит к невозможности
-            утилизировать жир, равно как и другим проблемам [<a
-              href="#sources-list"
-              >23</a
-            >]. Все это очень тесно перекликается с темой голодания, поэтому мы
+            утилизировать жир, равно как и другим проблемам [<a href="#sources-list">23</a>]. Все это очень тесно перекликается с темой голодания, поэтому мы
             обсудим все в подробностях уже в следующем посте.
           </p>
 
           <div class="post__continue continue">
-            <a href="./mimicking-fasting.html" class="continue__button">
+            <a href="/posts/mimicking-fasting.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Голодание</span>
@@ -183,7 +101,7 @@
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a href="./mitochondria-overload.html" class="continue__button">
+            <a href="/posts/mitochondria-overload.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Голодание</span>
                 <span class="continue__heading"> Перегрузка митохондрий </span>
@@ -197,23 +115,14 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021351/"
-                  target="_blank"
-                  >Welton, Stephanie et al. “Intermittent fasting and weight
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021351/" target="_blank">Welton, Stephanie et al. “Intermittent fasting and weight
                   loss: Systematic review.”
                   <i>Canadian family physician Medecin de famille canadien</i>
-                  vol. 66,2 (2020): 117-125.</a
-                >
+                  vol. 66,2 (2020): 117-125.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.gacetamedicademexico.com/files/gmm_uk_20_156_2_142-149.pdf"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://www.gacetamedicademexico.com/files/gmm_uk_20_156_2_142-149.pdf" target="_blank">
                   Frigolet, María E, and Ruth Gutiérrez-Aguilar. “The colors of
                   adipose tissue.” “Los colores del tejido adiposo.” Gaceta
                   medica de Mexico vol. 156,2 (2020): 142-149.
@@ -221,44 +130,25 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/"
-                  target="_blank"
-                  >Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/" target="_blank">Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
                   Cold Spring Harbor perspectives in biology vol. 4,9 a008417. 1
-                  Sep. 2012.</a
-                >
+                  Sep. 2012.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4945249/"
-                  target="_blank"
-                  >Roach, Peter J et al. “Glycogen and its metabolism: some new
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4945249/" target="_blank">Roach, Peter J et al. “Glycogen and its metabolism: some new
                   developments and old themes.”
-                  <i>The Biochemical journal</i> vol. 441,3 (2012): 763-87.</a
-                >
+                  <i>The Biochemical journal</i> vol. 441,3 (2012): 763-87.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/"
-                  target="_blank"
-                  >Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3428766/" target="_blank">Sarjeant, Kelesha, and Jacqueline M Stephens. “Adipogenesis.”
                   Cold Spring Harbor perspectives in biology vol. 4,9 a008417. 1
-                  Sep. 2012.</a
-                >
+                  Sep. 2012.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/http://science.sciencemag.org/content/306/5700/1383.long"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://sci-hub.se/http://science.sciencemag.org/content/306/5700/1383.long" target="_blank">
                   Zimmermann, Robert et al. “Fat mobilization in adipose tissue
                   is promoted by adipose triglyceride lipase.” Science (New
                   York, N.Y.) vol. 306,5700 (2004): 1383-6.
@@ -266,45 +156,26 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3104761/"
-                  target="_blank"
-                  >Sun, Kai et al. “Adipose tissue remodeling and obesity.”
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3104761/" target="_blank">Sun, Kai et al. “Adipose tissue remodeling and obesity.”
                   <i>The Journal of clinical investigation</i> vol. 121,6
-                  (2011): 2094-101.</a
-                >
+                  (2011): 2094-101.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7055173/"
-                  target="_blank"
-                  >Mayoral, Laura Perez-Campos et al. “Obesity subtypes, related
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7055173/" target="_blank">Mayoral, Laura Perez-Campos et al. “Obesity subtypes, related
                   biomarkers & heterogeneity.” The Indian journal of medical
-                  research vol. 151,1 (2020): 11-21.</a
-                >
+                  research vol. 151,1 (2020): 11-21.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2880185/"
-                  target="_blank"
-                  >Unger, Roger H, and Philipp E Scherer. “Gluttony, sloth and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2880185/" target="_blank">Unger, Roger H, and Philipp E Scherer. “Gluttony, sloth and
                   the metabolic syndrome: a roadmap to lipotoxicity.”
                   <i>Trends in endocrinology and metabolism: TEM</i> vol. 21,6
-                  (2010): 345-52.</a
-                >
+                  (2010): 345-52.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/15181022/"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/15181022/" target="_blank">
                   Kershaw, Erin E, and Jeffrey S Flier. “Adipose tissue as an
                   endocrine organ.” The Journal of clinical endocrinology and
                   metabolism vol. 89,6 (2004): 2548-56.
@@ -312,11 +183,7 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/31777187/"
-                  target="_blank"
-                >
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/31777187/" target="_blank">
                   Heinonen, Sini et al. “White adipose tissue mitochondrial
                   metabolism in health and in obesity.” Obesity reviews : an
                   official journal of the International Association for the
@@ -325,70 +192,40 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6289667/"
-                  target="_blank"
-                  >O'Rourke, Robert W. “Adipose tissue and the physiologic
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6289667/" target="_blank">O'Rourke, Robert W. “Adipose tissue and the physiologic
                   underpinnings of metabolic disease.”
-                  <i
-                    >Surgery for obesity and related diseases : official journal
-                    of the American Society for Bariatric Surgery</i
-                  >
-                  vol. 14,11 (2018): 1755-1763.</a
-                >
+                  <i>Surgery for obesity and related diseases : official journal
+                    of the American Society for Bariatric Surgery</i>
+                  vol. 14,11 (2018): 1755-1763.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://pubmed.ncbi.nlm.nih.gov/16731815/"
-                  target="_blank"
-                  >Scherer, Philipp E. “Adipose tissue: from lipid storage
+                <a class="sources__link" href="https://pubmed.ncbi.nlm.nih.gov/16731815/" target="_blank">Scherer, Philipp E. “Adipose tissue: from lipid storage
                   compartment to endocrine organ.” Diabetes vol. 55,6 (2006):
                   1537-45.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7551046/"
-                  target="_blank"
-                  >Orsso, Camila E et al. “Adipose Tissue Development and
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7551046/" target="_blank">Orsso, Camila E et al. “Adipose Tissue Development and
                   Expansion from the Womb to Adolescence: An Overview.”
-                  <i>Nutrients</i> vol. 12,9 2735. 8 Sep. 2020.</a
-                >
+                  <i>Nutrients</i> vol. 12,9 2735. 8 Sep. 2020.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6376873/"
-                  target="_blank"
-                  >Alves-Bezerra, Michele, and David E Cohen. “Triglyceride
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6376873/" target="_blank">Alves-Bezerra, Michele, and David E Cohen. “Triglyceride
                   Metabolism in the Liver.” <i>Comprehensive Physiology</i> vol.
-                  8,1 1-8. 12 Dec. 2017.</a
-                >
+                  8,1 1-8. 12 Dec. 2017.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6376873/"
-                  target="_blank"
-                  >Alves-Bezerra, Michele, and David E Cohen. “Triglyceride
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6376873/" target="_blank">Alves-Bezerra, Michele, and David E Cohen. “Triglyceride
                   Metabolism in the Liver.” <i>Comprehensive Physiology</i> vol.
-                  8,1 1-8. 12 Dec. 2017.</a
-                >
+                  8,1 1-8. 12 Dec. 2017.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[17]</span>
-                <a
-                  class="sources__link"
-                  href="https://pubmed.ncbi.nlm.nih.gov/23074240/"
-                  target="_blank"
-                  >Soeters, Maarten R et al. “Adaptive reciprocity of lipid and
+                <a class="sources__link" href="https://pubmed.ncbi.nlm.nih.gov/23074240/" target="_blank">Soeters, Maarten R et al. “Adaptive reciprocity of lipid and
                   glucose metabolism in human short-term starvation.” American
                   journal of physiology. Endocrinology and metabolism vol.
                   303,12 (2012): E1397-407.
@@ -396,76 +233,44 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[18]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765362/"
-                  target="_blank"
-                  >Muoio, Deborah M. “Metabolic inflexibility: when
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765362/" target="_blank">Muoio, Deborah M. “Metabolic inflexibility: when
                   mitochondrial indecision leads to metabolic gridlock.” Cell
-                  vol. 159,6 (2014): 1253-62.</a
-                >
+                  vol. 159,6 (2014): 1253-62.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[19]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/24138078/"
-                  target="_blank"
-                  >Akram, Muhammad. “A focused review of the role of ketone
+                <a class="sources__link" href="https://sci-hub.se/https://pubmed.ncbi.nlm.nih.gov/24138078/" target="_blank">Akram, Muhammad. “A focused review of the role of ketone
                   bodies in health and disease.” Journal of medicinal food vol.
-                  16,11 (2013): 965-7.</a
-                >
+                  16,11 (2013): 965-7.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[20]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5313038/"
-                  target="_blank"
-                  >Puchalska, Patrycja, and Peter A Crawford. “Multi-dimensional
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5313038/" target="_blank">Puchalska, Patrycja, and Peter A Crawford. “Multi-dimensional
                   Roles of Ketone Bodies in Fuel Metabolism, Signaling, and
                   Therapeutics.” <i>Cell metabolism</i> vol. 25,2 (2017):
-                  262-284.</a
-                >
+                  262-284.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[21]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/"
-                  target="_blank"
-                  >Longo, Valter D, and Mark P Mattson. “Fasting: molecular
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946160/" target="_blank">Longo, Valter D, and Mark P Mattson. “Fasting: molecular
                   mechanisms and clinical applications.”
-                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a
-                >
+                  <i>Cell metabolism</i> vol. 19,2 (2014): 181-92.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[22]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2129159/"
-                  target="_blank"
-                  >Manninen, Anssi H. “Metabolic effects of the
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2129159/" target="_blank">Manninen, Anssi H. “Metabolic effects of the
                   very-low-carbohydrate diets: misunderstood "villains" of human
                   metabolism.” Journal of the International Society of Sports
-                  Nutrition vol. 1,2 7-11. 31 Dec. 2004.</a
-                >
+                  Nutrition vol. 1,2 7-11. 31 Dec. 2004.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[23]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6093334/"
-                  target="_blank"
-                  >Smith, Reuben L et al. “Metabolic Flexibility as an
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6093334/" target="_blank">Smith, Reuben L et al. “Metabolic Flexibility as an
                   Adaptation to Energy Resources and Requirements in Health and
-                  Disease.” Endocrine reviews vol. 39,4 (2018): 489-517.</a
-                >
+                  Disease.” Endocrine reviews vol. 39,4 (2018): 489-517.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

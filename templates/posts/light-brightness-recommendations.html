@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Яркость освещения: рекомендации | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Яркость освещения: рекомендации | Адам Леос" />
+{% endblock %}
+{% block title %} Яркость освещения: рекомендации | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/sleep.html"><span>Сон</span></a>
+            <a href="/topics/sleep.html"><span>Сон</span></a>
             <div class="post__delimiter"></div>
           </span>
           Яркость освещения: рекомендации
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/light-brightness-discussion.jpg"
-              alt="light-brightness-recommendations"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/light-brightness-discussion.jpg') }}" alt="light-brightness-recommendations">
           </div>
           <p class="post__text">
             Как вы поняли, нам необходимо максимизировать правильные сигналы
@@ -109,10 +48,7 @@
           </p>
           <p class="post__text">
             Ценнейшее время - с самого утра, после пробуждения. Это поможет
-            организму правильно проснуться и запустить процессы [<a
-              href="#sources-list"
-              >4</a
-            >]. Еще лучше, если сможете погулять на закате, что позволит собрать
+            организму правильно проснуться и запустить процессы [<a href="#sources-list">4</a>]. Еще лучше, если сможете погулять на закате, что позволит собрать
             еще больше данных вашим организмом и начать правильное приготовление
             ко сну. Идеально, если можете добавить еще и дневные прогулки,
             например - после обеда. В общем, просто старайтесь бывать больше на
@@ -134,23 +70,16 @@
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./light-brightness-discussion.html"
-              class="continue__button"
-            >
+            <a href="/posts/light-brightness-discussion.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Сон</span>
                 <span class="continue__heading">
-                  Яркость освещения: обсуждение</span
-                >
+                  Яркость освещения: обсуждение</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./visible-light-spectrum-natural.html"
-              class="continue__button"
-            >
+            <a href="/posts/visible-light-spectrum-natural.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Сон</span>
                 <span class="continue__heading">
@@ -166,11 +95,7 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://journals.physiology.org/doi/full/10.1152/ajpregu.00478.2005"
-                  target="_blank"
-                  >Münch, Mirjam et al. “Wavelength-dependent effects of evening
+                <a class="sources__link" href="https://journals.physiology.org/doi/full/10.1152/ajpregu.00478.2005" target="_blank">Münch, Mirjam et al. “Wavelength-dependent effects of evening
                   light exposure on sleep architecture and sleep EEG power
                   density in men.” American journal of physiology. Regulatory,
                   integrative and comparative physiology vol. 290,5 (2006):
@@ -179,59 +104,36 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5976009/"
-                  target="_blank"
-                  >Cho, Chul-Hyun et al. “Impact of Exposure to Dim Light at
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5976009/" target="_blank">Cho, Chul-Hyun et al. “Impact of Exposure to Dim Light at
                   Night on Sleep in Female and Comparison with Male Subjects.”
-                  <i>Psychiatry investigation</i> vol. 15,5 (2018): 520-530.</a
-                >
+                  <i>Psychiatry investigation</i> vol. 15,5 (2018): 520-530.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4031400/"
-                  target="_blank"
-                  >Boubekri, Mohamed et al. “Impact of windows and daylight
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4031400/" target="_blank">Boubekri, Mohamed et al. “Impact of windows and daylight
                   exposure on overall health and sleep quality of office
                   workers: a case-control pilot study.”
-                  <i
-                    >Journal of clinical sleep medicine : JCSM : official
-                    publication of the American Academy of Sleep Medicine</i
-                  >
-                  vol. 10,6 603-11. 15 Jun. 2014.</a
-                >
+                  <i>Journal of clinical sleep medicine : JCSM : official
+                    publication of the American Academy of Sleep Medicine</i>
+                  vol. 10,6 603-11. 15 Jun. 2014.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://onlinelibrary.wiley.com/doi/full/10.1046/j.1440-1819.1999.00486.x"
-                  target="_blank"
-                  >Kobayashi, R et al. “Effects of morning bright light on sleep
+                <a class="sources__link" href="https://onlinelibrary.wiley.com/doi/full/10.1046/j.1440-1819.1999.00486.x" target="_blank">Kobayashi, R et al. “Effects of morning bright light on sleep
                   in healthy elderly women.” Psychiatry and clinical
                   neurosciences vol. 53,2 (1999): 237-8.
                 </a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6656201/"
-                  target="_blank"
-                  >Lanca, Carla et al. “The Effects of Different Outdoor
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6656201/" target="_blank">Lanca, Carla et al. “The Effects of Different Outdoor
                   Environments, Sunglasses and Hats on Light Levels:
                   Implications for Myopia Prevention.”
                   <i>Translational vision science & technology</i> vol. 8,4 7.
-                  18 Jul. 2019.</a
-                >
+                  18 Jul. 2019.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

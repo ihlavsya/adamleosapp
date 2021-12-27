@@ -1,0 +1,466 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="" />
+{% endblock %}
+{% block title %}  {% endblock %}
+{% block content %}
+      <section class="main__section articles">
+        <h2 class="main__heading">Микрофлора</h2>
+
+        <input type="checkbox" id="gradient" class="articles__gradient-checkbox">
+        <ul class="articles__list">
+          <label for="gradient" class="articles__navigation">
+            <span class="articles__navigation-arrow"></span>
+            <span class="
+                articles__navigation-arrow articles__navigation-arrow--right
+              "></span>
+          </label>
+          <li class="articles__item">
+            <a href="/posts/microbiome-in-general.html" class="articles__link">1. Микрофлора в общих словах</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/which-useful-compounds-microbiom-makes-for-us.html" class="articles__link">2. Какие полезные (и критически необходимые) вещества производит
+              для нас наша микрофлора</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/what-to-eat-for-microbiome-to-thrive.html" class="articles__link">3. Чем питаться, чтобы микрофлора кишечника процветала (а вместе
+              с ней и вы)</a>
+          </li>
+
+          <li class="articles__item">
+            <a href="/posts/probiotics-and-prebiotics-crucial-for-health.html" class="articles__link">
+              4. ПРОбиотики и ПРЕбиотики - инструмент для втюхивания йогуртов
+              или важная составляющая крепкого здоровья?
+            </a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/how-our-immune-system-depends-on-microbs.html" class="articles__link">
+              5. Как наш иммунитет зависит от микробов в кишечнике
+            </a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/developing-together-with-microbiome-from-birth.html" class="articles__link">6. Развиваемся вместе с микрофлорой! С самого рождения</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/breast-milk-for-microbiome.html" class="articles__link">7. Грудное молоко для микрофлоры</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/breast-milk-vs-baby-formulas.html" class="articles__link">8. Грудное молоко vs детское питание. Неповторимый оригинал и
+              жалкая подделка</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/vagus-nerve.html" class="articles__link">9. Блуждающий Нерв!</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/how-mental-health-depends-on-microbiome.html" class="articles__link">10. Как ментальное здоровье зависит от микрофлоры кишечника</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/do-not-stress-microbs.html" class="articles__link">11. Не подвергайте микробов стрессу!</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/how-microbs-manipulate-with-our-food-preferences.html" class="articles__link">12. Как микробы манипулируют нашими предпочтениями в еде</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/what-destroying-microbiome-i.html" class="articles__link">13. Какие повседневные вещи уничтожают микрофлору. Часть I</a>
+          </li>
+          <li class="articles__item">
+            <a href="/posts/what-destroying-microbiome-ii.html" class="articles__link">14. Какие повседневные вещи уничтожают микрофлору. Часть II</a>
+          </li>
+        </ul>
+
+        <span class="articles__delimiter articles__delimiter--single"></span>
+
+        <div class="articles__grid">
+          <div class="articles__topic">
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/microbiome-in-general.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/microbiome-in-general.jpg') }}" alt="microbiome-in-general">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/microbiome-in-general.html">
+                  <h3 class="article__heading">Микрофлора в общих словах</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/microbiome-in-general.html">
+                <p class="article__description">
+                  Дело в том, что снаружи и внутри нас находятся триллионы
+                  микроорганизмов, таких как бактерии, грибки, археи и много
+                  чего еще. Если быть более точным, микрофлора человека
+                  насчитывает от 30 до 40 триллионов бактерий - на коже,
+                  слизистых, половых органах, во рту, легких, плаценте и т.д.. В
+                  общем повсюду! Но основная их масса все же сосредоточена в
+                  нашем кишечнике.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/which-useful-compounds-microbiom-makes-for-us.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/which-useful-compounds-microbiom-makes-for-us.jpg') }}" alt="which-useful-compounds-microbiom-makes-for-us">
+                  </div>
+                </a>
+                <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
+                <a class="article__link" href="/posts/which-useful-compounds-microbiom-makes-for-us.html">
+                  <h3 class="article__heading">
+                    Какие полезные (и критически необходимые) вещества
+                    производит для нас наша микрофлора
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/which-useful-compounds-microbiom-makes-for-us.html">
+                <p class="article__description">
+                  Дабы зафиксировать насколько важны микроорганизмы внутри (и
+                  снаружи) нас, давайте углубимся в то, чем они полезны. В
+                  сегодняшнем посте мы поговорим о необходимых нам веществах,
+                  которые производит для нас наша микрофлора (в будущих постах
+                  также обсудим большое влияние на наш имунитет, мозг и нервную
+                  систему).
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/what-to-eat-for-microbiome-to-thrive.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/what-to-eat-for-microbiome-to-thrive.jpg') }}" alt="what-to-eat-for-microbiome-to-thrive">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/what-to-eat-for-microbiome-to-thrive.html">
+                  <h3 class="article__heading">
+                    Чем питаться, чтобы микрофлора кишечника процветала (а
+                    вместе с ней и вы)
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/what-to-eat-for-microbiome-to-thrive.html">
+                <p class="article__description">
+                  Сегодня более практичный пост, где мы обсудим пищу, которую
+                  обожает наша микрофлора и которая в итоге сделает нас здоровее
+                  и счастливее. На всякий случай - это не пример "правильного
+                  питания", а лишь обсуждение лучшей еды для развития хорошей
+                  микрофлоры. Но буду честным, это одно из лучших улучшений в
+                  питании, что вы можете сделать.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/probiotics-and-prebiotics-crucial-for-health.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/probiotics-and-prebiotics-crucial-for-health.jpg') }}" alt="probiotics-and-prebiotics-crucial-for-health">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/probiotics-and-prebiotics-crucial-for-health.html">
+                  <h3 class="article__heading">
+                    ПРОбиотики и ПРЕбиотики - инструмент для втюхивания йогуртов
+                    или важная составляющая крепкого здоровья?
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/probiotics-and-prebiotics-crucial-for-health.html">
+                <p class="article__description">
+                  Наверняка каждый из вас слышал слово «пробиотики». Скорее
+                  всего в контексте с йогуртом. Возможно в связке с непонятными
+                  «бифидо- и лактобактериями» и что-то там про улучшение
+                  пищеварения и здоровья. И надеюсь что вы, как и я, задавались
+                  вопросом - очередной ли это инструмент маркетинга или
+                  действительно что-то полезное?
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/how-our-immune-system-depends-on-microbs.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/how-our-immune-system-depends-on-microbs.jpg') }}" alt="how-our-immune-system-depends-on-microbs">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/how-our-immune-system-depends-on-microbs.html">
+                  <h3 class="article__heading">
+                    Как наш иммунитет зависит от микробов в кишечнике
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/how-our-immune-system-depends-on-microbs.html">
+                <p class="article__description">
+                  Казалось бы, мы уже достаточно обсудили, чтобы понять важность
+                  микрофлоры в здоровье каждого из нас. Но на самом деле мы лишь
+                  намочили ноги в огромном океане положительных эффектов. В этом
+                  посте я бы хотел обсудить как иммунитет зависит от микробиома
+                  и насколько мы можем сделать его крепче, а себя здоровее, при
+                  помощи микробов.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/developing-together-with-microbiome-from-birth.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/developing-together-with-microbiome-from-birth.jpg') }}" alt="developing-together-with-microbiome-from-birth">
+                  </div>
+                </a>
+                <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
+                <a class="article__link" href="/posts/developing-together-with-microbiome-from-birth.html">
+                  <h3 class="article__heading">
+                    Развиваемся вместе с микрофлорой! С самого рождения.
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/developing-together-with-microbiome-from-birth.html">
+                <p class="article__description">
+                  Давайте изучим как микробы отвечают за правильное развитие
+                  человека, начиная буквально с первых секунд после рождения.
+                  Так что начнем с появления нас на свет. Занимательно, что пока
+                  плод формируется в чреве матери, у него по сути еще нет
+                  микрофлоры. Первый контакт происходит именно при рождении,
+                  когда ребенок проходит через родовой канал и контактирует с
+                  вагинальной микрофлорой матери.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/breast-milk-for-microbiome.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/breast-milk-for-microbiome.png') }}" alt="breast-milk-for-microbioome">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/breast-milk-for-microbiome.html">
+                  <h3 class="article__heading">
+                    Грудное молоко для микрофлоры
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/breast-milk-for-microbiome.html">
+                <p class="article__description">
+                  Занимательно, что человеческое грудное молоко содержит
+                  олигосахариды, которые мы полностью расщепить в тонком
+                  кишечнике не можем. Кто читал предыдущие посты, уже заподозрил
+                  к чему это ведет. Долгое время мы считали, что это
+                  эволюционная случайность и олигосахариды бесполезны. И только
+                  недавно разобрались, что это еда для нашего микробиома
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/breast-milk-vs-baby-formulas.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/breast-milk-vs-baby-formulas.png') }}" alt="breast-milk-vs-baby-formulas">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/breast-milk-vs-baby-formulas.html">
+                  <h3 class="article__heading">
+                    Грудное молоко vs детское питание. Неповторимый оригинал и
+                    жалкая подделка.
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/breast-milk-vs-baby-formulas.html">
+                <p class="article__description">
+                  Прежде всего вспомним, что человеческое ГМ, среди ряда
+                  полезных веществ, содержит также и олигосахариды, которые
+                  питают не столько ребенка, сколько его микрофлору. Потому что,
+                  как мы уже знаем, здоровый микробиом - залог большой части
+                  здоровья. Сразу же укажу, что нам все еще не удалось (и еще не
+                  скоро удастся) правильно воссоздать все необходимые вещества в
+                  грудном молоке, в том числе олигосахариды.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/vagus-nerve.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/vagus-nerve.jpg') }}" alt="vagus-nerve">
+                  </div>
+                </a>
+                <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
+                <a class="article__link" href="/posts/vagus-nerve.html">
+                  <h3 class="article__heading">Блуждающий Нерв!</h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/vagus-nerve.html">
+                <p class="article__description">
+                  Ну что, мы наконец-то подобрались к взаимодействию микрофлоры
+                  и мозга (мозг - вообще моя любимая тема). По этому направлению
+                  будет несколько постов и сегодня мы начнем с очень интересной
+                  части нашей нервной системы - Блуждающего Нерва. Блуждающий
+                  нерв - это десятая пара черепных нервов и самый длинных из
+                  них.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/how-mental-health-depends-on-microbiome.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/how-mental-health-depends-on-microbiome.jpg') }}" alt="how-mental-health-depends-on-microbiome">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/how-mental-health-depends-on-microbiome.html">
+                  <h3 class="article__heading">
+                    Как ментальное здоровье зависит от микрофлоры кишечника
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/how-mental-health-depends-on-microbiome.html">
+                <p class="article__description">
+                  Думаете стресс, депрессия, тревога, да и функционирование
+                  мозга в целом не зависит от вашей микрофлоры? Как бы не так!
+                  Сейчас разберемся, что поддается влиянию, каким образом, и,
+                  само собой, можно ли это улучшить (для нетерпеливых - да,
+                  конечно же можно!).
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/do-not-stress-microbs.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/do-not-stress-microbs.jpg') }}" alt="do-not-stress-microbs">
+                  </div>
+                </a>
+                <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
+                <a class="article__link" href="/posts/do-not-stress-microbs.html">
+                  <h3 class="article__heading">
+                    Не подвергайте микробов стрессу!
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/do-not-stress-microbs.html">
+                <p class="article__description">
+                  Ментальное здоровье уже давно не является пустым звуком в мире
+                  науки. Последние исследования подчеркивают, что оно не просто
+                  зависит от физического здоровья, но и оказывает сильное
+                  влияние на него. Мы еще обсудим эту тему подробно в будущем.
+                  Сегодня же, приближаясь к заключению темы микрофлоры,
+                  посмотрим какое влияние может оказывать на микробиом человека
+                  “банальные” стресс и депрессия.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/how-microbs-manipulate-with-our-food-preferences.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/how-microbs-manipulate-with-our-food-preferences.jpg') }}" alt="how-microbs-manipulate-with-our-food-preferences">
+                  </div>
+                </a>
+                <a class="article__link" href="/topics/microbiome.html">
+                  <span class="article__tag">Микрофлора</span>
+                </a>
+                <a class="article__link" href="/posts/how-microbs-manipulate-with-our-food-preferences.html">
+                  <h3 class="article__heading">
+                    Как микробы манипулируют нашими предпочтениями в еде
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/how-microbs-manipulate-with-our-food-preferences.html">
+                <p class="article__description">
+                  Мы уже много говорили о зависимости ментального и физического
+                  здоровья от микрофлоры, но очевидным образом и микробы зависят
+                  от своего носителя - то есть нас. Ведь мы не только защита, но
+                  и поставщик ресурсов. Поэтому они всячески стараются
+                  подтолкнуть нас к приему той пищи, которая поможет им выжить и
+                  приведет к процветанию. И для этого у них есть впечатляющий
+                  спектр инструментов.
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/what-destroying-microbiome-ii.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/what-destroying-microbiome-ii.jpg') }}" alt="what-destroying-microbiome-ii">
+                  </div>
+                </a>
+                <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
+                <a class="article__link" href="/posts/what-destroying-microbiome-ii.html">
+                  <h3 class="article__heading">
+                    Какие повседневные вещи уничтожают микрофлору. Часть II
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/what-destroying-microbiome-ii.html">
+                <p class="article__description">
+                  Но если медикаменты мы еще как-то осознанно привносим в свою
+                  жизнь, то вот другая группа вещей уже приходит незаметно.
+                  Первый представитель этой группы будет содержаться в
+                  водопроводной воде, причем в очень щедрых количествах. Я
+                  говорю о хлоре, который несет разрушающий эффект на некоторые
+                  виды бактерий кишечника, что в итоге ассоциировано с развитием
+                  Колоректального рака
+                </p>
+              </a>
+            </article>
+
+            <article class="articles__preview article">
+              <div class="article__top">
+                <a class="article__link" href="/posts/what-destroying-microbiome-i.html">
+                  <div class="article__imagewrapper">
+                    <img class="article__image" src="{{ url_for('static', filename='img/posts/what-destroying-microbiome-i.jpg') }}" alt="what-destroying-microbiome-i">
+                  </div>
+                </a>
+                <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
+                <a class="article__link" href="/posts/what-destroying-microbiome-i.html">
+                  <h3 class="article__heading">
+                    Какие повседневные вещи уничтожают микрофлору. Часть I
+                  </h3>
+                </a>
+              </div>
+              <a class="article__link" href="/posts/what-destroying-microbiome-i.html">
+                <p class="article__description">
+                  Сегодня последний пост о микрофлоре (который не влез в один
+                  пост, поэтому их два сразу), а на следующей неделе уже релиз
+                  видео. В конце поста, кстати, упомяну тему следующей серии
+                  публикаций и нового ролика. В завершении этой темы хотел бы
+                  обратить внимание на основные вещи в нашей с вами ежедневной
+                  жизни, которые незаметно разрушают нашу микрофлору.
+                </p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    {% endblock %}

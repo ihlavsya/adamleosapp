@@ -1,0 +1,33 @@
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contacts__image {
+  width: 100%;
+}
+
+.contacts__link {
+  padding: 10px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.contacts__item {
+  padding: 30px 10px 20px;
+  color: #2c2c2c;
+  line-height: 1.2rem;
+  border-bottom: 4px solid #142b84;
+}
+
+.contacts__paragraph {
+  margin-bottom: 15px;
+}

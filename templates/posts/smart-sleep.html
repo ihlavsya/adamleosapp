@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Умный сон | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Умный сон | Адам Леос" />
+{% endblock %}
+{% block title %} Умный сон | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/sleep.html"><span>Сон</span></a>
+            <a href="/topics/sleep.html"><span>Сон</span></a>
             <div class="post__delimiter"></div>
           </span>
           Умный сон
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/smart-sleep.jpg"
-              alt="smart-sleep"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/smart-sleep.jpg') }}" alt="smart-sleep">
           </div>
           <p class="post__text">
             Подобрались мы к эффективности мозга в разрезе темы сна. Секретом ни
@@ -103,26 +42,17 @@
             Ведь это под капотом уже будет базовым функционирование мозга. Те же
             накопления знаний, что есть запоминанием новой информации, является
             образованием новых нейронных связей, укреплением существующих, ну и
-            в целях производительности - очисткой старых [<a
-              href="#sources-list"
-              >1</a
-            >].
+            в целях производительности - очисткой старых [<a href="#sources-list">1</a>].
           </p>
           <p class="post__text">
             Но прежде чем это произойдет для долгосрочной памяти,
-            накапливающаяся за день информация отправляется в краткосрочную [<a
-              href="#sources-list"
-              >2</a
-            >]. По-настоящему и надолго мы что-либо запоминаем только после…
+            накапливающаяся за день информация отправляется в краткосрочную [<a href="#sources-list">2</a>]. По-настоящему и надолго мы что-либо запоминаем только после…
             верно, сна [<a href="#sources-list">3</a>]. А точнее, глубокой его
             фазы [<a href="#sources-list">4</a>]. Заодно это позволяет нам
             очистить краткосрочную память, что очень важно, ведь объем ее
             ограничен [<a href="#sources-list">5</a>]. Если продолжать
             “запихивать” информацию без отдыха, то новые воспоминания попросту
-            начнут вытеснять старые, и так пока не поспите [<a
-              href="#sources-list"
-              >6, 7</a
-            >].
+            начнут вытеснять старые, и так пока не поспите [<a href="#sources-list">6, 7</a>].
           </p>
           <p class="post__text">
             Но хоть я и не биохакер, вот вам супербиохак - короткий дневной сон.
@@ -131,10 +61,7 @@
             место в гиппокампе [<a href="#sources-list">8</a>], но даже повысит
             вашу способность обучаться [<a href="#sources-list">9</a>]. Более
             того, отличные результаты дневного сна были зафиксированы и в
-            разрезе когнитивной производительности при решении проблем [<a
-              href="#sources-list"
-              >10</a
-            >].
+            разрезе когнитивной производительности при решении проблем [<a href="#sources-list">10</a>].
           </p>
           <p class="post__text">
             И сразу давайте об обратной стороне. Депривация сна на все эти
@@ -153,14 +80,8 @@
             определение и показатели таких вещей зафиксировать сложно
             (невозможно?), но ученые действительно делают попытки это сделать
             [<a href="#sources-list">15</a>]. Например, оценивая решение задач и
-            насколько гибким и эффективным был подход у людей [<a
-              href="#sources-list"
-              >16</a
-            >]. Самый адекватный вывод - для демонстрации необычных и новых
-            подходов к проблемам необходим… качественный сон [<a
-              href="#sources-list"
-              >17</a
-            >].
+            насколько гибким и эффективным был подход у людей [<a href="#sources-list">16</a>]. Самый адекватный вывод - для демонстрации необычных и новых
+            подходов к проблемам необходим… качественный сон [<a href="#sources-list">17</a>].
           </p>
           <p class="post__text">
             Прокомментирую: ведь никакие идеи и открытия не возникают из
@@ -178,23 +99,15 @@
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./cleaning-byproducts-during-sleep.html"
-              class="continue__button"
-            >
+            <a href="/posts/cleaning-byproducts-during-sleep.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Сон</span>
-                <span class="continue__heading"
-                  >Избавляемся от отходов производства во время сна</span
-                >
+                <span class="continue__heading">Избавляемся от отходов производства во время сна</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./light-brightness-discussion.html"
-              class="continue__button"
-            >
+            <a href="/posts/light-brightness-discussion.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Сон</span>
                 <span class="continue__heading">
@@ -210,204 +123,113 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3183424/"
-                  target="_blank"
-                  >Saletin, M et al. “The role of sleep in directed forgetting
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3183424/" target="_blank">Saletin, M et al. “The role of sleep in directed forgetting
                   and remembering of human memories.” Cerebral cortex (New York,
-                  N.Y. : 1991) vol. 21,11 (2011): 2534-41.</a
-                >
+                  N.Y. : 1991) vol. 21,11 (2011): 2534-41.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.st/10.1046/j.1365-2869.7.s1.3.x"
-                  target="_blank"
-                  >Buzsáki, “Memory consolidation during sleep: a
+                <a class="sources__link" href="https://sci-hub.st/10.1046/j.1365-2869.7.s1.3.x" target="_blank">Buzsáki, “Memory consolidation during sleep: a
                   neurophysiological perspective.” Journal of sleep research
-                  vol. 7 Suppl 1 (1998): 17-23.</a
-                >
+                  vol. 7 Suppl 1 (1998): 17-23.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6687745/"
-                  target="_blank"
-                  >Helfrich, F et al. “Bidirectional prefrontal-hippocampal
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6687745/" target="_blank">Helfrich, F et al. “Bidirectional prefrontal-hippocampal
                   dynamics organize information transfer during sleep in
-                  humans.” Nature communications vol. 10,1 3572. 8 Aug. 2019.</a
-                >
+                  humans.” Nature communications vol. 10,1 3572. 8 Aug. 2019.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/books/NBK545136/"
-                  target="_blank"
-                  >Cascella, Marco. and Yasir Al Khalili. “Short Term Memory
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/books/NBK545136/" target="_blank">Cascella, Marco. and Yasir Al Khalili. “Short Term Memory
                   Impairment.” StatPearls, StatPearls Publishing, 21 July
-                  2021.</a
-                >
+                  2021.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1177/1073858406292647"
-                  target="_blank"
-                  >Born, Jan et al. "Sleep to remember".
-                  <i
-                    >The Neuroscientist : a review journal bringing
-                    neurobiology, neurology and psychiatry</i
-                  >
-                  vol. 12, 5. 2006 Oct.</a
-                >
+                <a class="sources__link" href="http://sci-hub.st/10.1177/1073858406292647" target="_blank">Born, Jan et al. "Sleep to remember".
+                  <i>The Neuroscientist : a review journal bringing
+                    neurobiology, neurology and psychiatry</i>
+                  vol. 12, 5. 2006 Oct.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/books/NBK545136/"
-                  target="_blank"
-                  >Cascella, Marco. and Yasir Al Khalili. “Short Term Memory
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/books/NBK545136/" target="_blank">Cascella, Marco. and Yasir Al Khalili. “Short Term Memory
                   Impairment.” StatPearls, StatPearls Publishing, 21 July
-                  2021.</a
-                >
+                  2021.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3971378/"
-                  target="_blank"
-                  >Jonides, John et al. “The mind and brain of short-term
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3971378/" target="_blank">Jonides, John et al. “The mind and brain of short-term
                   memory.” <i>Annual review of psychology</i> vol. 59 (2008):
-                  193-224.</a
-                >
+                  193-224.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1334654/"
-                  target="_blank"
-                  >Takashima, et al. “Declarative memory consolidation in
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1334654/" target="_blank">Takashima, et al. “Declarative memory consolidation in
                   humans: a prospective functional magnetic resonance imaging
                   study.” Proceedings of the National Academy of Sciences of the
-                  United States of America vol. 103,3 (2006): 756-61.</a
-                >
+                  United States of America vol. 103,3 (2006): 756-61.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[9]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3093247/"
-                  target="_blank"
-                  >Mander, A et al. “Wake deterioration and sleep restoration of
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3093247/" target="_blank">Mander, A et al. “Wake deterioration and sleep restoration of
                   human learning.” Current biology : CB vol. 21,5 (2011):
-                  R183-4.</a
-                >
+                  R183-4.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[10]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3885559/"
-                  target="_blank"
-                  >Beijamini, et al. “After being challenged by a video game
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3885559/" target="_blank">Beijamini, et al. “After being challenged by a video game
                   problem, sleep increases the chance to solve it.” PloS one
-                  vol. 9,1 e84342. 8 Jan. 2014.</a
-                >
+                  vol. 9,1 e84342. 8 Jan. 2014.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[11]</span>
-                <a
-                  class="sources__link"
-                  href="https://onlinelibrary.wiley.com/doi/full/10.1111/jsr.12578"
-                  target="_blank"
-                  >Cousins, N et al. “Memory encoding is impaired after multiple
+                <a class="sources__link" href="https://onlinelibrary.wiley.com/doi/full/10.1111/jsr.12578" target="_blank">Cousins, N et al. “Memory encoding is impaired after multiple
                   nights of partial sleep restriction.” Journal of sleep
-                  research vol. 27,1 (2018): 138-145.</a
-                >
+                  research vol. 27,1 (2018): 138-145.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[12]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243827/"
-                  target="_blank"
-                  >Van Hans P A et al. “A local, bottom-up perspective on sleep
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243827/" target="_blank">Van Hans P A et al. “A local, bottom-up perspective on sleep
                   deprivation and neurobehavioral performance.” Current topics
-                  in medicinal chemistry vol. 11,19 (2011): 2414-22.</a
-                >
+                  in medicinal chemistry vol. 11,19 (2011): 2414-22.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[13]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802247/"
-                  target="_blank"
-                  >Tucker, M et al. “Effects of sleep deprivation on dissociated
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802247/" target="_blank">Tucker, M et al. “Effects of sleep deprivation on dissociated
                   components of executive functioning.” Sleep vol. 33,1 (2010):
-                  47-57.</a
-                >
+                  47-57.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[14]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243827/"
-                  target="_blank"
-                  >Van Hans P A et al. “A local, bottom-up perspective on sleep
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243827/" target="_blank">Van Hans P A et al. “A local, bottom-up perspective on sleep
                   deprivation and neurobehavioral performance.” Current topics
-                  in medicinal chemistry vol. 11,19 (2011): 2414-22.</a
-                >
+                  in medicinal chemistry vol. 11,19 (2011): 2414-22.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[15]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2700890/"
-                  target="_blank"
-                  >Cai, Denise J et al. “REM, not incubation, improves
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2700890/" target="_blank">Cai, Denise J et al. “REM, not incubation, improves
                   creativity by priming associative networks.”
-                  <i
-                    >Proceedings of the National Academy of Sciences of the
-                    United States of America</i
-                  >
-                  vol. 106,25 (2009): 10130-4.</a
-                >
+                  <i>Proceedings of the National Academy of Sciences of the
+                    United States of America</i>
+                  vol. 106,25 (2009): 10130-4.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[16]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.se/10.1016/S0926-6410(02)00134-9"
-                  target="_blank"
-                  >Walker, Matthew P et al. "Cognitive flexibility across the
+                <a class="sources__link" href="http://sci-hub.se/10.1016/S0926-6410(02)00134-9" target="_blank">Walker, Matthew P et al. "Cognitive flexibility across the
                   sleep-wake cycle: REM-sleep enhancement of anagram problem
                   solving". <i>Brain research. Cognitive brain research</i> vol.
-                  14, 3. 2002 Nov.</a
-                >
+                  14, 3. 2002 Nov.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[17]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7543772/"
-                  target="_blank"
-                  >Lewis, A et al. “How Memory Replay in Sleep Boosts Creative
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7543772/" target="_blank">Lewis, A et al. “How Memory Replay in Sleep Boosts Creative
                   Problem-Solving.” Trends in cognitive sciences vol. 22,6
-                  (2018): 491-503.</a
-                >
+                  (2018): 491-503.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}

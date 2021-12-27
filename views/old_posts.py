@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-old_posts = Blueprint("old-posts", __name__, template_folder="templates")
+old_posts = Blueprint("old-posts", __name__)
 
 @old_posts.route('light-brightness-recommendations.html')
 def light_brightness_recommendations():

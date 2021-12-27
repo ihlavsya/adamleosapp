@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/articles.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/continue.css" />
-    <link rel="stylesheet" href="../styles/sources.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Не подвергайте микробов стрессу! | Адам Леос</title>
-  </head>
-
-  <body>
-    <header class="header header--secondary">
-      <nav class="header__nav nav">
-        <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-        <label for="hamburger" class="nav__hamburger">
-          <span class="nav__bar-one"></span>
-          <span class="nav__bar-two"></span>
-          <span class="nav__bar-three"></span>
-        </label>
-        <a href="../index.html" class="header__link header__link--mobile">
-          <img
-            src="../img/logo.png"
-            alt="graphic brain with mustache"
-            class="header__logo"
-          />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="../index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="../topics/index.html" class="nav__link">Темы</a>
-          </li>
-          <li class="nav__item nav__item--logo">
-            <a href="../index.html" class="header__link">
-              <img
-                src="../img/logo.png"
-                alt="graphic brain with mustache"
-                class="header__logo"
-              />
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="../media/index.html" class="nav__link">Медиа</a>
-          </li>
-          <li class="nav__item">
-            <a href="../contacts/index.html" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Не подвергайте микробов стрессу! | Адам Леос" />
+{% endblock %}
+{% block title %} Не подвергайте микробов стрессу! | Адам Леос {% endblock %}
+{% block content %}
       <section class="main__section">
         <h2 class="main__heading main__heading--post">
           <span class="main__subheading">
-            <a href="../topics/microbiome.html"><span>Микрофлора</span></a>
+            <a href="/topics/microbiome.html"><span>Микрофлора</span></a>
             <div class="post__delimiter"></div>
           </span>
           Не подвергайте микробов стрессу!
@@ -74,11 +17,7 @@
 
         <article class="post">
           <div class="post__imagewrapper">
-            <img
-              class="post__image"
-              src="../img/posts/do-not-stress-microbs.jpg"
-              alt="do-not-stress-microbs"
-            />
+            <img class="post__image" src="{{ url_for('static', filename='img/posts/do-not-stress-microbs.jpg') }}" alt="do-not-stress-microbs">
           </div>
           <p class="post__text">
             Ментальное здоровье уже давно не является пустым звуком в мире
@@ -90,10 +29,7 @@
             человека “банальные” стресс [<a href="#sources-list">2</a>] и
             депрессия [<a href="#sources-list">3</a>]. На всякий случай сделаю
             уточнение, что последние являются серьезными проблемами и это
-            зафиксированные наукой процессы в организме, причем критические [<a
-              href="#sources-list"
-              >4</a
-            >]. Так что не отмахивайтесь от них.
+            зафиксированные наукой процессы в организме, причем критические [<a href="#sources-list">4</a>]. Так что не отмахивайтесь от них.
           </p>
           <p class="post__text">
             В предыдущих постах мы уже копнули вглубь связи ментального здоровья
@@ -112,34 +48,20 @@
             долгое время (в исследовании - месяц) или является хроническим, то
             это приводит к серьезным проблемам в микрофлоре и повреждению
             слизистого барьера в кишечнике. Что в свою очередь способствует
-            развитию колита (воспалительного заболевания толстой кишки) [<a
-              href="#sources-list"
-              >5</a
-            >].
+            развитию колита (воспалительного заболевания толстой кишки) [<a href="#sources-list">5</a>].
           </p>
           <p class="post__text">
-            Ситуация не менее серьезна и в случае депрессии [<a
-              href="#sources-list"
-              >6</a
-            >], при продолжительном эффекте которой происходит исчезновение
+            Ситуация не менее серьезна и в случае депрессии [<a href="#sources-list">6</a>], при продолжительном эффекте которой происходит исчезновение
             бактерий видов Dialister, Coprococcus spp., Faecalibacterium,
             Coprococcus. Особенно важны последние два, участвующие в
-            производстве бутановой кислоты (и ряда других элементов [<a
-              href="#sources-list"
-              >7</a
-            >]). Что занимательно, отсутствие таких бактерий лишь ухудшает
+            производстве бутановой кислоты (и ряда других элементов [<a href="#sources-list">7</a>]). Что занимательно, отсутствие таких бактерий лишь ухудшает
             состояние ментального здоровья, что и приводит к спуску по спирали
-            проблем, которые подкрепляют друг друга [<a href="#sources-list"
-              >8</a
-            >].
+            проблем, которые подкрепляют друг друга [<a href="#sources-list">8</a>].
           </p>
           <p class="post__text">
             Но не переживайте! Как обычно, ваше здоровье - в ваших руках! И как
             показывают исследования, микрофлору можно восстановить и не только
-            исправить болезни, но и выйти на новый уровень эффективности [<a
-              href="#sources-list"
-              >9</a
-            >].
+            исправить болезни, но и выйти на новый уровень эффективности [<a href="#sources-list">9</a>].
           </p>
           <p class="post__text">
             По данной теме все просто - обогащайте микрофлору, питайтесь
@@ -149,28 +71,18 @@
           </p>
 
           <div class="post__continue continue">
-            <a
-              href="./how-mental-health-depends-on-microbiome.html"
-              class="continue__button"
-            >
+            <a href="/posts/how-mental-health-depends-on-microbiome.html" class="continue__button">
               <div class="continue__arrow">&#10229;</div>
               <div class="continue__content">
                 <span class="continue__tag">Микрофлора</span>
-                <span class="continue__heading"
-                  >Как ментальное здоровье зависит от микрофлоры кишечника</span
-                >
+                <span class="continue__heading">Как ментальное здоровье зависит от микрофлоры кишечника</span>
               </div>
             </a>
             <div class="continue__delimiter"></div>
-            <a
-              href="./how-microbs-manipulate-with-our-food-preferences.html"
-              class="continue__button"
-            >
+            <a href="/posts/how-microbs-manipulate-with-our-food-preferences.html" class="continue__button">
               <div class="continue__content continue__content--right">
                 <span class="continue__tag">Микрофлора</span>
-                <span class="continue__heading"
-                  >Как микробы манипулируют нашими предпочтениями в еде</span
-                >
+                <span class="continue__heading">Как микробы манипулируют нашими предпочтениями в еде</span>
               </div>
               <div class="continue__arrow">&#10230;</div>
             </a>
@@ -181,57 +93,33 @@
             <ul class="sources__list">
               <li class="sources__item">
                 <span class="sources__number">[1]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806285/"
-                  target="_blank"
-                  >Vyas, Sheela et al. “Chronic Stress and Glucocorticoids: From
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806285/" target="_blank">Vyas, Sheela et al. “Chronic Stress and Glucocorticoids: From
                   Neuronal Plasticity to Neurodegeneration.”
-                  <i>Neural plasticity</i> vol. 2016 (2016): 6391686.</a
-                >
+                  <i>Neural plasticity</i> vol. 2016 (2016): 6391686.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[2]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5573220/"
-                  target="_blank"
-                  >McEwen, Bruce S. “Neurobiological and Systemic Effects of
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5573220/" target="_blank">McEwen, Bruce S. “Neurobiological and Systemic Effects of
                   Chronic Stress.”
                   <i>Chronic stress (Thousand Oaks, Calif.)</i> vol. 1 (2017):
-                  2470547017692328.</a
-                >
+                  2470547017692328.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[3]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6511978/"
-                  target="_blank"
-                  >Kiecolt-Glaser, Janice K et al. “Inflammation: depression
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6511978/" target="_blank">Kiecolt-Glaser, Janice K et al. “Inflammation: depression
                   fans the flames and feasts on the heat.”
                   <i>The American journal of psychiatry</i> vol. 172,11 (2015):
-                  1075-91.</a
-                >
+                  1075-91.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[4]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7466429/"
-                  target="_blank"
-                  >Dai, Shirui et al. “Chronic Stress Promotes Cancer
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7466429/" target="_blank">Dai, Shirui et al. “Chronic Stress Promotes Cancer
                   Development.” <i>Frontiers in oncology</i> vol. 10 1492. 19
-                  Aug. 2020.</a
-                >
+                  Aug. 2020.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[5]</span>
-                <a
-                  class="sources__link"
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/29531080/"
-                  target="_blank"
-                  >Gao, Xinghua et al. “Chronic stress promotes colitis by
+                <a class="sources__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/29531080/" target="_blank">Gao, Xinghua et al. “Chronic stress promotes colitis by
                   disturbing the gut microbiota and triggering immune system
                   response.” Proceedings of the National Academy of Sciences of
                   the United States of America vol. 115,13 (2018): E2960-E2969.
@@ -239,42 +127,25 @@
               </li>
               <li class="sources__item">
                 <span class="sources__number">[6]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://doi.org/10.1016/j.bbi.2015.03.016"
-                  target="_blank"
-                  >Jiang, Haiyin et al. "Altered fecal microbiota composition in
+                <a class="sources__link" href="https://sci-hub.se/https://doi.org/10.1016/j.bbi.2015.03.016" target="_blank">Jiang, Haiyin et al. "Altered fecal microbiota composition in
                   patients with major depressive disorder".
-                  <i>Brain, behavior, and immunity</i> vol. 48. 2015 Aug.</a
-                >
+                  <i>Brain, behavior, and immunity</i> vol. 48. 2015 Aug.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[7]</span>
-                <a
-                  class="sources__link"
-                  href="https://sci-hub.se/https://doi.org/10.1038/s41564-018-0337-x"
-                  target="_blank"
-                  >Valles-Colomer, Mireia et al. "The neuroactive potential of
+                <a class="sources__link" href="https://sci-hub.se/https://doi.org/10.1038/s41564-018-0337-x" target="_blank">Valles-Colomer, Mireia et al. "The neuroactive potential of
                   the human gut microbiota in quality of life and depression".
-                  <i>Nature microbiology</i> vol. 4, 4. 2019 Apr.</a
-                >
+                  <i>Nature microbiology</i> vol. 4, 4. 2019 Apr.</a>
               </li>
               <li class="sources__item">
                 <span class="sources__number">[8]</span>
-                <a
-                  class="sources__link"
-                  href="http://sci-hub.st/10.1016/j.bbi.2017.09.001"
-                  target="_blank"
-                  >Guida, F et al. “Antibiotic-induced microbiota perturbation
+                <a class="sources__link" href="http://sci-hub.st/10.1016/j.bbi.2017.09.001" target="_blank">Guida, F et al. “Antibiotic-induced microbiota perturbation
                   causes gut endocannabinoidome changes, hippocampal neuroglial
                   reorganization and depression in mice.” Brain, behavior, and
-                  immunity vol. 67 (2018): 230-245.</a
-                >
+                  immunity vol. 67 (2018): 230-245.</a>
               </li>
             </ul>
           </div>
         </article>
       </section>
-    </main>
-  </body>
-</html>
+    {% endblock %}
