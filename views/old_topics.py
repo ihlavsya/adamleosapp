@@ -18,6 +18,6 @@ def fasting():
 def microbiome():
    return render_template('topics/microbiome.html')
 
-@old_topics.route('temperature-stress.html')
-def temperature_stress():
-   return render_template('topics/temperature-stress.html')
+@old_topics.route('temperature-stress-cold.html')
+def temperature_stress_cold():
+   return render_template('topics/temperature-stress-cold.html')

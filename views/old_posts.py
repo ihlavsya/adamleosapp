@@ -2,6 +2,18 @@ from flask import Blueprint, render_template
 
 old_posts = Blueprint("old-posts", __name__)
 
+@old_posts.route('how-cold-makes-you-stronger.html')
+def how_cold_makes_you_stronger():
+   return render_template('posts/how-cold-makes-you-stronger.html')
+
+@old_posts.route('how-to-lose-weight-with-cold.html')
+def how_to_lose_weight_with_cold():
+   return render_template('posts/how-to-lose-weight-with-cold.html')
+
+@old_posts.route('sport-and-cold-what-to-cool.html')
+def sport_and_cold_what_to_cool():
+   return render_template('posts/sport-and-cold-what-to-cool.html')
+
 @old_posts.route('light-brightness-recommendations.html')
 def light_brightness_recommendations():
    return render_template('posts/light-brightness-recommendations.html')
@@ -154,9 +166,9 @@ def ghrelin_and_hunger():
 def do_not_stress_microbs():
    return render_template('posts/do-not-stress-microbs.html')
 
-@old_posts.route('how-to-feel-temperarture.html')
-def how_to_feel_temperarture():
-   return render_template('posts/how-to-feel-temperarture.html')
+@old_posts.route('how-to-feel-temperature.html')
+def how_to_feel_temperature():
+   return render_template('posts/how-to-feel-temperature.html')
 
 @old_posts.route('what-to-eat-for-microbiome-to-thrive.html')
 def what_to_eat_for_microbiome_to_thrive():

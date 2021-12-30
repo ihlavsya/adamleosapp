@@ -2,166 +2,205 @@
 {% block head %}
 {{ super() }}
 {% include "styles-post.html"%}
-<meta name="description" content="" />
+<meta name="description" content="Температурный Стресс: Холод" />
 {% endblock %}
-{% block title %}  {% endblock %}
+{% block title %} {% endblock %}
 {% block content %}
-      <section class="main__section articles">
-        <h2 class="main__heading">Температурный Стресс: Холод</h2>
+<section class="main__section articles">
+  <h2 class="main__heading">Температурный Стресс: Холод</h2>
 
-        <input type="checkbox" id="gradient" class="articles__gradient-checkbox">
-        <ul class="articles__list">
-          <label for="gradient" class="articles__navigation">
-            <span class="articles__navigation-arrow"></span>
-            <span class="
+  <input type="checkbox" id="gradient" class="articles__gradient-checkbox">
+  <ul class="articles__list">
+    <label for="gradient" class="articles__navigation">
+      <span class="articles__navigation-arrow"></span>
+      <span class="
                 articles__navigation-arrow articles__navigation-arrow--right
               "></span>
-          </label>
-          <li class="articles__item">
-            <a href="/posts/what-is-about-temperature-stress.html" class="articles__link">1. О чем температурный стресс?
-            </a>
-          </li>
+    </label>
+    <li class="articles__item">
+      <a href="/posts/what-is-about-temperature-stress.html" class="articles__link">1. О чем температурный стресс?
+      </a>
+    </li>
 
-          <li class="articles__item">
-            <a href="/posts/hormesis-a-little-bit-of-bad-good.html" class="articles__link">2. Гормезис. Немножко плохо - хорошо?
-            </a>
-          </li>
+    <li class="articles__item">
+      <a href="/posts/hormesis-a-little-bit-of-bad-good.html" class="articles__link">2. Гормезис. Немножко плохо -
+        хорошо?
+      </a>
+    </li>
 
-          <li class="articles__item">
-            <a href="/posts/what-is-a-temperature-anyway.html" class="articles__link">3. А что вообще значит “температура”?
-            </a>
-          </li>
+    <li class="articles__item">
+      <a href="/posts/what-is-a-temperature-anyway.html" class="articles__link">3. А что вообще значит “температура”?
+      </a>
+    </li>
 
-          <li class="articles__item">
-            <a href="/posts/how-to-feel-temperarture.html" class="articles__link">4. Как почувствовать температуру?
-            </a>
-          </li>
-        </ul>
+    <li class="articles__item">
+      <a href="/posts/how-to-feel-temperature.html" class="articles__link">4. Как почувствовать температуру?
+      </a>
+    </li>
 
-        <span class="articles__delimiter articles__delimiter--single"></span>
+    <li class="articles__item">
+      <a href="/posts/reacting-to-cold.html" class="articles__link">5. Реагируем на холод
+      </a>
+    </li>
 
-        <div class="articles__grid">
-          <div class="articles__topic">
-            <article class="articles__preview article">
-              <div class="article__top">
-                <a class="article__link" href="/posts/what-is-about-temperature-stress.html">
-                  <div class="article__imagewrapper">
-                    <img class="article__image" src="{{ url_for('static', filename='img/posts/what-is-about-temperature-stress.jpg') }}" alt="what-is-about-temperature-stress">
-                  </div>
-                </a>
-                <a class="article__link" href="/topics/temperature-stress-cold.html">
-                  <span class="article__tag">Холод</span>
-                </a>
-                <a class="article__link" href="/posts/what-is-about-temperature-stress.html">
-                  <h3 class="article__heading">О чем температурный стресс?</h3>
-                </a>
-              </div>
-              <a class="article__link" href="/posts/what-is-about-temperature-stress.html">
-                <p class="article__description">
-                  Этот вводный пост я бы хотел посвятить обсуждению причин
-                  выбора данной темы (температурного стресса), а также что это
-                  значит и как это работает. Поговорим сейчас обобщенно, а в
-                  будущих публикациях каждому моменту будет посвящен отдельный
-                  подробный пост. Изначально, назвать тему я хотел
-                  “Контролируемый температурный стресс”, но решил остановится на
-                  названии “попроще”. Идейно, “контролируемый стресс” берет
-                  начало из термина Гормезис
-                </p>
-              </a>
-            </article>
+    <li class="articles__item">
+      <a href="/posts/three-colors-of-fat.html" class="articles__link">6. Три цвета жира
+      </a>
+    </li>
 
-            <article class="articles__preview article">
-              <div class="article__top">
-                <a class="article__link" href="/posts/hormesis-a-little-bit-of-bad-good.html">
-                  <div class="article__imagewrapper">
-                    <img class="article__image" src="{{ url_for('static', filename='img/posts/hormesis-a-little-bit-of-bad-good.png') }}" alt="hormesis-a-little-bit-of-bad-good">
-                  </div>
-                </a>
-                <a class="article__link" href="/topics/temperature-stress-cold.html">
-                  <span class="article__tag">Холод</span>
-                </a>
-                <a class="article__link" href="/posts/hormesis-a-little-bit-of-bad-good.html">
-                  <h3 class="article__heading">
-                    Гормезис. Немножко плохо - хорошо?
-                  </h3>
-                </a>
-              </div>
-              <a class="article__link" href="/posts/hormesis-a-little-bit-of-bad-good.html">
-                <p class="article__description">
-                  В предыдущем посте я кратко упоминал концепт под названием
-                  “Гормезис”. Концепт интересный и полезный, а самое главное -
-                  тесно связанный с нашей темой. Давайте взглянем на него самую
-                  малость подробнее. Гормезис подразумевает, что многие виды
-                  вредоносного стресса для организма могут быть… благоприятны.
-                  Вопрос лишь в “дозировке”. И спектр возможных стрессоров
-                  довольно широкий - от банальных физических нагрузок и
-                  экстремальных температур, вплоть до токсинов и даже радиации
-                </p>
-              </a>
-            </article>
+    <li class="articles__item">
+      <a href="/posts/brown-fat.html" class="articles__link">7. Коричневый жир (ну или бурый)
+      </a>
+    </li>
 
-            <article class="articles__preview article">
-              <div class="article__top">
-                <a class="article__link" href="/posts/what-is-a-temperature-anyway.html">
-                  <div class="article__imagewrapper">
-                    <img class="article__image" src="{{ url_for('static', filename='img/posts/what-is-a-temperature-anyway.jpeg') }}" alt="what-is-a-temperature-anyway">
-                  </div>
-                </a>
-                <a class="article__link" href="/topics/temperature-stress-cold.html">
-                  <span class="article__tag">Холод</span>
-                </a>
-                <a class="article__link" href="/posts/what-is-a-temperature-anyway.html">
-                  <h3 class="article__heading">
-                    А что вообще значит “температура”?
-                  </h3>
-                </a>
-              </div>
-              <a class="article__link" href="/posts/what-is-a-temperature-anyway.html">
-                <p class="article__description">
-                  Ну что, делаем последнее небольшое ответвление в физику и
-                  разберемся, что вообще значит эта штука “температура”. Не
-                  напрягайтесь, физики на самом деле почти не будет, но будут
-                  очень ценные знания, которые когда-то перевернули мое
-                  восприятие мира. Начнем с того, что “температуры” не
-                  существует. Это очередная абстракция, которая позволяет нам
-                  описать какие-то физические концепты. Что мы описываем в этот
-                  раз? Энергию! В частности, тепловую энергию.
-                </p>
-              </a>
-            </article>
+    <li class="articles__item">
+      <a href="/posts/how-cold-makes-you-stronger.html" class="articles__link">8. Как холод закаляет
+      </a>
+    </li>
 
-            <article class="articles__preview article">
-              <div class="article__top">
-                <a class="article__link" href="/posts/how-to-feel-temperarture.html">
-                  <div class="article__imagewrapper">
-                    <img class="article__image" src="{{ url_for('static', filename='img/posts/how-to-feel-temperarture.jpeg') }}" alt="how-to-feel-temperarture">
-                  </div>
-                </a>
-                <a class="article__link" href="/topics/temperature-stress-cold.html">
-                  <span class="article__tag">Холод</span>
-                </a>
-                <a class="article__link" href="/posts/how-to-feel-temperarture.html">
-                  <h3 class="article__heading">
-                    Как почувствовать температуру?
-                  </h3>
-                </a>
-              </div>
-              <a class="article__link" href="/posts/how-to-feel-temperarture.html">
-                <p class="article__description">
-                  Что ж, в предыдущем посте, где мы разбирали что вообще такое
-                  “температура”, я немного затронул сегодняшнюю тему. А
-                  конкретно: как наш организм воспринимает и реагирует на
-                  изменения температуры. Давайте взглянем на них подробнее, т.к.
-                  на этой информации, по сути, и будет построен весь последующий
-                  материал. Начнем с самого актуального: Нобелевская Премия по
-                  медицине в этом году была выдана двум ученым за открытие
-                  рецепторов температуры и прикосновений. Как вы догадались, нас
-                  интересует первые рецепторы (хотя другие тоже очень
-                  интересные, может быть однажды в будущем обсудим)
-                </p>
-              </a>
-            </article>
-          </div>
+    <li class="articles__item">
+      <a href="/posts/how-to-lose-weight-with-cold.html" class="articles__link">9. Как похудеть при помощи холода
+      </a>
+    </li>
+
+    <li class="articles__item">
+      <a href="/posts/sport-and-cold-what-to-cool.html" class="articles__link">10. Спорт и холод. Что будем охлаждать?
+      </a>
+    </li>
+  </ul>
+
+  <span class="articles__delimiter articles__delimiter--single"></span>
+
+  <div class="articles__grid">
+    <div class="articles__topic">
+      <article class="articles__preview article">
+        <div class="article__top">
+          <a class="article__link" href="/posts/what-is-about-temperature-stress.html">
+            <div class="article__imagewrapper">
+              <img class="article__image"
+                src="{{ url_for('static', filename='img/posts/what-is-about-temperature-stress.jpg') }}"
+                alt="what-is-about-temperature-stress">
+            </div>
+          </a>
+          <a class="article__link" href="/topics/temperature-stress-cold.html">
+            <span class="article__tag">Холод</span>
+          </a>
+          <a class="article__link" href="/posts/what-is-about-temperature-stress.html">
+            <h3 class="article__heading">О чем температурный стресс?</h3>
+          </a>
         </div>
-      </section>
-    {% endblock %}
+        <a class="article__link" href="/posts/what-is-about-temperature-stress.html">
+          <p class="article__description">
+            Этот вводный пост я бы хотел посвятить обсуждению причин
+            выбора данной темы (температурного стресса), а также что это
+            значит и как это работает. Поговорим сейчас обобщенно, а в
+            будущих публикациях каждому моменту будет посвящен отдельный
+            подробный пост. Изначально, назвать тему я хотел
+            “Контролируемый температурный стресс”, но решил остановится на
+            названии “попроще”. Идейно, “контролируемый стресс” берет
+            начало из термина Гормезис
+          </p>
+        </a>
+      </article>
+
+      <article class="articles__preview article">
+        <div class="article__top">
+          <a class="article__link" href="/posts/hormesis-a-little-bit-of-bad-good.html">
+            <div class="article__imagewrapper">
+              <img class="article__image"
+                src="{{ url_for('static', filename='img/posts/hormesis-a-little-bit-of-bad-good.png') }}"
+                alt="hormesis-a-little-bit-of-bad-good">
+            </div>
+          </a>
+          <a class="article__link" href="/topics/temperature-stress-cold.html">
+            <span class="article__tag">Холод</span>
+          </a>
+          <a class="article__link" href="/posts/hormesis-a-little-bit-of-bad-good.html">
+            <h3 class="article__heading">
+              Гормезис. Немножко плохо - хорошо?
+            </h3>
+          </a>
+        </div>
+        <a class="article__link" href="/posts/hormesis-a-little-bit-of-bad-good.html">
+          <p class="article__description">
+            В предыдущем посте я кратко упоминал концепт под названием
+            “Гормезис”. Концепт интересный и полезный, а самое главное -
+            тесно связанный с нашей темой. Давайте взглянем на него самую
+            малость подробнее. Гормезис подразумевает, что многие виды
+            вредоносного стресса для организма могут быть… благоприятны.
+            Вопрос лишь в “дозировке”. И спектр возможных стрессоров
+            довольно широкий - от банальных физических нагрузок и
+            экстремальных температур, вплоть до токсинов и даже радиации
+          </p>
+        </a>
+      </article>
+
+      <article class="articles__preview article">
+        <div class="article__top">
+          <a class="article__link" href="/posts/what-is-a-temperature-anyway.html">
+            <div class="article__imagewrapper">
+              <img class="article__image"
+                src="{{ url_for('static', filename='img/posts/what-is-a-temperature-anyway.jpeg') }}"
+                alt="what-is-a-temperature-anyway">
+            </div>
+          </a>
+          <a class="article__link" href="/topics/temperature-stress-cold.html">
+            <span class="article__tag">Холод</span>
+          </a>
+          <a class="article__link" href="/posts/what-is-a-temperature-anyway.html">
+            <h3 class="article__heading">
+              А что вообще значит “температура”?
+            </h3>
+          </a>
+        </div>
+        <a class="article__link" href="/posts/what-is-a-temperature-anyway.html">
+          <p class="article__description">
+            Ну что, делаем последнее небольшое ответвление в физику и
+            разберемся, что вообще значит эта штука “температура”. Не
+            напрягайтесь, физики на самом деле почти не будет, но будут
+            очень ценные знания, которые когда-то перевернули мое
+            восприятие мира. Начнем с того, что “температуры” не
+            существует. Это очередная абстракция, которая позволяет нам
+            описать какие-то физические концепты. Что мы описываем в этот
+            раз? Энергию! В частности, тепловую энергию.
+          </p>
+        </a>
+      </article>
+
+      <article class="articles__preview article">
+        <div class="article__top">
+          <a class="article__link" href="/posts/how-to-feel-temperature.html">
+            <div class="article__imagewrapper">
+              <img class="article__image"
+                src="{{ url_for('static', filename='img/posts/how-to-feel-temperature.jpeg') }}"
+                alt="how-to-feel-temperature">
+            </div>
+          </a>
+          <a class="article__link" href="/topics/temperature-stress-cold.html">
+            <span class="article__tag">Холод</span>
+          </a>
+          <a class="article__link" href="/posts/how-to-feel-temperature.html">
+            <h3 class="article__heading">
+              Как почувствовать температуру?
+            </h3>
+          </a>
+        </div>
+        <a class="article__link" href="/posts/how-to-feel-temperature.html">
+          <p class="article__description">
+            Что ж, в предыдущем посте, где мы разбирали что вообще такое
+            “температура”, я немного затронул сегодняшнюю тему. А
+            конкретно: как наш организм воспринимает и реагирует на
+            изменения температуры. Давайте взглянем на них подробнее, т.к.
+            на этой информации, по сути, и будет построен весь последующий
+            материал. Начнем с самого актуального: Нобелевская Премия по
+            медицине в этом году была выдана двум ученым за открытие
+            рецепторов температуры и прикосновений. Как вы догадались, нас
+            интересует первые рецепторы (хотя другие тоже очень
+            интересные, может быть однажды в будущем обсудим)
+          </p>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock %}

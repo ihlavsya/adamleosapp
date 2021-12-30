@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Спорт и холод. Что будем охлаждать? | Адам Леос" />
+{% endblock %}
+{% block title %} Спорт и холод. Что будем охлаждать? | Адам Леос {% endblock %}
+{% block content %}
+<section class="main__section">
+    <h2 class="main__heading main__heading--post"> <span class="main__subheading"> <a
+                href="/topics/temperature-stress-cold.html"><span>Температурный Стресс: Холод</span></a>
+            <div class="post__delimiter"></div>
+        </span> Спорт и холод. Что будем охлаждать? </h2>
+    <article class="post">
+        <div class="post__imagewrapper"> <img class="post__image"
+                src="{{ url_for('static', filename='img/posts/sport-and-cold-what-to-cool.jpg')}}"
+                alt="sport-and-cold-what-to-cool" /> </div>
+        </div>
+        <p class="post__text">Немного отложил публикации, переезжал поближе к океану. Но теперь океан под боком, а
+            значит пора
+            обсудить очень интересную связку холода и физических упражнений. И здесь есть что обсуждать!</p>
+        <p class="post__text">Начнем с важной и быстрой вводной: как вам известно, слишком высокая температура тела
+            точно также
+            опасна, как и слишком низкая. Например, наши белки начнут терять форму и неправильно сворачиваться
+            (денатурация),
+            что приведет к распаду и смерти клеток (а следом и человека) [1].</p>
+        <p class="post__text">Так что, ровно как в случае с холодом, когда организм старается тепло сохранить и
+            производить
+            больше, при жаре организм также будет стараться выравнять температуру, избавляясь от лишнего тепла. Трюков
+            для этого
+            у нас довольно много, и самый известный и важный из них - потение [2]. В подробностях мы к этому еще
+            вернемся в
+            следующей части температурного стресса, когда будем говорить о жаре.</p>
+        <p class="post__text">Сейчас же сфокусируемся на том, что тепло мы не только получаем из окружения (солнца,
+            батареи,
+            любимого\нелюбимого человека), но и производим сами. Это, безусловно, очень хорошо, да и недавно мы
+            рассматривали
+            как это важно для обогрева тела. Но иногда это происходит как побочный эффект. Как вы уже догадались, имею я
+            в виду
+            физические нагрузки и прочую активность [3]. </p>
+        <p class="post__text">Когда мы, к примеру, занимаемся спортом, то организм начинает производить много энергии
+            для мышц.
+            Но менее 30% новопроизведенной энергии мы используем для движения мышц, а вся остальная энергия
+            распространяется в
+            виде тепла. Именно поэтому мы во время активностей так быстро нагреваемся [4]. </p>
+        <p class="post__text">Кто-то может сказать, что “мы не очень-то и эффективны в использовании энергии”. И,
+            возможно, этот
+            “кто-то” будет отчасти прав… Но мы оставим это обсуждение для отдельной темы. А сейчас же вернемся к обилию
+            производимого тепла нашим телом.</p>
+        <p class="post__text">Так что, чтобы наши белки не посворачивались, мы должны быстренько от этого лишнего тепла
+            избавляться. Собственно, во многом именно температура тела и служит ограничителем нашей физической
+            производительности (не единственный ограничитель, конечно же, но критически важный). Ведь в какой-то момент
+            мы уже
+            физически не можем себе позволить продолжать [5].</p>
+        <p class="post__text">Получается, если применить холод, то мы будем более эффективны?! Ну, это зависит… от того,
+            куда и
+            как этот холод применить. Так как вариантов и данных много, а также полезности и опасности данных подходов
+            часто
+            совсем не очевидны, мы рассмотрим это все подробненько в следующем посте.</p>
+
+        <div class="post__continue continue"> <a href="/posts/how-to-lose-weight-with-cold.html"
+                class="continue__button">
+                <div class="continue__arrow">&#10229;</div>
+                <div class="continue__content"> <span class="continue__tag">Температурный Стресс: Холод</span> <span
+                        class="continue__heading">Как похудеть при помощи холода?
+                    </span> </div>
+            </a>
+            <div class="continue__delimiter"></div> <a href="/posts/sport-and-cold-increasing-perfomance.html"
+                class="continue__button">
+                <div class="continue__content continue__content--right"> <span class="continue__tag">Температурный
+                        Стресс: Холод</span>
+                    <span class="continue__heading">Спорт и холод. Увеличиваем производительность.
+                    </span>
+                </div>
+                <div class="continue__arrow">&#10230;</div>
+            </a>
+        </div>
+        <div class="post__sources sources" id="sources-list">
+            <h5 class="sources__toggler">Источники</h5>
+            <ul class="sources__list">
+                <li class="sources__item"><span class="sources__number">[1]</span> <a class="sources__link"
+                        href="https://sci-hub.hkvisa.net/10.1089/adt.2011.0390" target="_blank">Senisterra, Guillermo et
+                        al. "Thermal denaturation assays in chemical biology". <i>Assay and drug development
+                            technologies</i> vol. 10, 2. 2012 Apr.</a></li>
+                <li class="sources__item"><span class="sources__number">[2]</span> <a class="sources__link"
+                        href="https://sci-hub.st/https://pubmed.ncbi.nlm.nih.gov/24692142/" target="_blank">Taylor,
+                        Nigel A S et al. "Human heat adaptation". <i>Comprehensive Physiology</i> vol. 4, 1. 2014
+                        Jan.</a></li>
+                <li class="sources__item"><span class="sources__number">[3]</span> <a class="sources__link"
+                        href="https://annals.edu.sg/pdf/37VolNo4Apr2008/V37N4p347.pdf" target="_blank">Lim, Chin Leong
+                        et al. “Human thermoregulation and measurement of body temperature in exercise and clinical
+                        settings.” Annals of the Academy of Medicine, Singapore vol. 37,4 (2008): 347-53. </a></li>
+                <li class="sources__item"><span class="sources__number">[4]</span> <a class="sources__link"
+                        href="https://www.ncbi.nlm.nih.gov/books/NBK236240/" target="_blank">
+                        Institute of Medicine (US) Committee on Military Nutrition Research; Marriott BM, editor.
+                        Nutritional Needs in Hot Environments: Applications for Military Personnel in Field Operations.
+                        Washington (DC): National Academies Press (US); 1993. 3, Physiological Responses to Exercise in
+                        the Heat.</a></li>
+                <li class="sources__item"><span class="sources__number">[5]</span> <a class="sources__link"
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7036802" target="_blank">Douzi, Wafa et al.
+                        “Per-Cooling (Using Cooling Systems during Physical Exercise) Enhances Physical and Cognitive
+                        Performances in Hot Environments. A Narrative Review.” International journal of environmental
+                        research and public health vol. 17,3 1031.</a></li>
+            </ul>
+        </div>
+    </article>
+</section>
+{% endblock %}
