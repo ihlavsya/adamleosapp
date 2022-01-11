@@ -4,6 +4,7 @@ from views.old_topics import old_topics
 from views.media import media
 from views.contacts import contacts
 
+
 app = Flask(__name__)
 
 if app.config["ENV"] == "production":
