@@ -3,3 +3,6 @@ myenv
 .vscode
 config.py
 script.py
+fb_posts
+anon.session
+anon.session-journal
