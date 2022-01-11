@@ -7,10 +7,12 @@ media = Blueprint("media", __name__)
 def index():
    return render_template('media/index.html')
 
+@media.route('videos')
 @media.route('videos.html')
 def videos():
    return render_template('media/videos.html')
 
+@media.route('extra')
 @media.route('extra.html')
 def extra():
    return render_template('media/extra.html')

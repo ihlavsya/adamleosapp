@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background: url('../img/headerbg3.jpg') repeat top left;
+  background: url('/static/img/headerbg3.jpg') repeat top left;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -21,7 +21,7 @@ body {
 .header {
   height: 100vh;
   position: relative;
-  background: url('../img/headerbg2.jpg') no-repeat top left;
+  background: url('/static/img/headerbg2.jpg') no-repeat top left;
   background-size: cover;
   background-attachment: fixed;
 }
