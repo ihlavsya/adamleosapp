@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Охлаждение для мозга | Адам Леос" />
+{% endblock %}
+{% block title %} Охлаждение для мозга | Адам Леос {% endblock %}
+{% block content %}
+<section class="main__section">
+        <h2 class="main__heading main__heading--post"> <span class="main__subheading"> <a
+                                href="/topics/temperature-stress-cold.html"><span>Температурный Стресс: Холод</span></a>
+                        <div class="post__delimiter"></div>
+                </span> Охлаждение для мозга </h2>
+        <article class="post">
+                <div class="post__imagewrapper"> <img class="post__image"
+                                src="{{ url_for('static', filename='img/posts/brain-cooling.jpg')}}"
+                                alt="brain-cooling" /> </div>
+                </div>
+
+                <p class="post__text">Про всякие мышцы поговорили, пора обсудить самую важную для многих штуку - мозг.
+                        Ожидаемо, холод
+                        оказывает большое влияние на работу мозга, но много ли в этом полезного?</p>
+                <p class="post__text">В посте о реакции организма на холод я уже упоминал резкий и сильный выброс
+                        норарденалина
+                        (норэпинефрина), когда тело подвергается низким температурам. Всего за несколько минут в
+                        прохладных условиях его
+                        количество в крови может увеличиться в несколько раз [1]. </p>
+                <p class="post__text">Данное вещество выполняет очень важные функции, имея возможность выступать в роли
+                        как гормона, так
+                        и нейромедиатора. Мы сфокусируемся на связи с мозгом. По свойствам норадреналин довольно похож
+                        на адреналин и
+                        принимает ключевое участие в бдительности, внимании, фокусе, и настроении [2].</p>
+                <p class="post__text">Таким образом, вполне неудивительно, что нарушения в уровнях норэпинефрина
+                        ассоциированы в
+                        когнитивными расстройствами, включая болезнь Альцгеймера и шизофрению [3]. Но если это уже
+                        тяжелые случаи, то есть и
+                        более распространенные (и сперва незаметные) проблемы, связанные со сбоями данного
+                        нейромедиатора. Речь идет о таких
+                        вещах, как проблемы внимания и фокуса, перепады настроения или его “плохое” состояние, и даже
+                        низкие уровни энергии
+                        [4].</p>
+                <p class="post__text">Так что, холод может помочь с этим помочь? Ну, давайте попробуем на этот вопрос
+                        ответить.
+                        Допустим, возьмем депрессию. Данные указывают на сильную связь норэпинефрина с данным
+                        расстройством [5]. Есть ли
+                        успех в решении этой проблемы при помощи холода? Вполне себе да - после десяти сессий
+                        криотерапии наблюдали
+                        значительно улучшение состояния. Заодно, отмечали заметно улучшившееся настроение и качество
+                        жизни [6].</p>
+                <p class="post__text">Но это все - если присутствуют нарушения или отклонения. Когда человек здоров, а
+                        тем более закален
+                        - эффекты либо незначительны, либо и вовсе отсутствуют. Таким образом, подмечается необходимость
+                        именно испытывать
+                        стресс от холода, что имеет смысл, если вы помните пост о гормезисе (пользе небольшого стресса).
+                        Заодно, в следствии
+                        подобного стресса, люди не только улучшали обсужденные выше показатели, но также становились
+                        более устойчивы к
+                        стрессу в целом (включая разные его виды) [7].</p>
+                <p class="post__text">Только не перегибайте! Это все очень хорошо, и наверняка вас мотивировало
+                        померзнуть, но с холодом
+                        стоит быть крайне аккуратным. О том, как грамотно мерзнуть и безопасно закаляться - поговорим
+                        уже очень скоро.</p>
+
+                <div class="post__continue continue"> <a href="/posts/sport-and-cold-increasing-perfomance.html"
+                                class="continue__button">
+                                <div class="continue__arrow">&#10229;</div>
+                                <div class="continue__content"> <span class="continue__tag">Температурный Стресс:
+                                                Холод</span> <span class="continue__heading">Спорт и холод. Увеличиваем
+                                                производительность.
+                                        </span> </div>
+                        </a>
+                        <div class="continue__delimiter"></div> <a href="/posts/can-cold-make-immunity-stronger.html"
+                                class="continue__button">
+                                <div class="continue__content continue__content--right"> <span
+                                                class="continue__tag">Температурный
+                                                Стресс: Холод</span>
+                                        <span class="continue__heading">Можно ли холодом закалить иммунитет?
+                                        </span>
+                                </div>
+                                <div class="continue__arrow">&#10230;</div>
+                        </a>
+                </div>
+                <div class="post__sources sources" id="sources-list">
+                        <h5 class="sources__toggler">Источники</h5>
+                        <ul class="sources__list">
+                                <li class="sources__item"><span class="sources__number">[1]</span> <a
+                                                class="sources__link" href="https://sci-hub.ru/10.1007/s004210050065"
+                                                target="_blank">Srámek, P et al. "Human
+                                                physiological responses to immersion into water of different
+                                                temperatures". <i>European journal
+                                                        of applied physiology</i> vol. 81, 5. 2000 Mar.</a></li>
+                                <li class="sources__item"><span class="sources__number">[2]</span> <a
+                                                class="sources__link"
+                                                href="https://sci-hub.ru/10.1016/S0006-3223(99)00127-4"
+                                                target="_blank">ERROR</a></li>
+                                <li class="sources__item"><span class="sources__number">[3]</span> <a
+                                                class="sources__link"
+                                                href="http://sci-hub.ru/10.1016/S0006-3223(99)00232-2"
+                                                target="_blank">ERROR</a></li>
+                                <li class="sources__item"><span class="sources__number">[4]</span> <a
+                                                class="sources__link" href="http://sci-hub.ru/10.1002/ajmg.10196"
+                                                target="_blank">Kim, Chun-Hyung et al. "Mutations in
+                                                the dopamine beta-hydroxylase gene are associated with human
+                                                norepinephrine deficiency".
+                                                <i>American journal of medical genetics</i> vol. 108, 2. 03/01/2002.</a>
+                                </li>
+                                <li class="sources__item"><span class="sources__number">[5]</span> <a
+                                                class="sources__link"
+                                                href="https://www.dovepress.com/getfile.php?fileID=10204"
+                                                target="_blank">ERROR</a></li>
+                                <li class="sources__item"><span class="sources__number">[6]</span> <a
+                                                class="sources__link"
+                                                href="https://www.frontiersin.org/articles/10.3389/fpsyt.2020.00522/full"
+                                                target="_blank">ERROR</a></li>
+                                <li class="sources__item"><span class="sources__number">[7]</span> <a
+                                                class="sources__link"
+                                                href="https://physoc.onlinelibrary.wiley.com/doi/full/10.1113/EP086283"
+                                                target="_blank">ERROR</a></li>
+                        </ul>
+                </div>
+        </article>
+</section>
+{% endblock %}

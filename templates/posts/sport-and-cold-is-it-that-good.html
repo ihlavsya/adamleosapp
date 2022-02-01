@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="Спорт и холод. Так ли это хорошо?| Адам Леос" />
+{% endblock %}
+{% block title %} Спорт и холод. Так ли это хорошо?| Адам Леос {% endblock %}
+{% block content %}
+<section class="main__section">
+    <h2 class="main__heading main__heading--post"> <span class="main__subheading"> <a
+                href="/topics/temperature-stress-cold.html"><span>Температурный Стресс: Холод</span></a>
+            <div class="post__delimiter"></div>
+        </span> Спорт и холод. Так ли это хорошо?
+    </h2>
+    <article class="post">
+        <div class="post__imagewrapper"> <img class="post__image"
+                src="{{ url_for('static', filename='img/posts/sport-and-cold-is-it-that-good.jpg')}}"
+                alt="sport-and-cold-is-it-that-good" /> </div>
+        </div>
+        <p class="post__text">Последний пост мы закончили прямыми намеками на влияние холода на физическую
+            производительность.
+            Пора разобраться, какие эффекты нам способен холод предложить в этом разрезе, а также какие подводные камни
+            нас
+            здесь ждут. Как обычно, все совсем не так просто, как может показаться на первый взгляд.</p>
+        <p class="post__text">Ведь как мы обозначили в предыдущем посте, повышение температуры тела является большим
+            фактором,
+            ограничивающим наши физические возможности. Вплоть до ситуаций, когда просто при жаре дома или на улице мы
+            уже не
+            то, что не в состоянии нормально заниматься спортом, но даже двигаться не хочется. И действительно,
+            физическая
+            производительность людей при умеренной температуре окружения (+17-22°C) значительно выше, чем на жаре [1].
+        </p>
+        <p class="post__text">Можно даже охлаждать себя незадолго до активности, тем самым “откладывая перегревание”.
+            Это
+            довольно давно практикуется в различных видах профессионального спорта [2]. Логично тогда предположить, что
+            дополнительно охлаждая себя при выполнении физических нагрузок, мы будем способны выдать результаты лучше?
+        </p>
+        <p class="post__text">Так предполагали многие, но вот результаты, почему-то, то вроде бы поддерживают эти
+            утверждения,
+            то не совсем… [3] Почему же так? Самую большую роль играет метод охлаждения: прикладывание льда к
+            нагружаемым мышцам
+            и подобные методы зачастую не только не увеличивают производительность, но даже напротив - ее снижают [4].
+        </p>
+        <p class="post__text">Связано это с тем, что при нагрузках мышц (особенно при силовых упражнениях) растет
+            уровень
+            воспаления. Что, по сути, нормально - ткани нагружаются и повреждаются (чего при “качании мышц” и стараются
+            достичь). А тело реагирует на это каскадом событий, включая активацию регенерации и мобилизацию иммунной
+            системы,
+            что сопровождается ростом воспаления [5]. </p>
+        <p class="post__text">Холод же воспаление понижает. И хотя многие на быструю руку делают положительные выводы,
+            ведь
+            воспаление упало, а это хорошожевродебыкак, реально хорошего здесь мало [6]. Таким образом заглушается ряд
+            критических процессов, без которых невозможно не только качественное восстановление мышц, но и даже
+            корректное их
+            функционирование в процессе текущей нагрузки.</p>
+        <p class="post__text">Данные указывают на падение производительности в процессе тренировки (и корректности
+            выполняемых
+            активностей), а также меньший набор мышечной массы, медленную регенерацию, и даже увеличение риска травм.
+            Последнее
+            связано также с тем, что люди, вследствие применения холода локально, хуже ощущали собственные лимиты и
+            имели
+            притупленное чувство боли. Это заодно причина многих ошибочных суждений о “полезности” охлаждения после
+            тренировки,
+            потому что “болит меньше” [7].</p>
+        <p class="post__text">Еще очень плохой идеей является прикладывание холодного к шее. В следствии сужения сосудов
+            именно
+            в этой области, мозг начинает предполагать, что охлаждается очень сильно, хотя температура тела намного
+            выше. Таким
+            образом, вы будете “ощущать себя прохладнее”, когда это на самом деле далеко не так. Это приводит к еще
+            большему
+            количеству травм и проблем, так что данный метод практиковать точно не стоит [8].</p>
+        <p class="post__text">Ну а что тогда делать? Можно ли вообще безопасно и эффективно улучшить свою физическую
+            производительность? Да! Но об этом, в подробностях, в следующем посте.</p>
+        <div class="post__continue continue"> <a href="/posts/sport-and-cold-what-to-cool.html"
+                class="continue__button">
+                <div class="continue__arrow">&#10229;</div>
+                <div class="continue__content"> <span class="continue__tag">Температурный Стресс: Холод</span> <span
+                        class="continue__heading">Спорт и холод. Что будем охлаждать?
+                    </span> </div>
+            </a>
+            <div class="continue__delimiter"></div> <a href="/posts/sport-and-cold-increasing-perfomance.html"
+                class="continue__button">
+                <div class="continue__content continue__content--right"> <span class="continue__tag">Температурный
+                        Стресс: Холод</span>
+                    <span class="continue__heading">Спорт и холод. Увеличиваем производительность.
+                    </span>
+                </div>
+                <div class="continue__arrow">&#10230;</div>
+            </a>
+        </div>
+        <div class="post__sources sources" id="sources-list">
+            <h5 class="sources__toggler">Источники</h5>
+            <ul class="sources__list">
+                <li class="sources__item"><span class="sources__number">[1]</span> <a class="sources__link"
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8514392" target="_blank">ERROR in link with
+                        PMCID=</a></li>
+                <li class="sources__item"><span class="sources__number">[2]</span> <a class="sources__link"
+                        href="http://sci-hub.st/10.1152/jappl.1995.79.6.1971" target="_blank">Lee, D T et al. "Exercise
+                        duration and thermoregulatory responses after whole body precooling". <i>Journal of applied
+                            physiology (Bethesda, Md. : 1985)</i> vol. 79, 6. 1995 Dec.</a></li>
+                <li class="sources__item"><span class="sources__number">[3]</span> <a class="sources__link"
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5309298/" target="_blank">Ruddock, Alan et
+                        al. “Practical Cooling Strategies During Continuous Exercise in Hot Environments: A Systematic
+                        Review and Meta-Analysis.” <i>Sports medicine (Auckland, N.Z.)</i> vol. 47,3 (2017):
+                        517-532.</a></li>
+                <li class="sources__item"><span class="sources__number">[4]</span> <a class="sources__link"
+                        href="https://link.springer.com/article/10.1007/s00421-009-1138-y" target="_blank">ERROR</a>
+                </li>
+                <li class="sources__item"><span class="sources__number">[5]</span> <a class="sources__link"
+                        href="http://sci-hub.st/10.1016/j.jshs.2018.09.009" target="_blank">Nieman, David C et al. "The
+                        compelling link between physical activity and the body&#39;s defense system". <i>Journal of
+                            sport and health science</i> vol. 8, 3. 2019 May.</a></li>
+                <li class="sources__item"><span class="sources__number">[6]</span> <a class="sources__link"
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4586380/" target="_blank">Hohenauer, Erich et
+                        al. “The Effect of Post-Exercise Cryotherapy on Recovery Characteristics: A Systematic Review
+                        and Meta-Analysis.” <i>PloS one</i> vol. 10,9 e0139028. 28 Sep. 2015.</a></li>
+                <li class="sources__item"><span class="sources__number">[7]</span> <a class="sources__link"
+                        href="https://link.springer.com/article/10.1007/s00421-009-1138-y" target="_blank">ERROR</a>
+                </li>
+                <li class="sources__item"><span class="sources__number">[8]</span> <a class="sources__link"
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8197712/" target="_blank">Koehn, Julia et al.
+                        “Neck cooling induces blood pressure increase and peripheral vasoconstriction in healthy
+                        persons.” <i>Neurological sciences : official journal of the Italian Neurological Society and of
+                            the Italian Society of Clinical Neurophysiology</i> vol. 41,9 (2020): 2521-2529.</a></li>
+            </ul>
+        </div>
+    </article>
+</section>
+{% endblock %}

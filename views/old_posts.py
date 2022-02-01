@@ -2,6 +2,26 @@ from flask import Blueprint, render_template
 
 old_posts = Blueprint("old-posts", __name__)
 
+@old_posts.route('can-cold-make-immunity-stronger.html')
+def can_cold_make_immunity_stronger():
+   return render_template('posts/can-cold-make-immunity-stronger.html')
+
+@old_posts.route('brain-cooling.html')
+def brain_cooling():
+   return render_template('posts/brain-cooling.html')
+
+@old_posts.route('adapting-to-cold.html')
+def adapting_to_cold():
+   return render_template('posts/adapting-to-cold.html')
+
+@old_posts.route('sport-and-cold-is-it-that-good.html')
+def sport_and_cold_is_it_that_good():
+   return render_template('posts/sport-and-cold-is-it-that-good.html')
+
+@old_posts.route('sport-and-cold-increasing-perfomance.html')
+def sport_and_cold_increasing_perfomance():
+   return render_template('posts/sport-and-cold-increasing-perfomance.html')
+
 @old_posts.route('how-cold-makes-you-stronger.html')
 def how_cold_makes_you_stronger():
    return render_template('posts/how-cold-makes-you-stronger.html')
