@@ -1,0 +1,50 @@
+<section class="main__section articles">
+    <a href="/topics/index.html" class="main__heading-link">
+        <h2 class="main__heading">Последние Темы</h2>
+    </a>
+
+    <div class="articles__grid">
+        {% for topic in topics %}
+        <div class="articles__topic">
+            <h3 class="articles__heading">
+                <a href="/topics/{{topic.link}}"><span>{{topic.name}}</span></a>
+                <span class="articles__delimiter"></span>
+            </h3>
+            {% for post in topic.posts %}
+            <article class="articles__preview article">
+                <div class="article__top">
+                    <a class="article__link" href="/posts/{{post.link}}">
+                        <div class="article__imagewrapper">
+                            <img class="article__image" src="{{ url_for('static', filename=post.imgpath_original) }}"
+                                alt="post.eng_descr">
+                        </div>
+                    </a>
+                    <a class="article__link" href="/topics/{{topic.link}}">
+                        <span class="article__tag">{{ post.tag }}</span>
+                    </a>
+                    <a class="article__link" href="/posts/{{post.link}}">
+                        <h3 class="article__heading">
+                            {{ post.header }}
+                        </h3>
+                    </a>
+                </div>
+                <a class="article__link" href="/posts/{{post.link}}">
+                    <p class="article__description">
+                        {{ post.short_text }}
+                    </p>
+                </a>
+            </article>
+            {% endfor %}
+            <a href="/topics/{{topic.link}}" class="articles__all">
+                <span class="articles__arrow articles__arrow--top">&nbsp;</span>
+                <span class="articles__arrow-text articles__arrow-text--tall">Все посты по теме
+                    <br />&laquo;{{topic.name}}&raquo;</span>
+                <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+
+    <a href="/topics/index.html" class="articles__button articles__button--all-themes">Все темы</a>
+</section>

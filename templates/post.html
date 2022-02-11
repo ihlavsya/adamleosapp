@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="{{ post.header }} | Адам Леос" />
+{% endblock %}
+{% block title %} {{ post.header }} | Адам Леос {% endblock %}
+{% block content %}
+<section class="main__section">
+    <h2 class="main__heading main__heading--post"> <span class="main__subheading"> <a
+                href="/topics/{{ post.topic.link }}"><span>{{ post.topic.name }}</span></a>
+            <div class="post__delimiter"></div>
+        </span> {{ post.header }} </h2>
+    <article class="post">
+        <div class="post__imagewrapper"> <img class="post__image"
+                src="{{ url_for('static', filename=post.imgpath_original)}}" alt="post.eng_descr" /> </div>
+        </div>
+        {{ post.text_html | safe }}
+        <div class="post__continue continue">
+            <a href="/posts/{{post.prev_post.link}}" class="continue__button">
+                <div class="continue__arrow">&#10229;</div>
+                <div class="continue__content">
+                    <span class="continue__tag">{{ post.prev_post.topic.name }}</span>
+                    <span class="continue__heading">{{ post.prev_post.header }}</span>
+                </div>
+            </a>
+            <div class="continue__delimiter"></div>
+            <a href="/posts/{{post.next_post.link}}" class="continue__button">
+                <div class="continue__content continue__content--right">
+                    <span class="continue__tag">{{post.next_post.topic.name}}</span>
+                    <span class="continue__heading">{{ post.next_post.header }}</span>
+                </div>
+                <div class="continue__arrow">&#10230;</div>
+            </a>
+        </div>
+        <div class="post__sources sources" id="sources-list">
+            <h5 class="sources__toggler">Источники</h5>
+            <ul class="sources__list">
+                {{ post.references_html | safe }}
+            </ul>
+        </div>
+    </article>
+</section>
+{% endblock %}

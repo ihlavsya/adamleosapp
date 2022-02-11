@@ -1,0 +1,1 @@
+from services.topic_service import get_topic_profile

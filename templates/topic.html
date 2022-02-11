@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "styles-post.html"%}
+<meta name="description" content="{{ topic_profile.name }} | Адам Леос" />
+{% endblock %}
+{% block title %} {% endblock %}
+{% block content %}
+<section class="main__section articles">
+    <h2 class="main__heading">{{ topic_profile.name }}</h2>
+
+    <input type="checkbox" id="gradient" class="articles__gradient-checkbox">
+    <ul class="articles__list">
+        <label for="gradient" class="articles__navigation">
+            <span class="articles__navigation-arrow"></span>
+            <span class="
+                articles__navigation-arrow articles__navigation-arrow--right
+              "></span>
+        </label>
+        {% for post in topic_profile.posts %}
+        <li class="articles__item">
+            <a href="/posts/{{post.link}}" class="articles__link">{{post.num_in_line}}. {{post.header}}
+            </a>
+        </li>
+        {% endfor %}
+
+        <span class="articles__delimiter articles__delimiter--single"></span>
+
+        <div class="articles__grid">
+            <div class="articles__topic">
+                {% for post in topic_profile.posts %}
+                <article class="articles__preview article">
+                    <div class="article__top">
+                        <a class="article__link" href="/posts/{{post.link}}">
+                            <div class="article__imagewrapper">
+                                <img class="article__image"
+                                    src="{{ url_for('static', filename=post.imgpath_original) }}"
+                                    alt="post.eng_descr">
+                            </div>
+                        </a>
+                        <a class="article__link" href="/topics/temperature-stress-cold.html">
+                            <span class="article__tag">{{post.tag}}</span>
+                        </a>
+                        <a class="article__link" href="/posts/{{post.link}}">
+                            <h3 class="article__heading">{{post.header}}</h3>
+                        </a>
+                    </div>
+                    <a class="article__link" href="/posts/{{post.link}}">
+                        <p class="article__description">
+                            {{post.short_text}}
+                        </p>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+</section>
+{% endblock %}
