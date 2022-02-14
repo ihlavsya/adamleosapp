@@ -2,6 +2,7 @@ from typing import List
 from DTOs.ReferenceTopicDto import ReferenceTopicDto
 from repositories.Repository import Repository, RepositoryException
 import mapper
+from shared import Order
 
 
 class TopicRepository(Repository):
@@ -16,13 +17,13 @@ class TopicRepository(Repository):
         topic: ReferenceTopicDto = mapper.FromQueryResToTopic(result)
         return topic
 
-    def get_all_topics(self) -> List[ReferenceTopicDto]:
+    def get_all_topics(self, order: Order) -> List[ReferenceTopicDto]:
         c = self.conn.cursor()
         stmt = '''
         SELECT Topics.TopicID, Topics.Name, 
         Topics.EngDescription, Topics.NumberInChronology
-        from Topics ORDER BY Topics.NumberInChronology DESC'''
+        from Topics ORDER BY Topics.NumberInChronology {0}'''.format(order.value)
         c.execute(stmt)
         result = c.fetchall()
-        topic: ReferenceTopicDto = mapper.FromQueryResToTopic(result)
-        return topic
+        topics: List[ReferenceTopicDto] = [mapper.FromQueryResToTopic(row) for row in result]
+        return topics

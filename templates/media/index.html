@@ -2,11 +2,13 @@
 {% block head %}
 {{ super() }}
 <meta name="description"
-  content="Все мои видео, а также видео, подкасты, и т.п., где я фигрурирую и делюсь знаниями в видео приглашенного гостя" />
+  content="Все мои видео, а также видео, подкасты, и т.п., где я фигурирую и делюсь знаниями в видео приглашенного гостя" />
 {% endblock %}
 {% block title %}
 Медиа. Все медиа-ресурсы, где фигурирую я или мои работы | Адам Леос
 {% endblock %}
+
+{% block header_style %}header--secondary{% endblock %}
 
 {% block content %}
 <section class="main__section articles">
@@ -14,7 +16,7 @@
 
   <section class="main__section videos">
     <h3 class="articles__heading">
-      <a href="/media/videos.html"><span>Видео</span></a>
+      <a href="/media/videos.html"><span>Полные видео</span></a>
       <span class="articles__delimiter"></span>
     </h3>
 
@@ -32,17 +34,48 @@
 
       <a href="/media/videos.html" class="articles__all">
         <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-        <span class="articles__arrow-text">Все мои видео</span>
+        <span class="articles__arrow-text">Все мои полные видео</span>
         <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
       </a>
 
       <a href="/media/videos.html" class="articles__button articles__button--mobile">
-        Все мои видео
+        Все мои полные видео
       </a>
     </div>
   </section>
 
-  <section class="main__section extra">
+  <section class="main__section videos">
+    <h3 class="articles__heading">
+      <a href="/media/kusochki.html"><span>Кусочки</span></a>
+      <span class="articles__delimiter"></span>
+    </h3>
+
+    <div class="videos__grid">
+      <div class="videos__container">
+        <iframe src="https://www.youtube-nocookie.com/embed/bDJ-DYA-q9M" title="Рекомендации при бессоннице, ночных работах, и прочих нарушениях сна" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="videos__container">
+        <iframe src="https://www.youtube-nocookie.com/embed/khtBFt1n6ag" title="Кофе, алкоголь, и другие враги сна" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <a href="/media/kusochki.html" class="articles__all">
+        <span class="articles__arrow articles__arrow--top">&nbsp;</span>
+        <span class="articles__arrow-text">Все мои кусочки</span>
+        <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
+      </a>
+
+      <a href="/media/kusochki.html" class="articles__button articles__button--mobile">
+        Все мои кусочки
+      </a>
+    </div>
+  </section>
+
+  <!-- <section class="main__section extra">
     <h3 class="articles__heading">
       <a href="/media/extra.html"><span>Экстра</span></a>
       <span class="articles__delimiter"></span>
@@ -71,6 +104,6 @@
         Все экстра
       </a>
     </div>
-  </section>
+  </section> -->
 </section>
 {% endblock %}

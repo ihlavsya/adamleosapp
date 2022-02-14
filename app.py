@@ -1,10 +1,13 @@
 from flask import Flask, render_template
+from typing import List
+from DTOs.TopicProfileDto import TopicProfileDto
 from views.old_posts import old_posts
 from views.old_topics import old_topics
 from views.media import media
 from views.contacts import contacts
 from views.posts import posts
 from views.topics import topics
+from services import get_latest_topics
 
 
 app = Flask(__name__)
@@ -27,7 +30,8 @@ app.register_blueprint(topics, url_prefix='/topics')
 @app.route('/')
 @app.route('/index.html')
 def index():
-    return render_template('index.html')
+    topic_profiles: List[TopicProfileDto] = get_latest_topics()
+    return render_template('index.html', topic_profiles=topic_profiles)
 
 @app.errorhandler(404)
 def page_not_found(error):

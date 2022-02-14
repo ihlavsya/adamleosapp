@@ -7,11 +7,6 @@ old_topics = Blueprint("old-topics", __name__)
 def sleep():
    return render_template('topics/sleep.html')
 
-@old_topics.route('/')
-@old_topics.route('index.html')
-def index():
-   return render_template('topics/index.html')
-
 @old_topics.route('fasting')
 @old_topics.route('fasting.html')
 def fasting():

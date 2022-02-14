@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <header class="header header--secondary">
+    <header class="header {% block header_style %} {% endblock %}">
         <nav class="header__nav nav">
             <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
             <label for="hamburger" class="nav__hamburger">
@@ -61,6 +61,7 @@
                 </li>
             </ul>
         </nav>
+        {% block picture_header%} {% endblock %}
     </header>
     <main class="main" id="content">{% block content %}{% endblock %}</main>
 </body>

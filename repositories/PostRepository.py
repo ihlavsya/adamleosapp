@@ -1,8 +1,10 @@
+from typing import List, Optional
 from repositories.Repository import Repository, RepositoryException
 from DTOs.FullPostDto import FullPostDto
 from DTOs.ShortPostDto import ShortPostDto
 from models.Post import Post
 import mapper
+from shared import Order
 
 
 class PostRepository(Repository):
@@ -30,7 +32,7 @@ class PostRepository(Repository):
         post: FullPostDto = mapper.FromQueryResToPost(result)
         return post
 
-    def get_short_posts_by_topic_id(self, topic_id: int) -> list[ShortPostDto]:
+    def get_short_posts_by_topic_id(self, topic_id: int, order: Order, count: Optional[int]=None) -> List[ShortPostDto]:
         c = self.conn.cursor()
         stmt = '''
         SELECT p.PostID, p.Header, p.EngDescription, 
@@ -41,8 +43,10 @@ class PostRepository(Repository):
         INNER JOIN PostsTags pt ON p.PostID=pt.PostID
         INNER JOIN Tags ON pt.TagID=Tags.TagID
         WHERE Topics.TopicID={0}
-        ORDER BY p.NumberInLine ASC
-        '''.format(topic_id)
+        ORDER BY p.NumberInLine {1}
+        '''.format(topic_id, order.value)
+        if (count is not None):
+            stmt = stmt + " LIMIT {0}".format(count)
         c.execute(stmt)
         result = c.fetchall()
         posts: list[ShortPostDto] = mapper.FromQueryResToShortPosts(result)

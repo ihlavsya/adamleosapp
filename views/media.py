@@ -16,3 +16,8 @@ def videos():
 @media.route('extra.html')
 def extra():
    return render_template('media/extra.html')
+
+@media.route('kusochki')
+@media.route('kusochki.html')
+def kusochki():
+   return render_template('media/kusochki.html')

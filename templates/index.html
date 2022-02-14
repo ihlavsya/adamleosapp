@@ -1,446 +1,80 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/reset.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/videos.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/articles.css') }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}" />
-  <link rel="apple-touch-icon" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}" />
-  <link rel="apple-touch-icon" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}" />
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest')}}" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="description"
-    content="Адам Леос - сайт с полезной информацией по улучшению здоровья и качества жизни, опираясь на науку и исследования" />
-  <link rel="alternate" title="Adam Leos RSS" href="https://adamleos.com/adamleos.rss" type="application/rss+xml" />
-  <title>
-    Адам Леос - улучшаем здоровье и качество жизни, опираясь на научные
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<meta name="description"
+  content="Адам Леос - сайт с полезной информацией по улучшению здоровья и качества жизни, опираясь на науку и исследования" />
+{% endblock %}
+{% block title %}
+Адам Леос - улучшаем здоровье и качество жизни, опираясь на научные
     исследования
-  </title>
-</head>
+{% endblock %}
 
-<body>
-  <header class="header">
-    <nav class="header__nav nav">
-      <input type="checkbox" id="hamburger" class="nav__hamburger-checkbox" />
-      <label for="hamburger" class="nav__hamburger">
-        <span class="nav__bar-one"></span>
-        <span class="nav__bar-two"></span>
-        <span class="nav__bar-three"></span>
-      </label>
-      <a href="/index.html" class="header__link header__link--mobile">
-        <img src="{{ url_for('static', filename='img/logo.png')}}" alt="graphic brain with mustache"
-          class="header__logo" />
-      </a>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="/index.html" class="nav__link">Главная</a>
-        </li>
-        <li class="nav__item">
-          <a href="/topics/index.html" class="nav__link">Темы</a>
-        </li>
-        <li class="nav__item nav__item--logo">
-          <a href="/index.html" class="header__link">
-            <img src="{{ url_for('static', filename='img/logo.png')}}" alt="graphic brain with mustache"
-              class="header__logo" />
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="/media/index.html" class="nav__link">Медиа</a>
-        </li>
-        <li class="nav__item">
-          <a href="/contacts/index.html" class="nav__link">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <h1 class="header__heading">
-      Улучшаем здоровье и качество жизни,<br />
-      опираясь на научные исследования
-    </h1>
-  </header>
+{% block picture_header %}
+<h1 class="header__heading">
+  Улучшаем здоровье и качество жизни,<br />
+  опираясь на научные исследования
+</h1>
+{% endblock %}
 
-  <main class="main">
-    <section class="main__section videos">
-      <a href="/media/videos.html" class="main__heading-link">
-        <h2 class="main__heading">Видео</h2>
-      </a>
+{% block content %}
+<section class="main__section videos">
+  <a href="/media/videos.html" class="main__heading-link">
+    <h2 class="main__heading">Видео</h2>
+  </a>
 
-      <div class="videos__grid">
-        <div class="videos__container">
-          <iframe src="https://www.youtube-nocookie.com/embed/lfTmfrPGx50" title="Голодание" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div class="videos__container">
-          <iframe src="https://www.youtube-nocookie.com/embed/Pz_8yxa916I" title="Сон" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
+  <div class="videos__grid">
+    <div class="videos__container">
+      <iframe src="https://www.youtube-nocookie.com/embed/lfTmfrPGx50" title="Голодание" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="videos__container">
+      <iframe src="https://www.youtube-nocookie.com/embed/Pz_8yxa916I" title="Сон" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
 
-        <a href="/media/videos.html" class="articles__all">
-          <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-          <span class="articles__arrow-text">Все мои видео</span>
-          <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
-        </a>
+    <a href="/media/videos.html" class="articles__all">
+      <span class="articles__arrow articles__arrow--top">&nbsp;</span>
+      <span class="articles__arrow-text">Все мои видео</span>
+      <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
+    </a>
 
-        <a href="/media/videos.html" class="articles__button articles__button--mobile">
-          Все мои видео
-        </a>
-      </div>
-    </section>
+    <a href="/media/videos.html" class="articles__button articles__button--mobile">
+      Все мои видео
+    </a>
+  </div>
+</section>
 
-    <section class="main__section extra">
-      <a href="/media/extra.html" class="main__heading-link">
-        <h2 class="main__heading">Экстра</h2>
-      </a>
+<section class="main__section extra">
+  <a href="/media/extra.html" class="main__heading-link">
+    <h2 class="main__heading">Экстра</h2>
+  </a>
 
-      <div class="videos__grid">
-        <div class="videos__container">
-          <iframe src="https://www.youtube-nocookie.com/embed/of-8kriAwvo" title="Биохакинг" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
+  <div class="videos__grid">
+    <div class="videos__container">
+      <iframe src="https://www.youtube-nocookie.com/embed/of-8kriAwvo" title="Биохакинг" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
 
-        <div class="videos__container">
-          <iframe src="https://www.youtube-nocookie.com/embed/7tmloOjVa6M" title="Работа" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
+    <div class="videos__container">
+      <iframe src="https://www.youtube-nocookie.com/embed/7tmloOjVa6M" title="Работа" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
 
-        <a href="/media/extra.html" class="articles__all">
-          <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-          <span class="articles__arrow-text">Все экстра</span>
-          <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
-        </a>
+    <a href="/media/extra.html" class="articles__all">
+      <span class="articles__arrow articles__arrow--top">&nbsp;</span>
+      <span class="articles__arrow-text">Все экстра</span>
+      <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
+    </a>
 
-        <a href="/media/extra.html" class="articles__button articles__button--mobile">
-          Все экстра
-        </a>
-      </div>
-    </section>
-
-    <section class="main__section articles">
-      <a href="/topics/index.html" class="main__heading-link">
-        <h2 class="main__heading">Последние Темы</h2>
-      </a>
-
-      <div class="articles__grid">
-        <div class="articles__topic">
-          <h3 class="articles__heading">
-            <a href="/topics/temperature-stress-cold.html"><span>Температурный Стресс: Холод</span></a>
-            <span class="articles__delimiter"></span>
-          </h3>
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/can-cold-make-immunity-stronger.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image"
-                    src="{{ url_for('static', filename='img/posts/can-cold-make-immunity-stronger.jpg') }}"
-                    alt="can-cold-make-immunity-stronger">
-                </div>
-              </a>
-              <a class="article__link" href="/topics/temperature-stress-cold.html">
-                <span class="article__tag">Холод</span>
-              </a>
-              <a class="article__link" href="/posts/can-cold-make-immunity-stronger.html">
-                <h3 class="article__heading">
-                  Можно ли холодом закалить иммунитет?
-                </h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/can-cold-make-immunity-stronger.html">
-              <p class="article__description">
-                Чуть было не пропустили самое главное, так сказать “центральную идею закаливания”! Думаю, что не только
-                мне
-                одному постоянно рассказывали о “закаливании для улучшения иммунитета”. Сколько в этом правды? Очень
-                мало.
-                Честное слово, я не перестаю поражаться, насколько много информации, что я получал от
-                родственников\друзей\блогеров по теме здоровья, далеко от реальности…
-
-                Прежде всего, исследований о “закаливании и иммунитете” до неприличия мало. Мне пришлось хорошенько
-                покопать
-                в этом направлении, так что давайте разберемся, что мы имеем на самом деле.
-              </p>
-            </a>
-          </article>
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/adapting-to-cold.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image" src="{{ url_for('static', filename='img/posts/adapting-to-cold.jpg') }}"
-                    alt="adapting-to-cold">
-                </div>
-              </a>
-              <a class="article__link" href="/topics/temperature-stress-cold.html">
-                <span class="article__tag">Холод</span>
-              </a>
-              <a class="article__link" href="/posts/adapting-to-cold.html">
-                <h3 class="article__heading">
-                  Как закалиться без проблем
-                </h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/adapting-to-cold.html">
-              <p class="article__description">
-                Значит, вы однозначно решили улучшить свое сопротивление холоду. Возможно, чтобы поменьше болеть. Либо
-                же вы
-                захотели улучшить метаболические показатели таким образом. А может, вас просто заинтересовало улучшение
-                настроения и сопротивления стрессу. Какой бы не была причина, сейчас мы обсудим, как это сделать
-                эффективно
-                и, самое главное, безопасно.
-
-                Кто внимательно изучал текущую тему, знает, что основой адаптации к холоду у человека является
-                коричневый
-                жир. Но значит ли это, что вам необходимо усиленно наращивать данный жир, чтобы получить положительные
-                эффекты, упомянутые в начале поста? Вовсе нет.
-              </p>
-            </a>
-          </article>
-
-          <a href="/topics/temperature-stress-cold.html" class="articles__all">
-            <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-            <span class="articles__arrow-text articles__arrow-text--tall">Все посты по теме
-              <br />&laquo;Холод&raquo;</span>
-            <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
-          </a>
-
-          <a href="/topics/temperature-stress-cold.html" class="articles__button articles__button--mobile">
-            Все посты по теме <br />&laquo;Холод&raquo;
-          </a>
-        </div>
-
-        <div class="articles__topic">
-          <h3 class="articles__heading">
-            <a href="/topics/fasting.html"><span>Голодание</span></a>
-            <span class="articles__delimiter"></span>
-          </h3>
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/what-to-eat-on-fmd.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image" src="{{url_for('static', filename='img/posts/what-to-eat-on-fmd.jpg')}}"
-                    alt="what-to-eat-on-fmd" />
-                </div>
-              </a>
-              <a href="/topics/fasting.html"><span class="article__tag">Голодание</span></a>
-              <a class="article__link" href="/posts/what-to-eat-on-fmd.html">
-                <h3 class="article__heading">
-                  Что есть на имитирующей голодание диете?
-                </h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/what-to-eat-on-fmd.html">
-              <p class="article__description">
-                Я особо не планировал данный пост, но один из самых частых
-                вопросов, после публикации видео о голодании , был “Что есть
-                на имитирующей голодание диете, конкретно”. Поэтому закрывая
-                тему голодания , закончим этим постом, где я подробнее
-                поделюсь подходящими вариациями блюд и продуктов.
-              </p>
-            </a>
-          </article>
-
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/fasting-nuances-v-ending-fast.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image"
-                    src="{{url_for('static', filename='img/posts/fasting-nuances-v-ending-fast.jpg')}}"
-                    alt="fasting-nuances-v-ending-fast" />
-                </div>
-              </a>
-              <a class="article__link" href="/topics/fasting.html">
-                <span class="article__tag">Голодание</span>
-              </a>
-              <a class="article__link" href="/posts/fasting-nuances-v-ending-fast.html">
-                <h3 class="article__heading">
-                  Нюансы голодания. Часть V: Выходим из голодания
-                </h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/fasting-nuances-v-ending-fast.html">
-              <p class="article__description">
-                Ладненько, последняя часть нюансов голодания, а заодно и
-                заключительный пост темы голодания перед выходом видео.
-                Сегодня хотел бы обратить внимание на один важный нюанс,
-                который обычно не берется во внимание - как правильно и
-                безопасно выйти из голодания.
-              </p>
-            </a>
-          </article>
-
-          <a href="/topics/fasting.html" class="articles__all">
-            <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-            <span class="articles__arrow-text articles__arrow-text--tall">Все посты по теме
-              <br />&laquo;Голоданиe&raquo;</span>
-            <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
-          </a>
-
-          <a href="/topics/fasting.html" class="articles__button articles__button--mobile">
-            Все посты по теме <br />&laquo;Голоданиe&raquo;
-          </a>
-        </div>
-
-        <div class="articles__topic">
-          <h3 class="articles__heading">
-            <a href="/topics/sleep.html"><span>Сон</span></a><span class="articles__delimiter"></span>
-          </h3>
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/growing-in-sleep.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image" src="{{url_for('static', filename='img/posts/growing-in-sleep.jpg')}}"
-                    alt="growing-in-sleep" />
-                </div>
-              </a>
-              <a class="article__link" href="/topics/sleep.html">
-                <span class="article__tag">Сон</span>
-              </a>
-              <a class="article__link" href="/posts/growing-in-sleep.html">
-                <h3 class="article__heading">Растем во сне</h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/growing-in-sleep.html">
-              <p class="article__description">
-                Вот и самый последний пост по теме сна. Закончим мы довольно
-                важной информацией о связи сна с гормоном роста. Я очень хотел
-                об этом упомянуть в видео, но ролик был и без того объёмный.
-                Быстрая вводная - гормон роста это именно то, что вы подумали.
-                Этот протеин стимулирует рост, регенерацию и деление клеток.
-                Гормон роста является критической составляющей для
-                полноценного роста и развития тела, особенно в период
-                взросления.
-              </p>
-            </a>
-          </article>
-
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/caffeine-sleep.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image" src="{{url_for('static', filename='img/posts/caffeine-sleep.jpg')}}"
-                    alt="caffeine-sleep" />
-                </div>
-              </a>
-              <a class="article__link" href="/topics/sleep.html">
-                <span class="article__tag">Сон</span>
-              </a>
-              <a class="article__link" href="/posts/caffeine-sleep.html">
-                <h3 class="article__heading">Кофеиновый сон</h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/caffeine-sleep.html">
-              <p class="article__description">
-                Пора серьезно поговорить о кофеине, самом популярном
-                психоактивном веществе. Кофеин оказывает сильный эффект на
-                центральную нервную систему и довольно близок по эффектам к
-                таким веществам как героин, кокаин и амфетамин. И хотя эффекты
-                не такие значительные, как от последних веществ, я все же
-                настоятельно попрошу вас отнестись серьезно к моим словам (и
-                данным), так как ситуация серьезнее, чем мы ее воспринимаем
-              </p>
-            </a>
-          </article>
-
-          <a href="/topics/sleep.html" class="articles__all">
-            <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-            <span class="articles__arrow-text articles__arrow-text--tall">Все посты по теме
-              <br />&laquo;Сон&raquo;</span>
-            <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
-          </a>
-
-          <a href="/topics/sleep.html" class="articles__button articles__button--mobile">
-            Все посты по теме <br />&laquo;Сон&raquo;
-          </a>
-        </div>
-
-        <div class="articles__topic">
-          <h3 class="articles__heading">
-            <a href="/topics/microbiome.html">
-              <span>Микрофлора</span>
-            </a>
-            <span class="articles__delimiter"></span>
-          </h3>
-
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/what-destroying-microbiome-ii.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image"
-                    src="{{url_for('static', filename='img/posts/what-destroying-microbiome-ii.jpg')}}"
-                    alt="what-destroying-microbiome-ii" />
-                </div>
-              </a>
-              <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
-              <a class="article__link" href="/posts/what-destroying-microbiome-ii.html">
-                <h3 class="article__heading">
-                  Какие повседневные вещи уничтожают микрофлору. Часть II
-                </h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/what-destroying-microbiome-ii.html">
-              <p class="article__description">
-                Но если медикаменты мы еще как-то осознанно привносим в свою
-                жизнь, то вот другая группа вещей уже приходит незаметно.
-                Первый представитель этой группы будет содержаться в
-                водопроводной воде, причем в очень щедрых количествах. Я
-                говорю о хлоре, который несет разрушающий эффект на некоторые
-                виды бактерий кишечника, что в итоге ассоциировано с развитием
-                Колоректального рака
-              </p>
-            </a>
-          </article>
-
-          <article class="articles__preview article">
-            <div class="article__top">
-              <a class="article__link" href="/posts/what-destroying-microbiome-i.html">
-                <div class="article__imagewrapper">
-                  <img class="article__image"
-                    src="{{url_for('static', filename='img/posts/what-destroying-microbiome-i.jpg')}}"
-                    alt="what-destroying-microbiome-i" />
-                </div>
-              </a>
-              <a href="/topics/microbiome.html"><span class="article__tag">Микрофлора</span></a>
-              <a class="article__link" href="/posts/what-destroying-microbiome-i.html">
-                <h3 class="article__heading">
-                  Какие повседневные вещи уничтожают микрофлору. Часть I
-                </h3>
-              </a>
-            </div>
-            <a class="article__link" href="/posts/what-destroying-microbiome-i.html">
-              <p class="article__description">
-                Сегодня последний пост о микрофлоре (который не влез в один
-                пост, поэтому их два сразу), а на следующей неделе уже релиз
-                видео. В конце поста, кстати, упомяну тему следующей серии
-                публикаций и нового ролика. В завершении этой темы хотел бы
-                обратить внимание на основные вещи в нашей с вами ежедневной
-                жизни, которые незаметно разрушают нашу микрофлору.
-              </p>
-            </a>
-          </article>
-
-          <a href="/topics/microbiome.html" class="articles__all">
-            <span class="articles__arrow articles__arrow--top">&nbsp;</span>
-            <span class="articles__arrow-text articles__arrow-text--tall">Все посты по теме
-              <br />&laquo;Микрофлора&raquo;</span>
-            <span class="articles__arrow articles__arrow--bottom">&nbsp;</span>
-          </a>
-
-          <a href="/topics/microbiome.html" class="articles__button articles__button--mobile">
-            Все посты по теме <br />&laquo;Микрофлора&raquo;
-          </a>
-        </div>
-      </div>
-
-      <a href="/topics/index.html" class="articles__button articles__button--all-themes">Все темы</a>
-    </section>
-  </main>
-</body>
-
-</html>
+    <a href="/media/extra.html" class="articles__button articles__button--mobile">
+      Все экстра
+    </a>
+  </div>
+</section>
+{% set header='Темы' %}
+{% include "topics/last_topics_section.html" ignore missing with context %}
+{% endblock %}
